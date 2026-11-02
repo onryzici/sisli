@@ -1,0 +1,33 @@
+yöntemler: add_asset_user_data_of_class, create_attribute_identifier, find_meta_data_by_class, get_asset_user_data_of_class, has_asset_user_data_of_class
+şablon /Game/Sisli/Cocuk2/Anim/BS_Idle_Walk_Run_Cocuk2.BS_Idle_Walk_Run_Cocuk2 sınıf BlendSpace
+  MF_Unarmed_Walk_Fwd_Cocuk2 <Struct 'Vector' (0x000002A551DA27C8) {x: 0.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Fwd_Left_Cocuk2 <Struct 'Vector' (0x000002A551DA7148) {x: -45.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Left_Cocuk2 <Struct 'Vector' (0x000002A551DA6008) {x: -90.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Fwd_Right_Cocuk2 <Struct 'Vector' (0x000002A551DA7C48) {x: 45.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Right_Cocuk2 <Struct 'Vector' (0x000002A551DA7188) {x: 90.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Bwd_Cocuk2 <Struct 'Vector' (0x000002A551DA74C8) {x: -180.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Bwd_Cocuk2 <Struct 'Vector' (0x000002A551DA7488) {x: 180.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Bwd_Left_Cocuk2 <Struct 'Vector' (0x000002A551DA7288) {x: -135.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Walk_Bwd_Right_Cocuk2 <Struct 'Vector' (0x000002A54E734EC8) {x: 135.000000, y: 300.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Fwd_Cocuk2 <Struct 'Vector' (0x000002A551DA6488) {x: 0.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Fwd_Left_Cocuk2 <Struct 'Vector' (0x000002A551DA7308) {x: -45.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Fwd_Right_Cocuk2 <Struct 'Vector' (0x000002A551DA7748) {x: 45.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Left_Cocuk2 <Struct 'Vector' (0x000002A551DA7048) {x: -90.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Right_Cocuk2 <Struct 'Vector' (0x000002A551DA6008) {x: 90.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Bwd_Cocuk2 <Struct 'Vector' (0x000002A551DA65C8) {x: 180.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Bwd_Cocuk2 <Struct 'Vector' (0x000002A551DA27C8) {x: -180.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Bwd_Left_Cocuk2 <Struct 'Vector' (0x000002A551DA7408) {x: -135.000000, y: 600.000000, z: 0.000000}>
+  MF_Unarmed_Jog_Bwd_Right_Cocuk2 <Struct 'Vector' (0x000002A551DA1E08) {x: 135.000000, y: 600.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA2588) {x: 0.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA2548) {x: 45.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA2088) {x: 90.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA2B88) {x: 135.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA2908) {x: 180.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA2F48) {x: -45.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA7508) {x: -90.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA20C8) {x: -135.000000, y: 0.000000, z: 0.000000}>
+  MM_Idle_Cocuk2 <Struct 'Vector' (0x000002A551DA72C8) {x: -180.000000, y: 0.000000, z: 0.000000}>
+  eksen Direction -180.0 180.0
+  eksen Speed 0.0 600.0
+BS: /Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket.BS_Cocuk2_Hareket
+BS: /Game/Sisli/Cocuk2/Anim/BS_Idle_Walk_Run_Cocuk2.BS_Idle_Walk_Run_Cocuk2

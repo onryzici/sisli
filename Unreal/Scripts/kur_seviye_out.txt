@@ -1,0 +1,6 @@
+yeni seviye True
+mesh aktörü 54
+küp doku <Object '/Engine/EngineResources/GrayDarkTextureCube.GrayDarkTextureCube' (0x000001E116412A00) Class 'TextureCube'>
+ses eklendi
+mekanikler yerleşti
+kaydedildi /Game/Sisli/Maps/L_Sisli

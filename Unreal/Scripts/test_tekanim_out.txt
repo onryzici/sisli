@@ -1,0 +1,1 @@
+ok <AnimationMode.ANIMATION_SINGLE_NODE: 1>

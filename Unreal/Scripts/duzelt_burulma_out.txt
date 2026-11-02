@@ -1,0 +1,21 @@
+ref kemik 53 LeftArm <Struct 'Vector' (0x000002111EC670E0) {x: 12.823511, y: 1.244627, z: 94.464178}>
+MF_Unarmed_Jog_Bwd_Cocuk üst kol burulma düz. ort 9.3° | önkol 21.7°
+MF_Unarmed_Jog_Bwd_Left_Cocuk üst kol burulma düz. ort 9.3° | önkol 21.7°
+MF_Unarmed_Jog_Bwd_Right_Cocuk üst kol burulma düz. ort 9.3° | önkol 21.7°
+MF_Unarmed_Jog_Fwd_Cocuk üst kol burulma düz. ort 9.2° | önkol 19.8°
+MF_Unarmed_Jog_Fwd_Left_Cocuk üst kol burulma düz. ort 9.2° | önkol 19.8°
+MF_Unarmed_Jog_Fwd_Right_Cocuk üst kol burulma düz. ort 9.2° | önkol 19.7°
+MF_Unarmed_Jog_Left_Cocuk üst kol burulma düz. ort 9.1° | önkol 21.1°
+MF_Unarmed_Jog_Right_Cocuk üst kol burulma düz. ort 10.0° | önkol 21.9°
+MF_Unarmed_Walk_Bwd_Cocuk üst kol burulma düz. ort 10.7° | önkol 17.7°
+MF_Unarmed_Walk_Bwd_Left_Cocuk üst kol burulma düz. ort 10.8° | önkol 17.7°
+MF_Unarmed_Walk_Bwd_Right_Cocuk üst kol burulma düz. ort 11.0° | önkol 17.7°
+MF_Unarmed_Walk_Fwd_Cocuk üst kol burulma düz. ort 10.0° | önkol 7.2°
+MF_Unarmed_Walk_Fwd_Left_Cocuk üst kol burulma düz. ort 10.1° | önkol 7.0°
+MF_Unarmed_Walk_Fwd_Right_Cocuk üst kol burulma düz. ort 10.1° | önkol 7.5°
+MF_Unarmed_Walk_Left_Cocuk üst kol burulma düz. ort 9.4° | önkol 11.2°
+MF_Unarmed_Walk_Right_Cocuk üst kol burulma düz. ort 8.5° | önkol 9.7°
+MM_Fall_Loop_Cocuk üst kol burulma düz. ort 3.3° | önkol 19.7°
+MM_Idle_Cocuk üst kol burulma düz. ort 11.1° | önkol 14.2°
+MM_Jump_Cocuk üst kol burulma düz. ort 5.0° | önkol 12.9°
+MM_Land_Cocuk üst kol burulma düz. ort 10.0° | önkol 10.3°

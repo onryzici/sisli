@@ -1,0 +1,3 @@
+arm rot <Struct 'Rotator' (0x000001B82491C198) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>
+arm rot <Struct 'Rotator' (0x000001B82491C198) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>
+rate <Struct 'Rotator' (0x000001B822A6CB10) {pitch: 0.000000, yaw: 540.000000, roll: 0.000000}>

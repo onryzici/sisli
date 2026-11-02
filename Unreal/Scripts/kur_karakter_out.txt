@@ -1,0 +1,48 @@
+içe aktarılan: ['/Game/Sisli/Cocuk/brown_eye.brown_eye', '/Game/Sisli/Cocuk/eyebrow001.eyebrow001', '/Game/Sisli/Cocuk/T_Sac_Mat_D.T_Sac_Mat_D', '/Game/Sisli/Cocuk/T_male_worksuit01_Mat_D.T_male_worksuit01_Mat_D', '/Game/Sisli/Cocuk/male_worksuit01_normal.male_worksuit01_normal', '/Game/Sisli/Cocuk/shoes03_diffuse.shoes03_diffuse', '/Game/Sisli/Cocuk/Ten_Mat.Ten_Mat', '/Game/Sisli/Cocuk/SK_Cocuk_Skeleton.SK_Cocuk_Skeleton', '/Game/Sisli/Cocuk/Goz_Mat.Goz_Mat', '/Game/Sisli/Cocuk/Kas_Mat.Kas_Mat', '/Game/Sisli/Cocuk/Sac_Mat.Sac_Mat', '/Game/Sisli/Cocuk/male_worksuit01_Mat.male_worksuit01_Mat', '/Game/Sisli/Cocuk/shoes03_Mat.shoes03_Mat', '/Game/Sisli/Cocuk/SK_Cocuk.SK_Cocuk']
+  varlık /Game/Sisli/Cocuk/brown_eye.brown_eye
+  varlık /Game/Sisli/Cocuk/eyebrow001.eyebrow001
+  varlık /Game/Sisli/Cocuk/Goz_Mat.Goz_Mat
+  varlık /Game/Sisli/Cocuk/Kas_Mat.Kas_Mat
+  varlık /Game/Sisli/Cocuk/male_worksuit01_Mat.male_worksuit01_Mat
+  varlık /Game/Sisli/Cocuk/male_worksuit01_normal.male_worksuit01_normal
+  varlık /Game/Sisli/Cocuk/Sac_Mat.Sac_Mat
+  varlık /Game/Sisli/Cocuk/shoes03_diffuse.shoes03_diffuse
+  varlık /Game/Sisli/Cocuk/shoes03_Mat.shoes03_Mat
+  varlık /Game/Sisli/Cocuk/SK_Cocuk.SK_Cocuk
+  varlık /Game/Sisli/Cocuk/SK_Cocuk_Skeleton.SK_Cocuk_Skeleton
+  varlık /Game/Sisli/Cocuk/T_male_worksuit01_Mat_D.T_male_worksuit01_Mat_D
+  varlık /Game/Sisli/Cocuk/T_Sac_Mat_D.T_Sac_Mat_D
+  varlık /Game/Sisli/Cocuk/Ten_Mat.Ten_Mat
+mesh /Game/Sisli/Cocuk/SK_Cocuk.SK_Cocuk
+sınırlar <Struct 'Vector' (0x0000017A078D67C0) {x: 0.000000, y: 4.281981, z: 64.000000}> <Struct 'Vector' (0x0000017A078D67D8) {x: 61.090279, y: 12.479713, z: 64.000000}>
+IK_Manny oto tanım: True kök: pelvis zincirler: [(Name("Spine"), 'spine_01', 'spine_05'), (Name("Neck"), 'neck_01', 'neck_02'), (Name("Head"), 'Head', 'Head'), (Name("LeftLeg"), 'thigh_l', 'foot_l'), (Name("LeftFoot"), 'ball_l', 'ball_l'), (Name("LeftClavicle"), 'clavicle_l', 'clavicle_l'), (Name("LeftArm"), 'upperarm_l', 'hand_l'), (Name("LeftThumb"), 'thumb_01_l', 'thumb_03_l'), (Name("LeftIndex"), 'index_01_l', 'index_03_l'), (Name("LeftMiddle"), 'middle_01_l', 'middle_03_l'), (Name("LeftRing"), 'ring_01_l', 'ring_03_l'), (Name("LeftPinky"), 'pinky_01_l', 'pinky_03_l'), (Name("LeftIndexMetacarpal"), 'index_metacarpal_l', 'index_metacarpal_l'), (Name("LeftMiddleMetacarpal"), 'middle_metacarpal_l', 'middle_metacarpal_l'), (Name("LeftRingMetacarpal"), 'ring_metacarpal_l', 'ring_metacarpal_l'), (Name("LeftPinkyMetacarpal"), 'pinky_metacarpal_l', 'pinky_metacarpal_l'), (Name("RightLeg"), 'thigh_r', 'foot_r'), (Name("RightFoot"), 'ball_r', 'ball_r'), (Name("RightClavicle"), 'clavicle_r', 'clavicle_r'), (Name("RightArm"), 'upperarm_r', 'hand_r'), (Name("RightThumb"), 'thumb_01_r', 'thumb_03_r'), (Name("RightIndex"), 'index_01_r', 'index_03_r'), (Name("RightMiddle"), 'middle_01_r', 'middle_03_r'), (Name("RightRing"), 'ring_01_r', 'ring_03_r'), (Name("RightPinky"), 'pinky_01_r', 'pinky_03_r'), (Name("RightIndexMetacarpal"), 'index_metacarpal_r', 'index_metacarpal_r'), (Name("RightMiddleMetacarpal"), 'middle_metacarpal_r', 'middle_metacarpal_r'), (Name("RightRingMetacarpal"), 'ring_metacarpal_r', 'ring_metacarpal_r'), (Name("RightPinkyMetacarpal"), 'pinky_metacarpal_r', 'pinky_metacarpal_r')]
+IK_Cocuk oto tanım: True kök: Hips zincirler: [(Name("Spine"), 'Spine', 'Spine2'), (Name("Neck"), 'Neck', 'Neck'), (Name("Head"), 'Head', 'Head'), (Name("LeftLeg"), 'LeftUpLeg', 'LeftFoot'), (Name("LeftFoot"), 'LeftToeBase', 'LeftToeBase'), (Name("LeftClavicle"), 'LeftShoulder', 'LeftShoulder'), (Name("LeftArm"), 'LeftArm', 'LeftHand'), (Name("LeftThumb"), 'LeftHandThumb1', 'LeftHandThumb3'), (Name("LeftIndex"), 'LeftHandIndex1', 'LeftHandIndex3'), (Name("LeftMiddle"), 'LeftHandMiddle1', 'LeftHandMiddle3'), (Name("LeftRing"), 'LeftHandRing1', 'LeftHandRing3'), (Name("LeftPinky"), 'LeftHandPinky1', 'LeftHandPinky3'), (Name("RightLeg"), 'RightUpLeg', 'RightFoot'), (Name("RightFoot"), 'RightToeBase', 'RightToeBase'), (Name("RightClavicle"), 'RightShoulder', 'RightShoulder'), (Name("RightArm"), 'RightArm', 'RightHand'), (Name("RightThumb"), 'RightHandThumb1', 'RightHandThumb3'), (Name("RightIndex"), 'RightHandIndex1', 'RightHandIndex3'), (Name("RightMiddle"), 'RightHandMiddle1', 'RightHandMiddle3'), (Name("RightRing"), 'RightHandRing1', 'RightHandRing3'), (Name("RightPinky"), 'RightHandPinky1', 'RightHandPinky3')]
+op sayısı 5
+DOC X.duplicate_and_retarget(assets_to_retarget, source_mesh, target_mesh, ik_retarget_asset, search="", replace="", prefix="", suffix="", target_path="", use_source_path=False, include_referenced_assets=True, overwrite_existing_files=False) -> Array[AssetData]
+
+deprecated: Use RunBatchRetarget instead. It uses a struct for better future-proofing and cleaner Blueprint graphs.
+deprecated: This function is deprecated. Please use RunBatchRetarget which takes a FIKRetargetBatchOperationInputs struct.
+
+Args:
+    assets_to_retarget (Array[AssetData]): 
+    source_mesh (SkeletalMesh): 
+    target_mesh (SkeletalMesh): 
+    ik_retarget_asset (IKRetargeter): 
+    search (str): 
+    replace (str): 
+    prefix (str): 
+    suffix (str): 
+    target_path (str): 
+    use_source_path (bool): 
+    include_referenced_assets (bool): 
+    overwrite_existing_files (bool): 
+
+Returns:
+    Array[AssetData]:
+yeniden hedeflenen: ['/Game/Sisli/Cocuk/Anim/BS_Idle_Walk_Run_Cocuk', '/Game/Sisli/Cocuk/Anim/MM_Idle_Cocuk', '/Game/Sisli/Cocuk/Anim/MM_Land_Cocuk', '/Game/Sisli/Cocuk/Anim/MM_Fall_Loop_Cocuk', '/Game/Sisli/Cocuk/Anim/MM_Jump_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Fwd_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Fwd_Left_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Left_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Fwd_Right_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Right_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Bwd_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Bwd_Left_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Walk_Bwd_Right_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Fwd_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Fwd_Left_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Fwd_Right_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Left_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Right_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Bwd_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Bwd_Left_Cocuk', '/Game/Sisli/Cocuk/Anim/MF_Unarmed_Jog_Bwd_Right_Cocuk']
+ABP <Object '/Game/Sisli/Cocuk/Anim/ABP_Unarmed_Cocuk.ABP_Unarmed_Cocuk' (0x0000017A10893100) Class 'AnimBlueprint'>
+KONTROL idle Head yerel çeviri <Struct 'Vector' (0x0000017A069DAC60) {x: 0.000000, y: -8.007070, z: -0.000006}> kök ölçek <Struct 'Vector' (0x0000017A069DB190) {x: 1.000000, y: 1.000000, z: 1.000000}>
+Kamera FOV 78.0
+SpringArm serbest SpringArmComponent_0__A9892D03
+Kamera FOV 78.0
+BP kaydedildi

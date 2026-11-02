@@ -1,0 +1,7 @@
+karakter slot Goz_Mat atandı
+karakter slot Kas_Mat atandı
+karakter slot Sac_Mat atandı
+karakter slot Ten_Mat atandı
+karakter slot male_worksuit01_Mat atandı
+karakter slot shoes03_Mat atandı
+TAMAM

@@ -1,0 +1,4 @@
+çocuk iskeleti /Game/Characters/Mannequin_UE4/Meshes/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton
+MCO iskeleti /Game/MCO_Mocap_Basics/Character/Mesh/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton
+önce []
+sonra [<Object '/Game/MCO_Mocap_Basics/Character/Mesh/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton' (0x000002419CDEF000) Class 'Skeleton'>]

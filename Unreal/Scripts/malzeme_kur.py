@@ -1,0 +1,218 @@
+# Sisli ana malzemeleri + örnekler, ortam ve karakter mesh'lerine atama.
+#  M_Sisli: BaseColor×Ton, Normal (su birikintisinde düzleşir), ARM (AO/Pürüz/Metal) × çarpanlar, Işıma,
+#           dünya uzayı gürültüsüyle su birikintisi (Birikinti>0 ise koyu + ayna gibi)
+#  M_Sisli_Maskeli: aynı + OpacityMask = dot(BaseColor.RGBA, MaskeSec) × MaskeGuc, iki yüzlü
+import unreal, glob, os, traceback
+OUT = []
+def log(*a): OUT.append(" ".join(str(x) for x in a))
+at = unreal.AssetToolsHelpers.get_asset_tools(); eal = unreal.EditorAssetLibrary; mel = unreal.MaterialEditingLibrary
+MDIR = "/Game/Sisli/Malzeme"; TDIR = "/Game/Sisli/Doku"
+PH_T = "C:/Users/Onur/Sisli/Indir/polyhaven/textures"; PH_M = "C:/Users/Onur/Sisli/Indir/polyhaven/models"
+E = unreal.MaterialProperty
+
+def expr(m, cls, x, y, **props):
+    e = mel.create_material_expression(m, cls, x, y)
+    for k, v in props.items(): e.set_editor_property(k, v)
+    return e
+def link(a, ao, b, bi): mel.connect_material_expressions(a, ao, b, bi)
+
+def build_master(name, masked):
+    path = f"{MDIR}/{name}"
+    if os.environ.get("SISLI_ANA_KORU") and eal.does_asset_exist(path): return eal.load_asset(path)   # başka sahnenin MI'leri bağlı: yeniden kurma
+    if eal.does_asset_exist(path): eal.delete_asset(path)
+    m = at.create_asset(name, MDIR, unreal.Material, unreal.MaterialFactoryNew())
+    if masked:
+        m.set_editor_property("blend_mode", unreal.BlendMode.BLEND_MASKED); m.set_editor_property("two_sided", True)
+    T = unreal.MaterialExpressionTextureSampleParameter2D
+    bc = expr(m, T, -1400, -300, parameter_name="BaseColor", texture=WHITE, sampler_type=unreal.MaterialSamplerType.SAMPLERTYPE_COLOR)
+    nr = expr(m, T, -1400, 100, parameter_name="Normal", texture=unreal.load_asset("/Engine/EngineMaterials/DefaultNormal.DefaultNormal"), sampler_type=unreal.MaterialSamplerType.SAMPLERTYPE_NORMAL)
+    ar = expr(m, T, -1400, 500, parameter_name="ARM", texture=WHITE_MASK, sampler_type=unreal.MaterialSamplerType.SAMPLERTYPE_MASKS)
+    ton = expr(m, unreal.MaterialExpressionVectorParameter, -1100, -450, parameter_name="Ton", default_value=unreal.LinearColor(1, 1, 1, 1))
+    rmul = expr(m, unreal.MaterialExpressionScalarParameter, -1100, 650, parameter_name="PuruzCarpan", default_value=1.0)
+    mmul = expr(m, unreal.MaterialExpressionScalarParameter, -1100, 750, parameter_name="MetalCarpan", default_value=1.0)
+    isi = expr(m, unreal.MaterialExpressionVectorParameter, -500, 900, parameter_name="Isima", default_value=unreal.LinearColor(0, 0, 0, 1))
+    bir = expr(m, unreal.MaterialExpressionScalarParameter, -1100, 1000, parameter_name="Birikinti", default_value=0.0)
+    # su birikintisi maskesi (dünya uzayı gürültü)
+    nz = expr(m, unreal.MaterialExpressionNoise, -1100, 1150, scale=0.0035, levels=4, output_min=0.0, output_max=1.0, quality=1)
+    ss = expr(m, unreal.MaterialExpressionSmoothStep, -850, 1150, const_min=0.60, const_max=0.67)
+    link(nz, "", ss, "Value")
+    mk = expr(m, unreal.MaterialExpressionMultiply, -650, 1100); link(ss, "", mk, "A"); link(bir, "", mk, "B")
+    # taban renk
+    c1 = expr(m, unreal.MaterialExpressionMultiply, -800, -350); link(bc, "RGB", c1, "A"); link(ton, "", c1, "B")
+    dk = expr(m, unreal.MaterialExpressionLinearInterpolate, -500, -300, const_a=1.0, const_b=0.72); link(mk, "", dk, "Alpha")
+    c2 = expr(m, unreal.MaterialExpressionMultiply, -300, -350); link(c1, "", c2, "A"); link(dk, "", c2, "B")
+    mel.connect_material_property(c2, "", E.MP_BASE_COLOR)
+    # pürüz
+    r1 = expr(m, unreal.MaterialExpressionMultiply, -800, 550); link(ar, "G", r1, "A"); link(rmul, "", r1, "B")
+    r2 = expr(m, unreal.MaterialExpressionLinearInterpolate, -500, 550, const_b=0.15); link(r1, "", r2, "A"); link(mk, "", r2, "Alpha")
+    mel.connect_material_property(r2, "", E.MP_ROUGHNESS)
+    mt = expr(m, unreal.MaterialExpressionMultiply, -800, 750); link(ar, "B", mt, "A"); link(mmul, "", mt, "B")
+    mel.connect_material_property(mt, "", E.MP_METALLIC)
+    mel.connect_material_property(ar, "R", E.MP_AMBIENT_OCCLUSION)
+    # normal (birikintide düz)
+    up = expr(m, unreal.MaterialExpressionConstant3Vector, -800, 250, constant=unreal.LinearColor(0, 0, 1, 1))
+    n2 = expr(m, unreal.MaterialExpressionLinearInterpolate, -500, 150); link(nr, "RGB", n2, "A"); link(up, "", n2, "B"); link(mk, "", n2, "Alpha")
+    mel.connect_material_property(n2, "", E.MP_NORMAL)
+    mel.connect_material_property(isi, "", E.MP_EMISSIVE_COLOR)
+    if masked:
+        # opaklık = A × MaskeAlfa + (R+G+B) × MaskeRenk
+        ma = expr(m, unreal.MaterialExpressionScalarParameter, -1100, -650, parameter_name="MaskeAlfa", default_value=1.0)
+        mr = expr(m, unreal.MaterialExpressionScalarParameter, -1100, -750, parameter_name="MaskeRenk", default_value=0.0)
+        a1 = expr(m, unreal.MaterialExpressionMultiply, -800, -650); link(bc, "A", a1, "A"); link(ma, "", a1, "B")
+        s1 = expr(m, unreal.MaterialExpressionAdd, -900, -800); link(bc, "R", s1, "A"); link(bc, "G", s1, "B")
+        s2 = expr(m, unreal.MaterialExpressionAdd, -800, -800); link(s1, "", s2, "A"); link(bc, "B", s2, "B")
+        s3 = expr(m, unreal.MaterialExpressionMultiply, -700, -800); link(s2, "", s3, "A"); link(mr, "", s3, "B")
+        om = expr(m, unreal.MaterialExpressionAdd, -500, -700); link(a1, "", om, "A"); link(s3, "", om, "B")
+        mel.connect_material_property(om, "", E.MP_OPACITY_MASK)
+    mel.recompile_material(m); eal.save_loaded_asset(m)
+    return m
+
+TEXCACHE = {}
+def tex(path_on_disk, sub, kind):
+    if not path_on_disk or not os.path.exists(path_on_disk): return None
+    name = "T_" + sub + "_" + os.path.splitext(os.path.basename(path_on_disk))[0]
+    name = "".join(ch if ch.isalnum() or ch == "_" else "_" for ch in name)
+    dst = f"{TDIR}/{sub}"
+    ap = f"{dst}/{name}"
+    if ap in TEXCACHE: return TEXCACHE[ap]
+    if not eal.does_asset_exist(ap):
+        t = unreal.AssetImportTask(); t.filename = path_on_disk; t.destination_path = dst; t.destination_name = name
+        t.automated = True; t.save = False; t.replace_existing = True
+        at.import_asset_tasks([t])
+    a = eal.load_asset(ap)
+    if kind == "n":
+        a.set_editor_property("compression_settings", unreal.TextureCompressionSettings.TC_NORMALMAP); a.set_editor_property("srgb", False)
+    elif kind == "l":
+        a.set_editor_property("compression_settings", unreal.TextureCompressionSettings.TC_MASKS); a.set_editor_property("srgb", False)
+    eal.save_loaded_asset(a); TEXCACHE[ap] = a; return a
+
+def mi(name, master, base=None, nor=None, arm=None, ton=(1, 1, 1), rmul=1.0, mmul=1.0, isima=(0, 0, 0), birikinti=0.0, maskealfa=None, maskerenk=None):
+    path = f"{MDIR}/MI/{name}"
+    if eal.does_asset_exist(path): eal.delete_asset(path)
+    m = at.create_asset(name, f"{MDIR}/MI", unreal.MaterialInstanceConstant, unreal.MaterialInstanceConstantFactoryNew())
+    mel.set_material_instance_parent(m, master)
+    if base: mel.set_material_instance_texture_parameter_value(m, "BaseColor", base)
+    if nor: mel.set_material_instance_texture_parameter_value(m, "Normal", nor)
+    if arm: mel.set_material_instance_texture_parameter_value(m, "ARM", arm)
+    mel.set_material_instance_vector_parameter_value(m, "Ton", unreal.LinearColor(*ton, 1))
+    mel.set_material_instance_scalar_parameter_value(m, "PuruzCarpan", rmul)
+    mel.set_material_instance_scalar_parameter_value(m, "MetalCarpan", mmul)
+    mel.set_material_instance_vector_parameter_value(m, "Isima", unreal.LinearColor(*isima, 1))
+    mel.set_material_instance_scalar_parameter_value(m, "Birikinti", birikinti)
+    if maskealfa is not None: mel.set_material_instance_scalar_parameter_value(m, "MaskeAlfa", maskealfa)
+    if maskerenk is not None: mel.set_material_instance_scalar_parameter_value(m, "MaskeRenk", maskerenk)
+    eal.save_loaded_asset(m); return m
+
+try:
+    def white(fn, masks):
+        ap = f"{TDIR}/{fn}"
+        if not eal.does_asset_exist(ap):
+            t = unreal.AssetImportTask(); t.filename = f"C:/Users/Onur/Sisli/Unreal/SourceArt/Doku/{fn}.png"; t.destination_path = TDIR; t.destination_name = fn
+            t.automated = True; t.save = True; t.replace_existing = True; at.import_asset_tasks([t])
+        a = eal.load_asset(ap)
+        if masks:
+            a.set_editor_property("compression_settings", unreal.TextureCompressionSettings.TC_MASKS); a.set_editor_property("srgb", False)
+        eal.save_loaded_asset(a); return a
+    WHITE = white("T_Beyaz", False); WHITE_MASK = white("T_BeyazMaske", True)
+    M = build_master("M_Sisli", False); MM = build_master("M_Sisli_Maskeli", True)
+    log("ana malzemeler hazır")
+    # --- mimari ---
+    ARCH = {  # slot adı → (doku klasörü, ton, birikinti, pürüz çarpanı)
+        "M_asphalt_03_islak": ("asphalt_03", (0.55, 0.58, 0.62), 1.0, 1.0),
+        "M_cobblestone_floor_05_islak": ("cobblestone_floor_05", (0.6, 0.6, 0.62), 1.0, 1.0),
+        "M_brick_4": ("brick_4", (0.55, 0.52, 0.5), 0.0, 1.0),
+        "M_blue_plaster_weathered": ("blue_plaster_weathered", (0.55, 0.6, 0.65), 0.0, 1.0),
+        "M_black_painted_planks": ("black_painted_planks", (0.9, 0.9, 0.9), 0.0, 1.0),
+        "M_concrete_layers": ("concrete_layers", (0.5, 0.52, 0.55), 0.0, 1.0),
+        "M_concrete_layers_001": ("concrete_layers", (0.4, 0.42, 0.45), 0.0, 1.0),
+        "M_ceramic_roof_01": ("ceramic_roof_01", (0.35, 0.33, 0.33), 0.0, 1.0),
+    }
+    FLAT = {  # slot → (renk, pürüz, ışıma)
+        "M_Cam": ((0.01, 0.012, 0.015), 0.08, (0, 0, 0)),
+        "M_Cerceve": ((0.05, 0.05, 0.05), 0.6, (0, 0, 0)),
+        "M_SicakCam": ((0.2, 0.1, 0.04), 0.3, (2.4, 0.95, 0.3)),
+        "M_Su": ((0.004, 0.006, 0.008), 0.05, (0, 0, 0)),
+        "M_Tel": ((0.01, 0.01, 0.01), 0.5, (0, 0, 0)),
+        "M_Siluet": ((0.02, 0.022, 0.025), 0.9, (0, 0, 0)),
+        "street_lamp_01_glass": ((0.8, 0.7, 0.5), 0.2, (1.6, 1.0, 0.45)),
+        "street_lamp_01_bulb": ((1, 1, 1), 0.2, (2.6, 1.6, 0.7)),
+        "Lantern_01_glass": ((0.5, 0.35, 0.2), 0.15, (1.4, 0.62, 0.2)),
+    }
+    PH_ALIAS = {"military_crate_m_01": "old_military_crate", "Barrel_01": "Barrel_01_explosive", "rollershutter_door_graffiti": "rollershutter_door_graffiti"}
+    model_tex = glob.glob(PH_M + "/*/textures/*.jpg")
+    def ph_find(slot, kind):
+        base = slot[:-4] if slot.endswith("_001") else slot
+        base = PH_ALIAS.get(base, base)
+        cands = [f for f in model_tex if os.path.basename(f).startswith(base + "_" + kind)]
+        if not cands and kind == "nor_gl" and base.endswith("_graffiti"):
+            cands = [f for f in model_tex if os.path.basename(f).startswith(base[:-9] + "_nor_gl")]
+        if not cands and kind == "arm" and base.endswith("_graffiti"):
+            cands = [f for f in model_tex if os.path.basename(f).startswith(base[:-9] + "_arm")]
+        return cands[0] if cands else None
+    import json
+    MBJ = json.load(open(os.environ.get("SISLI_SRC", "C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam") + "/malzeme_bilgi.json"))
+    made = {}
+    PFX = os.environ.get("SISLI_MIP", "")   # sahneye özel MI adı öneki (ör. Oda1_)
+    def material_for(slot):
+        if slot in made: return made[slot]
+        r = None
+        jb = MBJ.get(slot)
+        if jb and "tex" in jb and slot not in FLAT:
+            d = jb["tex"]
+            r = mi("MI_" + PFX + slot, M, tex(f"{PH_T}/{d}/Diffuse.jpg", d, "c"), tex(f"{PH_T}/{d}/nor_gl.jpg", d, "n"), tex(f"{PH_T}/{d}/arm.jpg", d, "l"),
+                   tuple(jb["tint"]), 1.0, 1.0, birikinti=0.35 if jb.get("puddle") else 0.0)
+        elif jb and "flat" in jb and slot not in FLAT:
+            r = mi("MI_" + PFX + slot, M, None, None, None, tuple(jb["flat"]), jb["rough"], 0.0, tuple(jb["emis"]))
+        elif slot in ARCH:
+            d, ton, bir, rm = ARCH[slot]
+            r = mi("MI_" + PFX + slot, M, tex(f"{PH_T}/{d}/Diffuse.jpg", d, "c"), tex(f"{PH_T}/{d}/nor_gl.jpg", d, "n"), tex(f"{PH_T}/{d}/arm.jpg", d, "l"), ton, rm, 1.0, birikinti=bir)
+        elif slot in FLAT:
+            col, rg, em = FLAT[slot]
+            r = mi("MI_" + PFX + slot, M, None, None, None, col, rg, 0.0, em)
+        else:
+            dfi, nfi, afi = ph_find(slot, "diff"), ph_find(slot, "nor_gl"), ph_find(slot, "arm")
+            if dfi:
+                sub = "PH"
+                if "chainlink_fence_wire" in slot:
+                    r = mi("MI_" + PFX + slot, MM, tex(dfi, sub, "c"), tex(nfi, sub, "n"), tex(afi, sub, "l"), (1, 1, 1), 1.0, 1.0, maskealfa=0.0, maskerenk=2.0)
+                else:
+                    tn = (0.42, 0.44, 0.48) if "Barrel" in slot else (0.8, 0.8, 0.8)   # patlayıcı kırmızı variller fazla doygun
+                    r = mi("MI_" + PFX + slot, M, tex(dfi, sub, "c"), tex(nfi, sub, "n"), tex(afi, sub, "l"), tn, 1.0, 1.0)
+        made[slot] = r; log("MI", slot, "→", r.get_name() if r else "YOK")
+        return r
+    # statik mesh'lere ata
+    for p in eal.list_assets(os.environ.get("SISLI_DST", "/Game/Sisli/Ortam"), recursive=True):
+        a = eal.load_asset(p)
+        if not isinstance(a, unreal.StaticMesh): continue
+        for i, sm in enumerate(a.get_editor_property("static_materials")):
+            slot = str(sm.get_editor_property("material_slot_name"))
+            r = material_for(slot)
+            if r: a.set_material(i, r)
+        eal.save_loaded_asset(a)
+    # --- karakter ---
+    C = "/Game/Sisli/Cocuk"
+    sk = eal.load_asset(C + "/SK_Cocuk")
+    CH = {
+        "Ten_Mat": lambda: mi("MI_Cocuk_Ten", M, None, None, None, (0.58, 0.47, 0.42), 0.55, 0.0),
+        "M_Maske": lambda: mi("MI_Cocuk_Maske", M, eal.load_asset(C + "/T_Maske_D"), None, None, (1, 1, 1), 0.72, 0.0),
+        "male_worksuit01_Mat": lambda: mi("MI_Cocuk_Tulum", M, eal.load_asset(C + "/T_male_worksuit01_Mat_D"), eal.load_asset(C + "/male_worksuit01_normal"), None, (1, 1, 1), 0.88, 0.0),
+        "shoes03_Mat": lambda: mi("MI_Cocuk_Bot", M, eal.load_asset(C + "/shoes03_diffuse"), None, None, (0.8, 0.8, 0.8), 0.45, 0.0),
+        "Sac_Mat": lambda: mi("MI_Cocuk_Sac", MM, eal.load_asset(C + "/T_Sac_Mat_D"), None, None, (1, 1, 1), 0.6, 0.0, maskealfa=1.0, maskerenk=0.0),
+        "Goz_Mat": lambda: mi("MI_Cocuk_Goz", M, eal.load_asset(C + "/brown_eye"), None, None, (0.6, 0.6, 0.6), 0.15, 0.0),
+        "M_Kayis": lambda: mi("MI_Cocuk_Kayis", M, None, None, None, (0.05, 0.035, 0.025), 0.55, 0.0),
+    }
+    nm = eal.load_asset(C + "/male_worksuit01_normal")
+    nm.set_editor_property("compression_settings", unreal.TextureCompressionSettings.TC_NORMALMAP); nm.set_editor_property("srgb", False); eal.save_loaded_asset(nm)
+    mats = sk.get_editor_property("materials")
+    for s in mats:
+        slot = str(s.get_editor_property("material_slot_name"))
+        f = CH.get(slot)
+        log("karakter slot", slot, "atandı" if f else "ATLANDI")
+        if f: s.set_editor_property("material_interface", f())
+    sk.set_editor_property("materials", mats)
+    eal.save_loaded_asset(sk)
+    eal.save_directory("/Game/Sisli", only_if_is_dirty=True, recursive=True)
+    log("TAMAM")
+except Exception:
+    log("HATA", traceback.format_exc())
+open("C:/Users/Onur/Sisli/Unreal/Scripts/malzeme_kur_out.txt", "w", encoding="utf-8").write("\n".join(OUT))

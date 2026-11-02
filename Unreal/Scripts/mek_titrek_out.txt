@@ -1,0 +1,16 @@
+TAMAM BP_Titrek
+(event EventBeginPlay)
+
+(event Collision|EventActorBeginOverlap (OtherActor))
+
+(event EventTick (DeltaSeconds)
+  (bind _karanlik (|GetKaranlik))
+  (bind _temelsiddet (|GetTemelSiddet))
+  (bind _isik (|GetIsik))
+  (if (> _karanlik 0.0)
+    (|SetKaranlik (- _karanlik DeltaSeconds))
+    (Rendering|Components|Light|SetIntensity _isik (* _temelsiddet (Math|Random|RandomFloatInRange 0.02 0.25)))
+    (elif (< (Math|Random|RandomFloatInRange 0.0 1.0) (|GetSans))
+      (|SetKaranlik (Math|Random|RandomFloatInRange 0.04 0.35))
+      (else
+        (Rendering|Components|Light|SetIntensity _isik (* _temelsiddet (Math|Random|RandomFloatInRange 0.92 1.0)))))))

@@ -1,0 +1,10 @@
+*.uasset binary
+*.umap binary
+*.blend binary
+*.png binary
+*.jpg binary
+*.wav binary
+*.fbx binary
+*.exr binary
+*.sh text eol=lf
+*.py text eol=lf

@@ -1,0 +1,20 @@
+00:01.500  blend            | Read blend: "C:\Users\Onur\Sisli\Blender\cocuk_v2.blend"
+00:02.281  render           | Saved: 'C:\Users\Onur\AppData\Local\Temp\claude\C--Users-Onur\c05057a4-94ba-4cf9-b28d-6d4149e5668e\scratchpad\goz_0.png'
+00:02.375  render           | Saved: 'C:\Users\Onur\AppData\Local\Temp\claude\C--Users-Onur\c05057a4-94ba-4cf9-b28d-6d4149e5668e\scratchpad\goz_1.png'
+00:02.453  render           | Saved: 'C:\Users\Onur\AppData\Local\Temp\claude\C--Users-Onur\c05057a4-94ba-4cf9-b28d-6d4149e5668e\scratchpad\goz_2.png'
+00:02.531  render           | Saved: 'C:\Users\Onur\AppData\Local\Temp\claude\C--Users-Onur\c05057a4-94ba-4cf9-b28d-6d4149e5668e\scratchpad\goz_son.png'
+BlenderMCP addon registered
+GOZ ölçüm 0 {'sol': np.float64(-1.83), 'sag': np.float64(2.33)} mm
+GOZ çevrildi sol 6.15°
+GOZ çevrildi sag -7.85°
+GOZ ölçüm 1 {'sol': np.float64(-0.51), 'sag': np.float64(0.74)} mm
+GOZ çevrildi sol 1.72°
+GOZ çevrildi sag -2.48°
+GOZ ölçüm 2 {'sol': np.float64(-0.17), 'sag': np.float64(0.3)} mm
+GOZ çevrildi sol 0.56°
+GOZ çevrildi sag -0.99°
+GOZ son {'sol': np.float64(-0.07), 'sag': np.float64(0.08)} mm
+BlenderMCP addon unregistered
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:37:34)
+
+Blender quit

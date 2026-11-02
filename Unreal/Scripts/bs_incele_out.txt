@@ -1,0 +1,62 @@
+== BS_Idle_Walk_Run_Cocuk BlendSpace
+  eksen 0 Direction min -180 max 180
+  eksen 1 Speed min 0 max 600
+  eksen 2 None min 0 max 100
+  örnek <Struct 'Vector' (0x0000023961236548) {x: 0.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Fwd_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239612365E8) {x: -45.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Fwd_Left_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E248) {x: -90.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Left_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E1C8) {x: 45.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Fwd_Right_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E548) {x: 90.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Right_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E708) {x: -180.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E888) {x: 180.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E8C8) {x: -135.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd_Left_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724A8C8) {x: 135.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd_Right_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724AF88) {x: 0.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Fwd_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724AE08) {x: -45.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Fwd_Left_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E608) {x: 45.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Fwd_Right_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EDC8) {x: -90.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Left_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724ECC8) {x: 90.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Right_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EE48) {x: 180.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EC08) {x: -180.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EF08) {x: -135.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd_Left_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x0000023961236688) {x: 135.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd_Right_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EE08) {x: 0.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EC08) {x: 45.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EFC8) {x: 90.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EE48) {x: 135.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724ECC8) {x: 180.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724ED08) {x: -45.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EDC8) {x: -90.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724E488) {x: -135.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+  örnek <Struct 'Vector' (0x00000239E724EA88) {x: -180.000000, y: 0.000000, z: 0.000000}> → MM_Idle_Cocuk hız 1.00
+== BS_Idle_Walk_Run BlendSpace
+  eksen 0 Direction min -180 max 180
+  eksen 1 Speed min 0 max 600
+  eksen 2 None min 0 max 100
+  örnek <Struct 'Vector' (0x00000239EEC54688) {x: 0.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Fwd hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54488) {x: -45.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Fwd_Left hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC533C8) {x: -90.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Left hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54448) {x: 45.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Fwd_Right hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC538C8) {x: 90.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Right hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54608) {x: -180.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54348) {x: 180.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54208) {x: -135.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd_Left hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54588) {x: 135.000000, y: 300.000000, z: 0.000000}> → MF_Unarmed_Walk_Bwd_Right hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC542C8) {x: 0.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Fwd hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC53D08) {x: -45.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Fwd_Left hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC532C8) {x: 45.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Fwd_Right hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54248) {x: -90.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Left hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC545C8) {x: 90.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Right hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54288) {x: 180.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54C48) {x: -180.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC545C8) {x: -135.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd_Left hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54248) {x: 135.000000, y: 600.000000, z: 0.000000}> → MF_Unarmed_Jog_Bwd_Right hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54188) {x: 0.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC53D08) {x: 45.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC542C8) {x: 90.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54588) {x: 135.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54548) {x: 180.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC53C88) {x: -45.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54348) {x: -90.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC54608) {x: -135.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00
+  örnek <Struct 'Vector' (0x00000239EEC538C8) {x: -180.000000, y: 0.000000, z: 0.000000}> → MM_Idle hız 1.00

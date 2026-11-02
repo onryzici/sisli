@@ -1,0 +1,54 @@
+add_get_member_variable_node: x.add_get_member_variable_node(member_name, class_path="") -> K2Node_VariableGet
+Creates a UK2Node_VariableGet for the member variable identified by MemberName
+by default this will use the current class, provided a ClassPath to work
+with a different class
+
+Args:
+    member_name (Name): 
+    class_path (str): 
+
+Returns:
+    K2Node_VariableGet:
+add_set_member_variable_node: x.add_set_member_variable_node(member_name, class_path="") -> K2Node_VariableSet
+Creates a UK2Node_VariableSet for the member variable identified by MemberName
+by default this will use the current class, provided a ClassPath to work
+with a different class
+
+Args:
+    member_name (Name): 
+    class_path (str): 
+
+Returns:
+    K2Node_VariableSet:
+create_node_from_name: x.create_node_from_name(node_with_category, location, context_pins, declaring_class=None) -> EdGraphNode
+Creates node from Catagory and Name. Example:
+                     - 'Development|PrintString'
+                     - 'Utilities|Operators|Add'
+                     - 'Utilities|FlowControl|Branch'
+                     - 'Math|Vector|VectorLength'
+When multiple actions share the same Category|Name string , pass DeclaringClass to
+select the action belonging to that specific class.
+
+Args:
+    node_with_category (str): 
+    location (Vector2D): 
+    context_pins (Array[BlueprintGraphPin]
+add_custom_event_node: x.add_custom_event_node(event_name) -> K2Node_CustomEvent
+Creates a UK2Node_CustomEvent node if the current graph is an event graph, using the provided EventName
+
+Args:
+    event_name (str): 
+
+Returns:
+    K2Node_CustomEvent:
+add_component_bound_event_node: x.add_component_bound_event_node(component, event_name) -> K2Node_ComponentBoundEvent
+Creates a UK2Node_ComponentBoundEvent in this event graph for the given component
+and delegate event name. Returns the existing node if one already exists.
+The graph must be an event graph.
+
+Args:
+    component (ActorComponent): 
+    event_name (Name): 
+
+Returns:
+    K2Node_ComponentBoundEvent:

@@ -1,0 +1,8 @@
+IK_UE4 oto tanım True
+zincirler ['Spine', 'Neck', 'Head', 'LeftLeg', 'LeftFoot', 'LeftClavicle', 'LeftArm', 'LeftThumb', 'LeftIndex', 'LeftMiddle', 'LeftRing', 'LeftPinky', 'RightLeg', 'RightFoot', 'RightClavicle', 'RightArm', 'RightThumb', 'RightIndex', 'RightMiddle', 'RightRing', 'RightPinky']
+ANIM /Game/Sisli/Cocuk/Anim/MCO/MOB1_Crouch_Idle_V2_IPC_Cocuk süre 4.67
+ANIM /Game/Sisli/Cocuk/Anim/MCO/MOB1_CrouchWalk_F_IPC_Cocuk süre 1.20
+ANIM /Game/Sisli/Cocuk/Anim/MCO/SCR_Walk_Scared_Fwd_Look_Left_Loop_IP_Cocuk süre 9.97
+ANIM /Game/Sisli/Cocuk/Anim/MCO/SCR_Walk_Scared_Fwd_Look_Right_Loop_IP_Cocuk süre 8.77
+çömelme açık True 42.0
+TAMAM

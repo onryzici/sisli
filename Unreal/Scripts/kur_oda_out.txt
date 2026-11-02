@@ -1,0 +1,8 @@
+su malzemesi SM_Mim_M_Su
+mesh 39
+ÖZELLİK YOK SkyLightComponent.specular_scale: SkyLightComponent: Failed to find property 'specular_scale' for attribute 'specular_scale' on 'SkyLi
+kamera1 yaw -72.5 pitch -8.7
+kamera2 yaw -85.1 pitch -4.9
+kamera3 yaw -85.6 pitch -5.7
+sınır 6
+kaydedildi /Game/Sisli/Maps/L_Oda1

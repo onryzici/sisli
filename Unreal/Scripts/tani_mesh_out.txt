@@ -1,0 +1,10 @@
+physics asset: None
+asset bounds origin <Struct 'Vector' (0x000001D6263043C0) {x: 0.000000, y: 15.810304, z: 64.000000}> extent <Struct 'Vector' (0x000001D6263043D8) {x: 61.090267, y: 24.008036, z: 64.000000}>
+imported bounds <Struct 'BoxSphereBounds' (0x000001D626304440) {origin: {x: 0.000000, y: 15.810304, z: 64.000000}, box_extent: {x: 61.090267, y: 24.008036, z: 64.000000}, sphere_radius: 91.675550}>
+actor bounds origin <Struct 'Vector' (0x000001D622A6D5F0) {x: 100.000000, y: 215.810304, z: 64.000000}> extent <Struct 'Vector' (0x000001D6160122C0) {x: 61.090267, y: 24.008036, z: 64.000000}>
+kemik root dünya <Struct 'Vector' (0x000001D6160110A0) {x: 100.000000, y: 200.000000, z: 0.000000}>
+kemik Hips dünya <Struct 'Vector' (0x000001D6160110A0) {x: 100.000000, y: 200.888407, z: 63.515878}>
+kemik Head dünya <Struct 'Vector' (0x000001D6160110A0) {x: 100.000000, y: 204.050710, z: 109.597515}>
+kemik LeftFoot dünya <Struct 'Vector' (0x000001D6160110A0) {x: 114.731166, y: 201.129386, z: 7.024782}>
+kemik RightHand dünya <Struct 'Vector' (0x000001D6160110A0) {x: 53.603117, y: 201.244605, z: 94.464164}>
+bones: ['root', 'Hips', 'Spine', 'Spine1', 'Spine2', 'Neck', 'Head', 'LeftShoulder', 'LeftArm', 'LeftForeArm', 'LeftHand', 'RightShoulder', 'RightArm', 'RightForeArm', 'RightHand', 'LeftUpLeg', 'LeftLeg', 'LeftFoot', 'LeftToeBase', 'RightUpLeg', 'RightLeg', 'RightFoot', 'RightToeBase']

@@ -1,0 +1,19 @@
+Kamera FOV 78.0
+SpringArm serbest SpringArmComponent_0__A9892D03
+Kamera FOV 78.0
+mesh dekal almaz
+kaydet True
+ESLEME IMC_Default IA_Jump SpaceBar
+ESLEME IMC_Default IA_Jump Gamepad_FaceButton_Bottom
+ESLEME IMC_Default IA_Move W
+ESLEME IMC_Default IA_Move S
+ESLEME IMC_Default IA_Move A
+ESLEME IMC_Default IA_Move D
+ESLEME IMC_Default IA_Move Up
+ESLEME IMC_Default IA_Move Down
+ESLEME IMC_Default IA_Move Right
+ESLEME IMC_Default IA_Move Left
+ESLEME IMC_Default IA_Move Gamepad_Left2D
+ESLEME IMC_Default IA_Look Gamepad_Right2D
+ESLEME IMC_MouseLook IA_MouseLook Mouse2D
+TAMAM

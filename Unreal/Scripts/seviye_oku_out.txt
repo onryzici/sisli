@@ -1,0 +1,10 @@
+Bak_Anahtarlar | {}
+Incele_Defter | {'Yaricap': '130.0', 'TestOto': 'True', 'Al': 'True', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_defter1.SW_defter1' (0x0000018", 'AlinanAktor': "<Object '/Game/Uyanis/Maps/L_Uyanis.L_Uyanis:PersistentLevel"}
+YatakhaneKapisi | {'Yaricap': '190.0', 'TestOto': 'True', 'Anahtar': "<Object '/Game/Uyanis/Maps/L_Uyanis.L_Uyanis:PersistentLevel"}
+Incele_Ela_Yatak | {'Yaricap': '120.0', 'TestOto': 'True', 'Al': 'False', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_yatak_ela.SW_yatak_ela' (0x000", 'AlinanAktor': 'None'}
+Incele_Ben_Yatak | {'Yaricap': '120.0', 'TestOto': 'True', 'Al': 'False', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_yatak_ben.SW_yatak_ben' (0x000", 'AlinanAktor': 'None'}
+Incele_Ela_Dolap | {'Yaricap': '125.0', 'TestOto': 'True', 'Al': 'False', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_dolap_ela.SW_dolap_ela' (0x000", 'AlinanAktor': 'None'}
+Incele_Kurallar | {'Yaricap': '150.0', 'TestOto': 'True', 'Al': 'False', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_kurallar1.SW_kurallar1' (0x000", 'AlinanAktor': 'None'}
+Incele_Pencere | {'Yaricap': '190.0', 'TestOto': 'True', 'Al': 'False', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_pencere.SW_pencere' (0x0000018", 'AlinanAktor': 'None'}
+Incele_Bak_Dolap | {'Yaricap': '110.0', 'TestOto': 'True', 'Al': 'False', 'Satir1': "<Object '/Game/Uyanis/Yazi/SW_dolap_bakici.SW_dolap_bakici' ", 'AlinanAktor': 'None'}
+TestYuru | {'Son': '6.0', 'H4': "<Struct 'Vector' (0x00000188FEAF34C8) {x: 790.000000, y: 247"}

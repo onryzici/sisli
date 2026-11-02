@@ -1,0 +1,163 @@
+00:02.344  blend            | Read blend: "C:\Users\Onur\Sisli\Blender\oda1.blend"
+BlenderMCP addon registered
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_drawer_cabinet.fbx'
+export finished in 0.0658 sec.
+PH drawer_cabinet 1 20013
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_painted_wooden_shelves.fbx'
+export finished in 0.0143 sec.
+PH painted_wooden_shelves 1 548
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_Rockingchair_01.fbx'
+export finished in 0.0418 sec.
+PH Rockingchair_01 1 10017
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_Barrel_01.fbx'
+export finished in 0.0649 sec.
+PH Barrel_01 5 10260
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_old_military_crate.fbx'
+export finished in 0.2184 sec.
+PH old_military_crate 2 33268
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_wooden_crate_01.fbx'
+export finished in 0.0971 sec.
+PH wooden_crate_01 3 14058
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_cardboard_box_01.fbx'
+export finished in 0.1639 sec.
+PH cardboard_box_01 2 17514
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_trashbag.fbx'
+export finished in 0.0549 sec.
+PH trashbag 3 7446
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_old_tyre.fbx'
+export finished in 0.0298 sec.
+PH old_tyre 2 4180
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_Lantern_01.fbx'
+export finished in 0.1055 sec.
+PH Lantern_01 1 20670
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_cit.fbx'
+export finished in 0.0457 sec.
+PH cit 2 5444
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_concrete_road_barrier.fbx'
+export finished in 0.3514 sec.
+PH concrete_road_barrier 2 63028
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_covered_car.fbx'
+export finished in 0.1014 sec.
+PH covered_car 1 10722
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_metal_trash_can.fbx'
+export finished in 0.0652 sec.
+PH metal_trash_can 1 9282
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_utility_box_01.fbx'
+export finished in 0.0249 sec.
+PH utility_box_01 1 3629
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_street_lamp_01.fbx'
+export finished in 0.3000 sec.
+PH street_lamp_01 3 52992
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_elektrik_diregi.fbx'
+export finished in 0.1054 sec.
+PH elektrik_diregi 1 27566
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_lifebuoy.fbx'
+export finished in 0.0509 sec.
+PH lifebuoy 1 5966
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_PH_dead_tree_trunk_02.fbx'
+export finished in 0.2988 sec.
+PH dead_tree_trunk_02 1 46112
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_brown_planks_05_islak.fbx'
+export finished in 0.0143 sec.
+MIM  M_brown_planks_05_islak 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_black_painted_planks.fbx'
+export finished in 0.0139 sec.
+MIM  M_black_painted_planks 143 1144
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_brick_4.fbx'
+export finished in 0.0173 sec.
+MIM  M_brick_4 26 3196
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_clay_plaster.fbx'
+export finished in 0.0127 sec.
+MIM  M_clay_plaster 9 72
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_concrete_layers.fbx'
+export finished in 0.0176 sec.
+MIM  M_concrete_layers 4 1300
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Ip.fbx'
+export finished in 0.0063 sec.
+MIM  M_Ip 1 16
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Siluet.fbx'
+export finished in 0.0081 sec.
+MIM  M_Siluet 55 560
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_brown_mud_02.fbx'
+export finished in 0.0145 sec.
+MIM  M_brown_mud_02 2 16
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_cobblestone_floor_05_islak.fbx'
+export finished in 0.0110 sec.
+MIM  M_cobblestone_floor_05_islak 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_concrete_floor_worn_001.fbx'
+export finished in 0.0106 sec.
+MIM  M_concrete_floor_worn_001 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Su.fbx'
+export finished in 0.0067 sec.
+MIM  M_Su 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Cam.fbx'
+export finished in 0.0114 sec.
+MIM  M_Cam 35 140
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_ceramic_roof_01.fbx'
+export finished in 0.0159 sec.
+MIM  M_ceramic_roof_01 21 126
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_SicakCam.fbx'
+export finished in 0.0080 sec.
+MIM  M_SicakCam 2 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_blue_plaster_weathered.fbx'
+export finished in 0.0150 sec.
+MIM  M_blue_plaster_weathered 3 24
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Tel.fbx'
+export finished in 0.0083 sec.
+MIM  M_Tel 1 192
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Tel_001.fbx'
+export finished in 0.0078 sec.
+MIM  M_Tel.001 1 192
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_Tel_002.fbx'
+export finished in 0.0137 sec.
+MIM  M_Tel.002 1 192
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_brown_planks_05.fbx'
+export finished in 0.0147 sec.
+MIM  M_brown_planks_05 9 72
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Oda1\\SM_Mim_M_GokKarti.fbx'
+export finished in 0.0069 sec.
+MIM  M_GokKarti 1 4
+TAMAM 20 malzeme
+BlenderMCP addon unregistered
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:37:34)
+
+Blender quit

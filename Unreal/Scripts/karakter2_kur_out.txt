@@ -1,0 +1,8 @@
+sınır merkez <Struct 'Vector' (0x0000022E07E31200) {x: -0.011564, y: -3.143982, z: 78.713182}> yarı boyut <Struct 'Vector' (0x0000022E07E31218) {x: 55.087889, y: 15.811907, z: 78.663603}>
+IK_Cocuk2 oto tanım True
+IK_Cocuk2 kök pelvis zincir ['Spine', 'Neck', 'Head', 'LeftLeg', 'LeftFoot', 'LeftClavicle', 'LeftArm', 'LeftThumb', 'LeftIndex', 'LeftMiddle', 'LeftRing', 'LeftPinky', 'RightLeg', 'RightFoot', 'RightClavicle', 'RightArm', 'RightThumb', 'RightIndex', 'RightMiddle', 'RightRing', 'RightPinky']
+ABP+yürüme 21
+MCO ['/Game/Sisli/Cocuk2/Anim/MCO/MOB1_Crouch_Idle_V2_IPC_Cocuk2', '/Game/Sisli/Cocuk2/Anim/MCO/MOB1_CrouchWalk_F_IPC_Cocuk2', '/Game/Sisli/Cocuk2/Anim/MCO/SCR_Walk_Scared_Fwd_Look_Left_Loop_IP_Cocuk2', '/Game/Sisli/Cocuk2/Anim/MCO/SCR_Walk_Scared_Fwd_Look_Right_Loop_IP_Cocuk2']
+ABP <Object '/Game/Sisli/Cocuk2/Anim/ABP_Unarmed_Cocuk2.ABP_Unarmed_Cocuk2' (0x0000022E1A22CB00) Class 'AnimBlueprint'>
+boy 157.3 kapsül yarı 79.7 mesh z -82.2
+TAMAM

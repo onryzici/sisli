@@ -1,0 +1,149 @@
+# Sisli — Sahne 1 "Yarık Oda": REANIMAL dilinde diorama. Kamera önden-alçak, sahne bir tiyatro dekoru gibi kurulur.
+# Yıkık oda + arka duvarda sisle aydınlanan büyük yarık + dışarıda harabe siluetleri (devrik su kulesi, eğik direk, kırık duvarlar).
+# kullanım: blender -b -P oda1.py -- --blend oda1.blend --json oda1.json
+import sys
+argv = sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else []
+def opt(k, d=None): return argv[argv.index(k)+1] if k in argv else d
+import bpy
+bpy.ops.wm.read_factory_settings(use_empty=True)
+exec(open("C:/Users/Onur/Sisli/Blender/ortak.py", encoding="utf-8").read())
+random.seed(21)
+ISARET = {}
+
+M_TAHTA = pbr("brown_planks_05", 1.0, (0.42, 0.38, 0.34), 1.0, puddles=True)
+M_TUGLA = pbr("brick_4", 1.0, (0.36, 0.34, 0.33))
+M_SIVA = pbr("clay_plaster", 1.0, (0.32, 0.34, 0.37))
+M_MOLOZ = pbr("concrete_layers", 1.0, (0.33, 0.33, 0.35))
+M_CAMUR = pbr("brown_mud_02", 1.0, (0.35, 0.36, 0.38))
+M_KIRIS = pbr("black_painted_planks", 1.0, (0.55, 0.52, 0.5))
+M_KOYU = flat("M_Siluet", (0.02, 0.022, 0.025), 0.9)
+M_IP = flat("M_Ip", (0.05, 0.04, 0.03), 0.8)
+M_GOK = flat("M_GokKarti", (0.0, 0.0, 0.0), 1.0, (0.55, 0.7, 0.85), 1.0)
+
+def rot_box(name, p, size, rot, mat, uv=1.0):
+    o = box(name, -size[0] / 2, size[0] / 2, -size[1] / 2, size[1] / 2, -size[2] / 2, size[2] / 2, mat, uv)
+    o.location = p; o.rotation_euler = Euler([math.radians(a) for a in rot]); return o
+
+# ---------------- oda ----------------
+RX, RY, H = 11.0, 8.0, 5.5
+box("Zemin", 0, RX, -1.0, RY, -0.12, 0.0, M_TAHTA, 2.0)
+# gevşek tahtalar (zeminde kırık, çapraz)
+for k in range(9):
+    rot_box(f"Tahta{k}", (random.uniform(1, 10), random.uniform(0.5, 7), 0.03), (random.uniform(0.8, 2.2), 0.16, 0.03), (0, random.uniform(-4, 4), random.uniform(-40, 40)), M_KIRIS)
+# arka duvar + düzensiz yarık (boolean)
+duvar = box("ArkaDuvar", 0, RX, RY, RY + 0.32, 0, H, M_TUGLA, 2.0)
+bm = bmesh.new(); N = 30; cx, cz = 6.2, 2.75
+pts = []
+for k in range(N):
+    a = 2 * math.pi * k / N
+    r = random.uniform(0.78, 1.12)
+    x = cx + 2.8 * r * math.cos(a); z = max(0.55, cz + 2.05 * r * math.sin(a))
+    pts.append((x, z))
+fv = [bm.verts.new((x, RY - 0.4, z)) for x, z in pts]; bv = [bm.verts.new((x, RY + 0.7, z)) for x, z in pts]
+bm.faces.new(fv); bm.faces.new(list(reversed(bv)))
+for k in range(N):
+    bm.faces.new((fv[k], fv[(k + 1) % N], bv[(k + 1) % N], bv[k]))
+bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+me = bpy.data.meshes.new("YarikKesici"); bm.to_mesh(me); bm.free()
+kes = bpy.data.objects.new("YarikKesici", me); col.objects.link(kes)
+b = duvar.modifiers.new("yarik", 'BOOLEAN'); b.object = kes; b.operation = 'DIFFERENCE'; b.solver = 'MANIFOLD'
+with bpy.context.temp_override(object=duvar, active_object=duvar, selected_objects=[duvar]):
+    bpy.ops.object.modifier_apply(modifier="yarik")
+bpy.data.objects.remove(kes); uv_cube(duvar, 2.0)
+# yarığın kenarında kırık çıtalar (lath) — dikey, eğri, kenardan sarkan
+for k in range(16):
+    x, z = random.choice(pts)
+    if z < 0.9: continue
+    ln = random.uniform(0.7, 2.4)
+    rot_box(f"Cita{k}", (x + random.uniform(-0.2, 0.2), RY + random.uniform(-0.05, 0.15), z + random.uniform(-0.4, 0.6)),
+            (0.07, 0.035, ln), (random.uniform(-10, 10), random.uniform(-25, 25), 0), M_KIRIS)
+# sol duvar (kapı boşluğu) ve sağ yıkık duvar
+for (y0, y1, z0, z1) in ((0, 2.6, 0, H), (3.8, RY, 0, H), (2.6, 3.8, 2.3, H)):
+    box("SolDuvar", -0.3, 0, y0, y1, z0, z1, M_SIVA, 2.0)
+y = 0.0
+while y < RY:
+    w = random.uniform(0.6, 1.4); h = random.uniform(1.4, 4.6)
+    box("SagDuvar", RX, RX + 0.3, y, min(RY, y + w), 0, h, M_TUGLA, 2.0); y += w
+# tavan: kirişler + ön yarıda tahta tavan (kadrajın üstünü karartır)
+for k in range(7):
+    yy = 0.4 + k * 1.25
+    box("Kiris", 0, RX, yy, yy + 0.22, H - 0.3, H - 0.05, M_KIRIS, 1.0)
+box("TavanOn", 0, RX, -1.0, 3.2, H - 0.05, H + 0.1, M_KIRIS, 2.0)
+rot_box("SarkanTahta", (8.6, 3.6, 4.4), (2.6, 0.25, 0.06), (0, 35, 12), M_KIRIS)
+# ---------------- moloz ----------------
+def moloz(name, cx, cy, rx, ry, h, nb):
+    bm = bmesh.new(); bmesh.ops.create_uvsphere(bm, u_segments=24, v_segments=12, radius=1.0)
+    for v in bm.verts:
+        n = 1 + random.uniform(-0.12, 0.12)
+        v.co = Vector((v.co.x * rx * n, v.co.y * ry * n, v.co.z * h * n))
+    bmesh.ops.delete(bm, geom=[v for v in bm.verts if v.co.z < -0.05], context='VERTS')
+    me = bpy.data.meshes.new(name); bm.to_mesh(me); bm.free()
+    o = bpy.data.objects.new(name, me); col.objects.link(o); o.location = (cx, cy, 0); me.materials.append(M_MOLOZ); uv_cube(o, 2.0); o["static"] = True
+    bricks = []
+    for k in range(nb):
+        a = random.uniform(0, 2 * math.pi); r = math.sqrt(random.random()) * 0.95
+        dx, dy = r * math.cos(a) * rx, r * math.sin(a) * ry
+        dz = h * math.sqrt(max(0.0, 1 - (dx / rx) ** 2 - (dy / ry) ** 2))
+        bricks.append(rot_box(f"{name}_T{k}", (cx + dx, cy + dy, dz + 0.02), (0.22, 0.105, 0.07), (random.uniform(-40, 40), random.uniform(-40, 40), random.uniform(0, 180)), M_TUGLA, 0.5))
+    bpy.ops.object.select_all(action='DESELECT')
+    for t in bricks: t.select_set(True)
+    bpy.context.view_layer.objects.active = bricks[0]; bpy.ops.object.join(); bpy.context.object["static"] = True
+moloz("MolozIc", 6.0, 7.2, 2.6, 1.3, 0.9, 140)
+moloz("MolozDis", 6.5, 10.5, 4.5, 2.6, 1.6, 120)
+moloz("MolozOn", 8.8, -2.2, 2.2, 1.0, 0.55, 40)
+moloz("MolozSol", 1.0, 6.8, 1.2, 1.0, 0.5, 40)
+# ---------------- ön plan çerçevesi (kameraya yakın, karanlık siluet) ----------------
+box("OnDirek", 0.25, 0.65, -1.6, -1.2, 0, H + 0.2, M_KIRIS, 1.0)
+rot_box("DevrikKiris", (0.2, -1.4, 2.0), (4.4, 0.3, 0.3), (0, -62, 8), M_KIRIS)
+# ---------------- eşyalar ----------------
+crate = load_ph("old_military_crate", prefix="old_military_crate", join_name="old_military_crate"); wcrate = load_ph("wooden_crate_01")
+barrel = load_ph("Barrel_01"); boxc = load_ph("cardboard_box_01"); rock = load_ph("Rockingchair_01")
+drw = load_ph("drawer_cabinet", prefix="drawer_cabinet", join_name="drawer_cabinet"); bag = load_ph("trashbag"); tyre = load_ph("old_tyre")
+lantern = load_ph("Lantern_01", prefix="Lantern_01", join_name="Lantern_01"); shelf = load_ph("painted_wooden_shelves")
+put(drw, (0.35, 5.6, 0.0), rotz=-90); put(shelf, (0.3, 1.4, 0.0), rotz=-90)
+put(rock, (2.2, 6.4, 0.0), rotz=150)
+put(barrel, (10.1, 6.6, 0.0)); put(barrel, (9.4, 7.1, 0.0), rotz=40); put(barrel, (10.0, 5.6, 0.28), rotx=90, rotz=80)
+put(crate, (9.6, 2.0, 0.0), rotz=12); put(wcrate, (8.8, 1.2, 0.0), rotz=-20); put(wcrate, (8.9, 1.25, 0.33), rotz=5)
+put(boxc, (3.6, 7.2, 0.0), rotz=20); put(boxc, (4.1, 7.0, 0.0), rotz=-15); put(bag, (8.2, 7.3, 0.0), rotz=30); put(tyre, (5.0, 1.0, 0.08), rotx=90, rotz=60)
+# tavandan sarkan fener (ip + fener)
+LX, LY, LZ = 3.4, 4.2, 2.35
+put(lantern, (LX, LY, LZ), rotz=15)
+bpy.ops.mesh.primitive_cylinder_add(vertices=8, radius=0.012, depth=H - 0.3 - (LZ + 0.29), location=(LX, LY, (LZ + 0.29 + H - 0.3) / 2))
+ip = bpy.context.object; ip.name = "Ip"; ip.data.materials.append(M_IP); ip["static"] = True
+ISARET["fener"] = [LX, LY, LZ + 0.16]
+# ---------------- dışarısı ----------------
+box("DisZemin", -40, 50, RY + 0.3, 110, -0.15, -0.02, M_CAMUR, 4.0)
+for k in range(10):   # kırık duvarlar (siluet)
+    x0 = random.uniform(-25, 30); y0 = random.uniform(20, 55); w = random.uniform(3, 9); h0 = random.uniform(3, 11)
+    for j in range(int(w / 1.2)):
+        hj = h0 * random.uniform(0.6, 1.0)
+        box(f"Harabe{k}_{j}", x0 + j * 1.2, x0 + (j + 1) * 1.2, y0, y0 + 0.5, 0, hj, M_KOYU, 0)
+# devrik su kulesi (merkez siluet)
+SX, SY = 9.0, 30.0
+kule = []
+for dx in (-1.5, 1.5):
+    for dy in (-1.5, 1.5):
+        kule.append(rot_box("KuleAyak", (SX + dx, SY + dy, 4.5), (0.3, 0.3, 9.0), (0, 0, 0), M_KOYU, 0))
+bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=2.4, depth=3.2, location=(SX, SY, 10.6)); t = bpy.context.object; t.data.materials.append(M_KOYU); kule.append(t)
+bpy.ops.mesh.primitive_cone_add(vertices=24, radius1=2.6, radius2=0.2, depth=1.6, location=(SX, SY, 13.0)); t = bpy.context.object; t.data.materials.append(M_KOYU); kule.append(t)
+bpy.ops.object.select_all(action='DESELECT')
+for t in kule: t.select_set(True)
+bpy.context.view_layer.objects.active = kule[0]; bpy.ops.object.join(); kul = bpy.context.object; kul.name = "SuKulesi"; kul["static"] = True
+sc.cursor.location = (SX, SY, 0); bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
+kul.rotation_euler = (math.radians(-9), math.radians(14), 0)
+# eğik elektrik direği + teller, dik ölü ağaç
+pole = load_ph("modular_electricity_poles", prefix="preset_02", join_name="elektrik_diregi")
+put(pole, (1.5, 17.0, 0.0), rotz=80, roty=-11)
+wire(Vector((0.4, 17.2, 5.3)), Vector((-14.0, 26.0, 6.0)), 1.1, "TelA"); wire(Vector((2.6, 16.9, 5.4)), Vector((22.0, 24.0, 7.5)), 1.4, "TelB")
+trunk = load_ph("dead_tree_trunk_02"); put(trunk, (-4.0, 22.0, -0.1), roty=-82, rotz=20)
+# gökyüzü kartı: yarığın arkasında aydınlık sis (REANIMAL arka ışığı)
+quad("GokKarti", "y", 95.0, -1, -80, 90, -5, 60, M_GOK)
+
+# ---------------- oyun işaretleri ----------------
+ISARET["kamera"] = [1.6, -6.4, 3.3]; ISARET["kamera_hedef"] = [6.3, 8.5, 0.9]
+ISARET["baslangic"] = [2.6, 1.6, 0.0]
+ISARET["yarik_merkez"] = [cx, RY, cz]
+if opt("--json"):
+    json.dump({"isaret": ISARET}, open(opt("--json"), "w"), indent=1)
+if opt("--blend"): bpy.ops.wm.save_as_mainfile(filepath=opt("--blend"))
+print("ODA1 TAMAM", len([o for o in bpy.data.objects if o.get("static")]), "statik")

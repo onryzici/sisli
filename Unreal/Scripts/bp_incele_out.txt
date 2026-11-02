@@ -1,0 +1,15 @@
+GM pawn: <Object '/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter_C' (0x000001FAA4602A00) Class 'BlueprintGeneratedClass'>
+mesh asset: <Object '/Game/Sisli/Cocuk/SK_Cocuk.SK_Cocuk' (0x000001FAA5151400) Class 'SkeletalMesh'> anim: <Object '/Game/Sisli/Cocuk/Anim/ABP_Unarmed_Cocuk.ABP_Unarmed_Cocuk_C' (0x000001FA16621C00) Class 'AnimBlueprintGeneratedClass'> loc: <Struct 'Vector' (0x000001FAA4D9C980) {x: 0.000000, y: 0.000000, z: -64.000000}> rot: <Struct 'Rotator' (0x000001FAA4D9C998) {pitch: 0.000000, yaw: 270.000000, roll: -0.000000}> vis: True hidden: False
+capsule: 64.0 24.0
+SCS Default__BP_ThirdPersonCharacter_C (BP_ThirdPersonCharacter_C) outer=/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+SCS CollisionCylinder (CapsuleComponent) outer=Default__BP_ThirdPersonCharacter_C
+SCS Arrow (ArrowComponent) outer=Default__BP_ThirdPersonCharacter_C
+SCS CameraComponent_0__CCE3C0B4 (CameraComponent) outer=BP_ThirdPersonCharacter_C fov=35.0 pawnrot=False attach=None
+SCS CharacterMesh0 (SkeletalMeshComponent) outer=Default__BP_ThirdPersonCharacter_C
+SCS SpringArmComponent_0__A9892D03 (SpringArmComponent) outer=BP_ThirdPersonCharacter_C arm=1500.0 rot=<Struct 'Rotator' (0x000001FA30987198) {pitch: -32.000000, yaw: 0.000000, roll: 0.000000}> pawnrot=True
+SCS CameraComponent_0__CCE3C0B4 (CameraComponent) outer=BP_ThirdPersonCharacter_C fov=35.0 pawnrot=False attach=None
+SCS CharMoveComp (CharacterMovementComponent) outer=Default__BP_ThirdPersonCharacter_C
+CDO comp CollisionCylinder CapsuleComponent
+CDO comp Arrow ArrowComponent
+CDO comp CharMoveComp CharacterMovementComponent
+CDO comp CharacterMesh0 SkeletalMeshComponent

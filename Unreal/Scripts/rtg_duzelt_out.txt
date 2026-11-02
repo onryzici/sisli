@@ -1,0 +1,9 @@
+RTG_UE4_Cocuk2 [('Pelvis Motion', True), ('FK Chains', True), ('Run IK Rig', False), ('Root Motion', True), ('Remap Curves', True)]
+RTG_Manny_Cocuk2 [('Pelvis Motion', True), ('FK Chains', True), ('Run IK Rig', False), ('Root Motion', True), ('Remap Curves', True)]
+aktarılan ['MOB1_Stand_Relaxed_Idle_v2_IPC_C2', 'MOB1_Walk_F_IPC_C2', 'MOB1_Jog_F_IPC_C2', 'MOB1_Crouch_Idle_V2_IPC_C2', 'MOB1_CrouchWalk_F_IPC_C2']
+aktarılan ['MM_Jump_C2', 'MM_Fall_Loop_C2', 'MM_Land_C2']
+MM_Jump süre 0.867
+MM_Fall_Loop süre 3.000
+MM_Land süre 0.867
+BS [(0, 300, 'MOB1_Walk_F_IPC_C2'), (-45, 300, 'MOB1_Walk_F_IPC_C2'), (-90, 300, 'MOB1_CrouchWalk_F_IPC_C2'), (45, 300, 'MOB1_Walk_F_IPC_C2'), (90, 300, 'MOB1_CrouchWalk_F_IPC_C2'), (-180, 300, 'MOB1_CrouchWalk_F_IPC_C2'), (180, 300, 'MOB1_CrouchWalk_F_IPC_C2'), (-135, 300, 'MOB1_CrouchWalk_F_IPC_C2'), (135, 300, 'MOB1_CrouchWalk_F_IPC_C2'), (0, 600, 'MOB1_Jog_F_IPC_C2'), (-45, 600, 'MOB1_Jog_F_IPC_C2'), (45, 600, 'MOB1_Jog_F_IPC_C2'), (-90, 600, 'MOB1_CrouchWalk_F_IPC_C2'), (90, 600, 'MOB1_CrouchWalk_F_IPC_C2'), (180, 600, 'MOB1_CrouchWalk_F_IPC_C2'), (-180, 600, 'MOB1_CrouchWalk_F_IPC_C2'), (-135, 600, 'MOB1_CrouchWalk_F_IPC_C2'), (135, 600, 'MOB1_CrouchWalk_F_IPC_C2'), (0, 0, 'MOB1_Stand_Relaxed_Idle_v2_IPC_C2'), (45, 0, 'MOB1_Stand_Relaxed_Idle_v2_IPC_C2'), (90, 0, 'MOB1_Crouch_Idle_V2_IPC_C2'), (135, 0, 'MOB1_Crouch_Idle_V2_IPC_C2'), (180, 0, 'MOB1_Crouch_Idle_V2_IPC_C2'), (-45, 0, 'MOB1_Stand_Relaxed_Idle_v2_IPC_C2'), (-90, 0, 'MOB1_Crouch_Idle_V2_IPC_C2'), (-135, 0, 'MOB1_Crouch_Idle_V2_IPC_C2'), (-180, 0, 'MOB1_Crouch_Idle_V2_IPC_C2')]
+TAMAM

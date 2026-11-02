@@ -1,0 +1,4 @@
+MM_Idle_Cocuk Left | önkol 0° | avuç yönü 0° | boğum ekseni 2° | Index 0°/0° | Middle 0°/0° | Thumb 0°/0°
+MM_Idle_Cocuk Right | önkol 0° | avuç yönü 0° | boğum ekseni 2° | Index 0°/0° | Middle 0°/0° | Thumb 0°/0°
+MF_Unarmed_Wal Left | önkol 0° | avuç yönü 0° | boğum ekseni 0° | Index 0°/0° | Middle 0°/0° | Thumb 0°/0°
+MF_Unarmed_Wal Right | önkol 0° | avuç yönü 0° | boğum ekseni 0° | Index 0°/0° | Middle 0°/0° | Thumb 0°/0°

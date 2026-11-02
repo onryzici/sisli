@@ -1,0 +1,8 @@
+doku0 srgb=True sik=<TextureCompressionSettings.TC_DEFAULT: 0> boyut=2048
+doku1 srgb=False sik=<TextureCompressionSettings.TC_DEFAULT: 0> boyut=2048
+doku2 srgb=False sik=<TextureCompressionSettings.TC_NORMALMAP: 1> boyut=2048
+param NormalTexture = bunk_bed_texture_2
+param BaseColorTexture = bunk_bed_texture_0
+param MetallicRoughnessTexture = bunk_bed_texture_1
+ebeveyn /InterchangeAssets/gltf/MaterialInstances/MI_Default_Opaque_DS.MI_Default_Opaque_DS
+M_Sisli nanite ok

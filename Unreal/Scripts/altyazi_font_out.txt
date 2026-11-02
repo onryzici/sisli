@@ -1,0 +1,3 @@
+kopya True
+önce 10 <FontCacheType.RUNTIME: 1>
+sonra 46

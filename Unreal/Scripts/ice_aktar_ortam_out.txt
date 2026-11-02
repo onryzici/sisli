@@ -1,0 +1,125 @@
+İÇE Oda1\SM_Mim_M_Cam.fbx 2
+İÇE Oda1\SM_Mim_M_GokKarti.fbx 2
+İÇE Oda1\SM_Mim_M_Ip.fbx 2
+İÇE Oda1\SM_Mim_M_SicakCam.fbx 2
+İÇE Oda1\SM_Mim_M_Siluet.fbx 2
+İÇE Oda1\SM_Mim_M_Su.fbx 2
+İÇE Oda1\SM_Mim_M_Tel.fbx 2
+İÇE Oda1\SM_Mim_M_Tel_001.fbx 2
+İÇE Oda1\SM_Mim_M_Tel_002.fbx 2
+İÇE Oda1\SM_Mim_M_black_painted_planks.fbx 3
+İÇE Oda1\SM_Mim_M_blue_plaster_weathered.fbx 3
+İÇE Oda1\SM_Mim_M_brick_4.fbx 3
+İÇE Oda1\SM_Mim_M_brown_mud_02.fbx 3
+İÇE Oda1\SM_Mim_M_brown_planks_05.fbx 3
+İÇE Oda1\SM_Mim_M_brown_planks_05_islak.fbx 3
+İÇE Oda1\SM_Mim_M_ceramic_roof_01.fbx 3
+İÇE Oda1\SM_Mim_M_clay_plaster.fbx 3
+İÇE Oda1\SM_Mim_M_cobblestone_floor_05_islak.fbx 3
+İÇE Oda1\SM_Mim_M_concrete_floor_worn_001.fbx 3
+İÇE Oda1\SM_Mim_M_concrete_layers.fbx 3
+İÇE Oda1\SM_PH_Barrel_01.fbx 4
+İÇE Oda1\SM_PH_Lantern_01.fbx 5
+İÇE Oda1\SM_PH_Rockingchair_01.fbx 4
+İÇE Oda1\SM_PH_cardboard_box_01.fbx 4
+İÇE Oda1\SM_PH_cit.fbx 7
+İÇE Oda1\SM_PH_concrete_road_barrier.fbx 4
+İÇE Oda1\SM_PH_covered_car.fbx 5
+İÇE Oda1\SM_PH_dead_tree_trunk_02.fbx 4
+İÇE Oda1\SM_PH_drawer_cabinet.fbx 4
+İÇE Oda1\SM_PH_elektrik_diregi.fbx 7
+İÇE Oda1\SM_PH_lifebuoy.fbx 4
+İÇE Oda1\SM_PH_metal_trash_can.fbx 8
+İÇE Oda1\SM_PH_old_military_crate.fbx 4
+İÇE Oda1\SM_PH_old_tyre.fbx 4
+İÇE Oda1\SM_PH_painted_wooden_shelves.fbx 4
+İÇE Oda1\SM_PH_street_lamp_01.fbx 6
+İÇE Oda1\SM_PH_trashbag.fbx 4
+İÇE Oda1\SM_PH_utility_box_01.fbx 4
+İÇE Oda1\SM_PH_wooden_crate_01.fbx 4
+SM /Game/Sisli/Oda1/SM_Mim_M_black_painted_planks/SM_Mim_M_black_painted_planks malz: ['/Game/Sisli/Oda1/SM_Mim_M_black_painted_planks/M_black_painted_planks']
+SM /Game/Sisli/Oda1/SM_Mim_M_blue_plaster_weathered/SM_Mim_M_blue_plaster_weathered malz: ['/Game/Sisli/Oda1/SM_Mim_M_blue_plaster_weathered/M_blue_plaster_weathered']
+SM /Game/Sisli/Oda1/SM_Mim_M_brick_4/SM_Mim_M_brick_4 malz: ['/Game/Sisli/Oda1/SM_Mim_M_brick_4/M_brick_4']
+SM /Game/Sisli/Oda1/SM_Mim_M_brown_mud_02/SM_Mim_M_brown_mud_02 malz: ['/Game/Sisli/Oda1/SM_Mim_M_brown_mud_02/M_brown_mud_02']
+SM /Game/Sisli/Oda1/SM_Mim_M_brown_planks_05/SM_Mim_M_brown_planks_05 malz: ['/Game/Sisli/Oda1/SM_Mim_M_brown_planks_05/M_brown_planks_05']
+SM /Game/Sisli/Oda1/SM_Mim_M_brown_planks_05_islak/SM_Mim_M_brown_planks_05_islak malz: ['/Game/Sisli/Oda1/SM_Mim_M_brown_planks_05_islak/M_brown_planks_05_islak']
+SM /Game/Sisli/Oda1/SM_Mim_M_Cam/SM_Mim_M_Cam malz: ['/Game/Sisli/Oda1/SM_Mim_M_Cam/M_Cam']
+SM /Game/Sisli/Oda1/SM_Mim_M_ceramic_roof_01/SM_Mim_M_ceramic_roof_01 malz: ['/Game/Sisli/Oda1/SM_Mim_M_ceramic_roof_01/M_ceramic_roof_01']
+SM /Game/Sisli/Oda1/SM_Mim_M_clay_plaster/SM_Mim_M_clay_plaster malz: ['/Game/Sisli/Oda1/SM_Mim_M_clay_plaster/M_clay_plaster']
+SM /Game/Sisli/Oda1/SM_Mim_M_cobblestone_floor_05_islak/SM_Mim_M_cobblestone_floor_05_islak malz: ['/Game/Sisli/Oda1/SM_Mim_M_cobblestone_floor_05_islak/M_cobblestone_floor_05_islak']
+SM /Game/Sisli/Oda1/SM_Mim_M_concrete_floor_worn_001/SM_Mim_M_concrete_floor_worn_001 malz: ['/Game/Sisli/Oda1/SM_Mim_M_concrete_floor_worn_001/M_concrete_floor_worn_001']
+SM /Game/Sisli/Oda1/SM_Mim_M_concrete_layers/SM_Mim_M_concrete_layers malz: ['/Game/Sisli/Oda1/SM_Mim_M_concrete_layers/M_concrete_layers']
+SM /Game/Sisli/Oda1/SM_Mim_M_GokKarti/SM_Mim_M_GokKarti malz: ['/Game/Sisli/Oda1/SM_Mim_M_GokKarti/M_GokKarti']
+SM /Game/Sisli/Oda1/SM_Mim_M_Ip/SM_Mim_M_Ip malz: ['/Game/Sisli/Oda1/SM_Mim_M_Ip/M_Ip']
+SM /Game/Sisli/Oda1/SM_Mim_M_SicakCam/SM_Mim_M_SicakCam malz: ['/Game/Sisli/Oda1/SM_Mim_M_SicakCam/M_SicakCam']
+SM /Game/Sisli/Oda1/SM_Mim_M_Siluet/SM_Mim_M_Siluet malz: ['/Game/Sisli/Oda1/SM_Mim_M_Siluet/M_Siluet']
+SM /Game/Sisli/Oda1/SM_Mim_M_Su/SM_Mim_M_Su malz: ['/Game/Sisli/Oda1/SM_Mim_M_Su/M_Su']
+SM /Game/Sisli/Oda1/SM_Mim_M_Tel/SM_Mim_M_Tel malz: ['/Game/Sisli/Oda1/SM_Mim_M_Tel/M_Tel']
+SM /Game/Sisli/Oda1/SM_Mim_M_Tel_001/SM_Mim_M_Tel_001 malz: ['/Game/Sisli/Oda1/SM_Mim_M_Tel_001/M_Tel_001']
+SM /Game/Sisli/Oda1/SM_Mim_M_Tel_002/SM_Mim_M_Tel_002 malz: ['/Game/Sisli/Oda1/SM_Mim_M_Tel_002/M_Tel_002']
+SM /Game/Sisli/Oda1/SM_PH_Barrel_01/SM_PH_Barrel_01 malz: ['/Game/Sisli/Oda1/SM_PH_Barrel_01/Barrel_01']
+SM /Game/Sisli/Oda1/SM_PH_cardboard_box_01/SM_PH_cardboard_box_01 malz: ['/Game/Sisli/Oda1/SM_PH_cardboard_box_01/cardboard_box_01']
+SM /Game/Sisli/Oda1/SM_PH_cit/SM_PH_cit malz: ['/Game/Sisli/Oda1/SM_PH_cit/modular_chainlink_fence_wire', '/Game/Sisli/Oda1/SM_PH_cit/modular_chainlink_fence_posts']
+SM /Game/Sisli/Oda1/SM_PH_concrete_road_barrier/SM_PH_concrete_road_barrier malz: ['/Game/Sisli/Oda1/SM_PH_concrete_road_barrier/concrete_road_barrier']
+SM /Game/Sisli/Oda1/SM_PH_covered_car/SM_PH_covered_car malz: ['/Game/Sisli/Oda1/SM_PH_covered_car/covered_car_001', '/Game/Sisli/Oda1/SM_PH_covered_car/covered_car']
+SM /Game/Sisli/Oda1/SM_PH_dead_tree_trunk_02/SM_PH_dead_tree_trunk_02 malz: ['/Game/Sisli/Oda1/SM_PH_dead_tree_trunk_02/dead_tree_trunk_02']
+SM /Game/Sisli/Oda1/SM_PH_drawer_cabinet/SM_PH_drawer_cabinet malz: ['/Game/Sisli/Oda1/SM_PH_drawer_cabinet/drawer_cabinet']
+SM /Game/Sisli/Oda1/SM_PH_elektrik_diregi/SM_PH_elektrik_diregi malz: ['/Game/Sisli/Oda1/SM_PH_elektrik_diregi/modular_electricity_poles_pieces', '/Game/Sisli/Oda1/SM_PH_elektrik_diregi/modular_electricity_poles']
+SM /Game/Sisli/Oda1/SM_PH_Lantern_01/SM_PH_Lantern_01 malz: ['/Game/Sisli/Oda1/SM_PH_Lantern_01/Lantern_01_brass', '/Game/Sisli/Oda1/SM_PH_Lantern_01/Lantern_01_glass']
+SM /Game/Sisli/Oda1/SM_PH_lifebuoy/SM_PH_lifebuoy malz: ['/Game/Sisli/Oda1/SM_PH_lifebuoy/lifebuoy']
+SM /Game/Sisli/Oda1/SM_PH_metal_trash_can/SM_PH_metal_trash_can malz: ['/Game/Sisli/Oda1/SM_PH_metal_trash_can/metal_trash_can', '/Game/Sisli/Oda1/SM_PH_metal_trash_can/metal_trash_can_rust', '/Game/Sisli/Oda1/SM_PH_metal_trash_can/metal_trash_can_rust_001']
+SM /Game/Sisli/Oda1/SM_PH_old_military_crate/SM_PH_old_military_crate malz: ['/Game/Sisli/Oda1/SM_PH_old_military_crate/military_crate_m_01']
+SM /Game/Sisli/Oda1/SM_PH_old_tyre/SM_PH_old_tyre malz: ['/Game/Sisli/Oda1/SM_PH_old_tyre/old_tyre']
+SM /Game/Sisli/Oda1/SM_PH_painted_wooden_shelves/SM_PH_painted_wooden_shelves malz: ['/Game/Sisli/Oda1/SM_PH_painted_wooden_shelves/painted_wooden_shelves']
+SM /Game/Sisli/Oda1/SM_PH_Rockingchair_01/SM_PH_Rockingchair_01 malz: ['/Game/Sisli/Oda1/SM_PH_Rockingchair_01/Rockingchair_01']
+SM /Game/Sisli/Oda1/SM_PH_street_lamp_01/SM_PH_street_lamp_01 malz: ['/Game/Sisli/Oda1/SM_PH_street_lamp_01/street_lamp_01', '/Game/Sisli/Oda1/SM_PH_street_lamp_01/street_lamp_01_glass', '/Game/Sisli/Oda1/SM_PH_street_lamp_01/street_lamp_01_bulb']
+SM /Game/Sisli/Oda1/SM_PH_trashbag/SM_PH_trashbag malz: ['/Game/Sisli/Oda1/SM_PH_trashbag/trashbag']
+SM /Game/Sisli/Oda1/SM_PH_utility_box_01/SM_PH_utility_box_01 malz: ['/Game/Sisli/Oda1/SM_PH_utility_box_01/utility_box_01']
+SM /Game/Sisli/Oda1/SM_PH_wooden_crate_01/SM_PH_wooden_crate_01 malz: ['/Game/Sisli/Oda1/SM_PH_wooden_crate_01/wooden_crate_01']
+MI M_black_painted_planks parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_blue_plaster_weathered parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_brick_4 parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_brown_mud_02 parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_brown_planks_05 parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_brown_planks_05_islak parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_Cam parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 84.64)]
+MI M_ceramic_roof_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_clay_plaster parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_cobblestone_floor_05_islak parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_concrete_floor_worn_001 parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_concrete_layers parent: FBXLegacyPhongSurfaceMaterial tex: [('NormalMap', 'nor_gl')] skaler: [('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI M_GokKarti parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 0.0)]
+MI M_Ip parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 4.0)]
+MI M_SicakCam parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 49.0)]
+MI M_Siluet parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 1.0)]
+MI M_Su parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 90.25)]
+MI M_Tel parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 25.0)]
+MI M_Tel_001 parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 25.0)]
+MI M_Tel_002 parent: FBXLegacyPhongSurfaceMaterial tex: [] skaler: [('Shininess', 25.0)]
+MI Barrel_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'Barrel_01_explosive_diff_1k'), ('NormalMap', 'Barrel_01_explosive_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI cardboard_box_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'cardboard_box_01_diff_1k'), ('NormalMap', 'cardboard_box_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI modular_chainlink_fence_posts parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'modular_chainlink_fence_posts_diff_1k'), ('NormalMap', 'modular_chainlink_fence_posts_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI modular_chainlink_fence_wire parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'modular_chainlink_fence_wire_diff_1k'), ('NormalMap', 'modular_chainlink_fence_wire_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('DiffuseColorMapTilingU', 0.25), ('DiffuseColorMapTilingV', 0.25), ('NormalMapWeight', 1.0), ('NormalMapTilingU', 0.25), ('NormalMapTilingV', 0.25), ('Shininess', 25.0)]
+MI concrete_road_barrier parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'concrete_road_barrier_diff_1k'), ('NormalMap', 'concrete_road_barrier_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI covered_car parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'covered_car_diff_1k'), ('NormalMap', 'covered_car_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI covered_car_001 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'covered_car_diff_1k'), ('NormalMap', 'covered_car_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI dead_tree_trunk_02 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'dead_tree_trunk_02_diff_1k'), ('NormalMap', 'dead_tree_trunk_02_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI drawer_cabinet parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'drawer_cabinet_diff_1k'), ('NormalMap', 'drawer_cabinet_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI modular_electricity_poles parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'modular_electricity_poles_diff_1k'), ('NormalMap', 'modular_electricity_poles_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI modular_electricity_poles_pieces parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'modular_electricity_poles_pieces_diff_1k'), ('NormalMap', 'modular_electricity_poles_pieces_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI Lantern_01_brass parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'Lantern_01_brass_diff_1k'), ('NormalMap', 'Lantern_01_brass_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI Lantern_01_glass parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'Lantern_01_brass_diff_1k'), ('NormalMap', 'Lantern_01_brass_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI lifebuoy parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'lifebuoy_diff_1k'), ('NormalMap', 'lifebuoy_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI metal_trash_can parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'metal_trash_can_diff_1k'), ('NormalMap', 'metal_trash_can_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI metal_trash_can_rust parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'metal_trash_can_rust_diff_1k'), ('NormalMap', 'metal_trash_can_rust_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI metal_trash_can_rust_001 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'metal_trash_can_rust_diff_1k'), ('NormalMap', 'metal_trash_can_rust_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI military_crate_m_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'old_military_crate_diff_1k'), ('NormalMap', 'old_military_crate_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI old_tyre parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'old_tyre_diff_1k'), ('NormalMap', 'old_tyre_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI painted_wooden_shelves parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'painted_wooden_shelves_diff_1k'), ('NormalMap', 'painted_wooden_shelves_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI Rockingchair_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'Rockingchair_01_diff_1k'), ('NormalMap', 'Rockingchair_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI street_lamp_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'street_lamp_01_diff_1k'), ('NormalMap', 'street_lamp_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI street_lamp_01_bulb parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'street_lamp_01_diff_1k'), ('NormalMap', 'street_lamp_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI street_lamp_01_glass parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'street_lamp_01_diff_1k'), ('NormalMap', 'street_lamp_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI trashbag parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'trashbag_diff_1k'), ('NormalMap', 'trashbag_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI utility_box_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'utility_box_01_diff_1k'), ('NormalMap', 'utility_box_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]
+MI wooden_crate_01 parent: FBXLegacyPhongSurfaceMaterial tex: [('DiffuseColorMap', 'wooden_crate_01_diff_1k'), ('NormalMap', 'wooden_crate_01_nor_gl_1k')] skaler: [('DiffuseColorMapWeight', 1.0), ('NormalMapWeight', 1.0), ('Shininess', 25.0)]

@@ -1,0 +1,11 @@
+MOB1_Walk_F_IPC | iskelet /Game/MCO_Mocap_Basics/Character/Mesh/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton | kare 35 | f0 rot A3A22C0) {pitch: -0.678463, yaw: -6.762451, roll: 4.706194}> ; f8 rot A3A2220) {pitch: 5.339043, yaw: 16.186575, roll: 4.960929}> ; f17 rot A3A22C0) {pitch: 7.038468, yaw: -25.563047, roll: 20.520803}
+MOB1_Walk_F_IPC_Cocuk2 | iskelet /Game/Characters/Mannequin_UE4/Meshes/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton | kare 35 | f0 rot A3A2220) {pitch: -1.036925, yaw: -10.241026, roll: -3.828811 ; f8 rot A3A22C0) {pitch: 5.005572, yaw: 13.250145, roll: -3.709556}> ; f17 rot A3A2220) {pitch: 7.120035, yaw: -29.514471, roll: 11.770193}
+MOB1_Crouch_Idle_V2_IPC_Cocuk2 | iskelet /Game/Characters/Mannequin_UE4/Meshes/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton | kare 139 | f0 rot A3A22C0) {pitch: 19.495277, yaw: -69.720009, roll: 38.274925 ; f34 rot A3A2220) {pitch: 20.499739, yaw: -67.596062, roll: 38.690132 ; f69 rot A3A22C0) {pitch: 19.072845, yaw: -70.179810, roll: 39.174416
+MF_Unarmed_Walk_Fwd_Cocuk2 | iskelet /Game/Characters/Mannequin_UE4/Meshes/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton | kare 45 | f0 rot A3A2220) {pitch: -8.427709, yaw: -15.266063, roll: 1.012692} ; f11 rot A3A22C0) {pitch: -1.507095, yaw: -13.584367, roll: -5.960324 ; f22 rot A3A2220) {pitch: -7.710873, yaw: -20.292850, roll: 1.179903}
+BS iskelet /Game/Characters/Mannequin_UE4/Meshes/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton örnek 6
+  örnek MOB1_Stand_Relaxed_Idle_v2_IPC_Cocuk2 <Struct 'Vector' (0x000001E919EA7BC8) {x: 0.000000, y: 0.000000, z: 0.000000}>
+  örnek MOB1_Walk_F_IPC_Cocuk2 <Struct 'Vector' (0x000001E919EA7B08) {x: 150.000000, y: 0.000000, z: 0.000000}>
+  örnek MOB1_Jog_F_IPC_Cocuk2 <Struct 'Vector' (0x000001E919EA7AC8) {x: 320.000000, y: 0.000000, z: 0.000000}>
+  örnek MOB1_Crouch_Idle_V2_IPC_Cocuk2 <Struct 'Vector' (0x000001E919EA7A48) {x: 0.000000, y: 1.000000, z: 0.000000}>
+  örnek MOB1_CrouchWalk_F_IPC_Cocuk2 <Struct 'Vector' (0x000001E919EA7988) {x: 95.000000, y: 1.000000, z: 0.000000}>
+  örnek MOB1_CrouchWalk_F_IPC_Cocuk2 <Struct 'Vector' (0x000001E919EA7908) {x: 320.000000, y: 1.000000, z: 0.000000}>

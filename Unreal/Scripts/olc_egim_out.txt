@@ -1,0 +1,6 @@
+MM_Idle_Cocuk kare 0 | gövde M 6.1 C 6.1 | boyun M 23.7 C 23.7 | kafa M 11.7 C -178.0
+MM_Idle_Cocuk kare 10 | gövde M 5.7 C 5.7 | boyun M 22.5 C 22.5 | kafa M 10.4 C -179.2
+MM_Idle_Cocuk kare 20 | gövde M 5.6 C 5.6 | boyun M 22.0 C 22.0 | kafa M 9.6 C -180.0
+MF_Unarmed_Walk_Fwd_Cocuk kare 0 | gövde M 6.6 C 6.6 | boyun M 25.5 C 25.5 | kafa M 17.6 C -172.6
+MF_Unarmed_Walk_Fwd_Cocuk kare 10 | gövde M 5.9 C 5.9 | boyun M 23.8 C 23.8 | kafa M 12.7 C -177.6
+MF_Unarmed_Walk_Fwd_Cocuk kare 20 | gövde M 4.7 C 4.7 | boyun M 21.9 C 21.9 | kafa M 10.6 C -179.5

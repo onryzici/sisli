@@ -1,0 +1,20 @@
+# Unreal üretilen / önbellek
+Unreal/Intermediate/
+Unreal/Saved/
+Unreal/DerivedDataCache/
+Unreal/Binaries/
+*.log
+*.blend1
+Araclar/pil_dusuk.flag
+
+# Lisanslı üçüncü taraf varlıklar (Fab Standard / kişisel lisans) — public repoda paylaşılamaz. Geri kurmak: VARLIKLAR.md
+Unreal/Content/child_test_2/
+Unreal/Content/MCO_Mocap_Basics/
+Unreal/Content/Uyanis/Fab/
+Unreal/Content/Sisli/Cocuk2/Anim/MCO/
+Unreal/Content/Sisli/Cocuk2/Anim/MCO2/
+Unreal/Source/
+Unreal/MCO_Mocap_Basics.png
+
+# İndirmeler (Poly Haven / MakeHuman CC0 — betiklerle yeniden indirilebilir)
+Indir/

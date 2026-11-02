@@ -1,0 +1,6 @@
+post_edit_change yok 'BlendSpace' object has no attribute 'post_edit_change'
+BS örnek 6 eksenler [('Hiz', 0.0, 320.0), ('Comel', 0.0, 1.0)]
+MOB1_Walk_F_IPC süre 1.20
+MOB1_Jog_F_IPC süre 0.80
+MOB1_CrouchWalk_F_IPC süre 1.20
+TAMAM

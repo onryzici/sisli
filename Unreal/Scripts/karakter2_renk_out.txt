@@ -1,0 +1,16 @@
+Std_Skin_Head_HQ_Inst.Base Color Tint ok
+Std_Skin_Body_HQ_Inst.Base Color Tint ok
+Std_Skin_Arm_HQ_Inst.Base Color Tint ok
+Std_Skin_Leg_HQ_Inst.Base Color Tint ok
+Std_Nails_HQ_Inst.Base Color Tint ok
+hair1_Transparency_LWHQ_Inst.Base Color Tint ok
+hair1_Transparency_LWHQ_Inst.Root Color ok
+hair1_Transparency_LWHQ_Inst.End Color ok
+hair1_Transparency_LWHQ_Inst.Highlight A Color ok
+hair1_Transparency_LWHQ_Inst.Highlight B Color ok
+Scalp1_Transparency_Inst.Base Color Tint ok
+Std_Eyelash_LWHQ_Inst.Base Color Tint ok
+Basic_T_shirts_Inst.Base Color Tint ok
+Waistband_Inst.Base Color Tint ok
+Basketball_Shoes_Inst.Base Color Tint ok
+TAMAM

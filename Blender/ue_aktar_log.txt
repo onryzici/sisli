@@ -1,0 +1,243 @@
+00:01.156  blend            | Read blend: "C:\Users\Onur\Sisli\Blender\sahne.blend"
+BlenderMCP addon registered
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_street_lamp_01.fbx'
+export finished in 0.1330 sec.
+PH street_lamp_01 4 70656
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_covered_car.fbx'
+export finished in 0.0490 sec.
+PH covered_car 3 32166
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_concrete_road_barrier.fbx'
+export finished in 0.1426 sec.
+PH concrete_road_barrier 2 63028
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_metal_trash_can_rust.fbx'
+export finished in 0.0210 sec.
+PH metal_trash_can_rust 2 9848
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_trashbag.fbx'
+export finished in 0.0207 sec.
+PH trashbag 4 9928
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_Barrel_01.fbx'
+export finished in 0.0205 sec.
+PH Barrel_01 6 12312
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_old_military_crate.fbx'
+export finished in 0.0530 sec.
+PH old_military_crate 2 33268
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_wooden_crate_01.fbx'
+export finished in 0.0308 sec.
+PH wooden_crate_01 4 18744
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_old_tyre.fbx'
+export finished in 0.0142 sec.
+PH old_tyre 3 6270
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_utility_box_01.fbx'
+export finished in 0.0091 sec.
+PH utility_box_01 1 3629
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_dead_tree_trunk.fbx'
+export finished in 0.1420 sec.
+PH dead_tree_trunk 1 52593
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_street_rat.fbx'
+export finished in 0.0647 sec.
+PH street_rat 1 31937
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_elektrik_diregi.fbx'
+export finished in 0.0871 sec.
+PH elektrik_diregi 3 82698
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_iskele.fbx'
+export finished in 0.0772 sec.
+PH iskele 1 41803
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_lifebuoy.fbx'
+export finished in 0.0156 sec.
+PH lifebuoy 1 5966
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_cit.fbx'
+export finished in 0.0196 sec.
+PH cit 4 10888
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_cit_kapi.fbx'
+export finished in 0.0261 sec.
+PH cit_kapi 1 19194
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_kepenk_kapi.fbx'
+export finished in 0.0078 sec.
+PH kepenk_kapi 4 2680
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_kepenk_pencere.fbx'
+export finished in 0.0081 sec.
+PH kepenk_pencere 4 2988
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_WoodenTable_01.fbx'
+export finished in 0.0058 sec.
+PH WoodenTable_01 1 1136
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_Rockingchair_01.fbx'
+export finished in 0.0165 sec.
+PH Rockingchair_01 1 10017
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_GothicCabinet_01.fbx'
+export finished in 0.0187 sec.
+PH GothicCabinet_01 1 12922
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_drawer_cabinet.fbx'
+export finished in 0.0285 sec.
+PH drawer_cabinet 1 20013
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_cardboard_box_01.fbx'
+export finished in 0.0555 sec.
+PH cardboard_box_01 3 26271
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_painted_wooden_shelves.fbx'
+export finished in 0.0069 sec.
+PH painted_wooden_shelves 1 548
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_small_wooden_table_01.fbx'
+export finished in 0.0086 sec.
+PH small_wooden_table_01 1 2249
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_Lantern_01.fbx'
+export finished in 0.0383 sec.
+PH Lantern_01 1 20670
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_hanging_industrial_lamp.fbx'
+export finished in 0.0183 sec.
+PH hanging_industrial_lamp 1 8971
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_concrete_road_barrier_02.fbx'
+export finished in 0.0852 sec.
+PH concrete_road_barrier_02 3 37497
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_dead_tree_trunk_02.fbx'
+export finished in 0.1004 sec.
+PH dead_tree_trunk_02 1 46112
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_PH_tree_stump_01.fbx'
+export finished in 0.0572 sec.
+PH tree_stump_01 1 22472
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Dyn_EvKapisi.fbx'
+export finished in 0.0055 sec.
+DİNAMİK EvKapisi
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Dyn_Anahtar.fbx'
+export finished in 0.0035 sec.
+DİNAMİK Anahtar
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Dyn_CitKapisi.fbx'
+export finished in 0.0122 sec.
+DİNAMİK CitKapisi
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Dyn_Sandik0.fbx'
+export finished in 0.0057 sec.
+DİNAMİK Sandik0
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Dyn_Sandik1.fbx'
+export finished in 0.0052 sec.
+DİNAMİK Sandik1
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_asphalt_03_islak.fbx'
+export finished in 0.0061 sec.
+MIM  M_asphalt_03_islak 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_cobblestone_floor_05_islak.fbx'
+export finished in 0.0044 sec.
+MIM  M_cobblestone_floor_05_islak 3 24
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_concrete_layers_001.fbx'
+export finished in 0.0066 sec.
+MIM  M_concrete_layers.001 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_Su.fbx'
+export finished in 0.0026 sec.
+MIM  M_Su 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_concrete_layers.fbx'
+export finished in 0.0059 sec.
+MIM  M_concrete_layers 5 40
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_ceramic_roof_01.fbx'
+export finished in 0.0055 sec.
+MIM  M_ceramic_roof_01 30 180
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_Cam.fbx'
+export finished in 0.0032 sec.
+MIM  M_Cam 84 336
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_Cerceve.fbx'
+export finished in 0.0031 sec.
+MIM  M_Cerceve 240 1000
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_brick_4.fbx'
+export finished in 0.0047 sec.
+MIM  M_brick_4 24 192
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_black_painted_planks.fbx'
+export finished in 0.0063 sec.
+MIM  M_black_painted_planks 6 48
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_blue_plaster_weathered.fbx'
+export finished in 0.0053 sec.
+MIM  M_blue_plaster_weathered 6 48
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_SicakCam.fbx'
+export finished in 0.0021 sec.
+MIM  M_SicakCam 1 4
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_Tel.fbx'
+export finished in 0.0044 sec.
+MIM  M_Tel 14 2688
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_Siluet.fbx'
+export finished in 0.0030 sec.
+MIM  M_Siluet 5 40
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_EvKesit_M_brick_4.fbx'
+export finished in 0.0049 sec.
+MIM EvKesit M_brick_4 2 16
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_clay_plaster.fbx'
+export finished in 0.0059 sec.
+MIM  M_clay_plaster 15 120
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_EvKesit_M_clay_plaster.fbx'
+export finished in 0.0060 sec.
+MIM EvKesit M_clay_plaster 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_brown_planks_05.fbx'
+export finished in 0.0060 sec.
+MIM  M_brown_planks_05 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_EvKesit_M_concrete_floor_worn_001.fbx'
+export finished in 0.0044 sec.
+MIM EvKesit M_concrete_floor_worn_001 1 8
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_EvKesit_M_ceramic_roof_01.fbx'
+export finished in 0.0065 sec.
+MIM EvKesit M_ceramic_roof_01 1 6
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_EvKesit_M_Cam.fbx'
+export finished in 0.0028 sec.
+MIM EvKesit M_Cam 4 16
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_black_painted_planks_001.fbx'
+export finished in 0.0054 sec.
+MIM  M_black_painted_planks.001 14 112
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Ortam\\SM_Mim_M_concrete_layers_002.fbx'
+export finished in 0.0062 sec.
+MIM  M_concrete_layers.002 3 160
+TAMAM 23 malzeme
+BlenderMCP addon unregistered
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:37:34)
+
+Blender quit

@@ -1,0 +1,17 @@
+00:01.500  blend            | Read blend: "C:\Users\Onur\Sisli\Blender\cocuk_v2_export.blend"
+00:02.360  render           | Saved: 'C:\Users\Onur\AppData\Local\Temp\claude\C--Users-Onur\c05057a4-94ba-4cf9-b28d-6d4149e5668e\scratchpad\goz2.png'
+BlenderMCP addon registered
+MESH male_worksuit01 ['male_worksuit01_Mat'] boyut (46.5, 20.2, 98.6)
+MESH shoes03 ['shoes03_Mat'] boyut (39.3, 19.0, 18.3)
+MESH Sac ['Sac_Mat'] boyut (20.3, 23.5, 21.1)
+MESH Gozler ['Goz_Mat'] boyut (9.5, 2.8, 3.4)
+MESH Kas ['Kas_Mat'] boyut (13.3, 4.0, 1.3)
+MESH Ten ['Ten_Mat'] boyut (122.2, 23.0, 36.9)
+GOZ merkez sol (3.2, -12.52, 114.26) sag (-3.2, -12.52, 114.26)
+GOZ yon sol (-0.19, -0.977, 0.096) sapma_x_derece -11.0
+GOZ yon sag (0.19, -0.977, 0.096) sapma_x_derece 11.0
+GOZ TAMAM C:/Users/Onur/AppData/Local/Temp/claude/C--Users-Onur/c05057a4-94ba-4cf9-b28d-6d4149e5668e/scratchpad/goz2.png
+BlenderMCP addon unregistered
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:37:34)
+
+Blender quit

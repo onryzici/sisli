@@ -1,0 +1,23 @@
+mesh sınır <Struct 'Vector' (0x000001A19AAAB180) {x: 0.000000, y: 15.810304, z: 64.000000}> <Struct 'Vector' (0x000001A19AAAB198) {x: 61.090279, y: 24.008036, z: 64.000000}> minZ 0.0
+ayak kemikleri ['LeftFoot', 'LeftToeBase', 'RightFoot', 'RightToeBase']
+ref {'LeftFoot': 7.0, 'LeftToeBase': 4.2, 'RightFoot': 7.0, 'RightToeBase': 4.2}
+MF_Unarmed_Jog_Bwd_Cocuk kare 45 min {'LeftFoot': 7.6, 'LeftToeBase': 3.8, 'RightFoot': 7.7, 'RightToeBase': 3.8}
+MF_Unarmed_Jog_Bwd_Left_Cocuk kare 45 min {'LeftFoot': 7.5, 'LeftToeBase': 3.9, 'RightFoot': 7.8, 'RightToeBase': 4.2}
+MF_Unarmed_Jog_Bwd_Right_Cocuk kare 45 min {'LeftFoot': 7.5, 'LeftToeBase': 3.9, 'RightFoot': 7.8, 'RightToeBase': 4.2}
+MF_Unarmed_Jog_Fwd_Cocuk kare 53 min {'LeftFoot': 8.1, 'LeftToeBase': 4.4, 'RightFoot': 6.7, 'RightToeBase': 3.9}
+MF_Unarmed_Jog_Fwd_Left_Cocuk kare 53 min {'LeftFoot': 8.1, 'LeftToeBase': 4.4, 'RightFoot': 6.7, 'RightToeBase': 3.8}
+MF_Unarmed_Jog_Fwd_Right_Cocuk kare 53 min {'LeftFoot': 8.1, 'LeftToeBase': 4.4, 'RightFoot': 6.7, 'RightToeBase': 3.9}
+MF_Unarmed_Jog_Left_Cocuk kare 46 min {'LeftFoot': 7.3, 'LeftToeBase': 3.5, 'RightFoot': 7.5, 'RightToeBase': 3.8}
+MF_Unarmed_Jog_Right_Cocuk kare 52 min {'LeftFoot': 6.9, 'LeftToeBase': 4.7, 'RightFoot': 7.4, 'RightToeBase': 4.4}
+MF_Unarmed_Walk_Bwd_Cocuk kare 64 min {'LeftFoot': 6.7, 'LeftToeBase': 4.0, 'RightFoot': 6.7, 'RightToeBase': 3.6}
+MF_Unarmed_Walk_Bwd_Left_Cocuk kare 64 min {'LeftFoot': 6.7, 'LeftToeBase': 4.0, 'RightFoot': 6.7, 'RightToeBase': 3.7}
+MF_Unarmed_Walk_Bwd_Right_Cocuk kare 64 min {'LeftFoot': 6.7, 'LeftToeBase': 4.0, 'RightFoot': 6.6, 'RightToeBase': 3.6}
+MF_Unarmed_Walk_Fwd_Cocuk kare 45 min {'LeftFoot': 6.0, 'LeftToeBase': 3.5, 'RightFoot': 6.1, 'RightToeBase': 3.6}
+MF_Unarmed_Walk_Fwd_Left_Cocuk kare 45 min {'LeftFoot': 6.0, 'LeftToeBase': 3.5, 'RightFoot': 6.1, 'RightToeBase': 3.7}
+MF_Unarmed_Walk_Fwd_Right_Cocuk kare 45 min {'LeftFoot': 6.0, 'LeftToeBase': 3.5, 'RightFoot': 6.1, 'RightToeBase': 3.6}
+MF_Unarmed_Walk_Left_Cocuk kare 46 min {'LeftFoot': 6.5, 'LeftToeBase': 3.2, 'RightFoot': 7.1, 'RightToeBase': 4.1}
+MF_Unarmed_Walk_Right_Cocuk kare 46 min {'LeftFoot': 6.5, 'LeftToeBase': 4.0, 'RightFoot': 6.8, 'RightToeBase': 4.0}
+MM_Fall_Loop_Cocuk kare 90 min {'LeftFoot': 22.5, 'LeftToeBase': 14.7, 'RightFoot': 22.6, 'RightToeBase': 13.6}
+MM_Idle_Cocuk kare 227 min {'LeftFoot': 6.6, 'LeftToeBase': 4.0, 'RightFoot': 6.3, 'RightToeBase': 3.5}
+MM_Jump_Cocuk kare 26 min {'LeftFoot': 3.2, 'LeftToeBase': -4.9, 'RightFoot': 15.7, 'RightToeBase': 5.3}
+MM_Land_Cocuk kare 26 min {'LeftFoot': 6.5, 'LeftToeBase': 3.6, 'RightFoot': 5.1, 'RightToeBase': 3.2}

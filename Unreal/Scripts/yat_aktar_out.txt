@@ -1,0 +1,19 @@
+ESYA Kapi /Game/Uyanis/Fab/Yat/Kapi/vmqifgedw_LOD0_TIER1_000 min [-77.1, -3.4, 0.0] max [77.1, 3.8, 223.2]
+ESYA Kapi /Game/Uyanis/Fab/Yat/Kapi/vmqifgedw_LOD0_TIER1_001 min [-0.5, -6.2, -108.8] max [73.7, 0.7, 108.8]
+ESYA Kapi /Game/Uyanis/Fab/Yat/Kapi/vmqifgedw_LOD0_TIER1_002 min [-73.4, -11.1, -108.8] max [0.8, 5.4, 108.8]
+ESYA Floresan /Game/Uyanis/Fab/Yat/Floresan/Fluorescent_Ceiling_Lamp_vidrear_High min [-6.4, -25.3, -8.0] max [6.4, 25.3, 0.0]
+ESYA Sarkit /Game/Uyanis/Fab/Yat/Sarkit/Metal_Pendant_Light_vgyide1aw_High min [-16.6, -17.7, -27.0] max [15.2, 14.5, 1.4]
+ESYA Defter /Game/Uyanis/Fab/Yat/Defter/Old_Book_wldocam_High min [-1.1, -6.8, -0.0] max [1.1, 6.7, 19.1]
+ESYA Tabure /Game/Uyanis/Fab/Yat/Tabure/Old_Metal_Stool_ukknbeyaw_High min [-19.4, -17.9, -0.4] max [19.7, 17.5, 58.0]
+ESYA Sandalye /Game/Uyanis/Fab/Yat/Sandalye/Dirty_Metal_Chair_ukikdggbw_High min [-24.0, -19.3, -0.3] max [22.8, 19.3, 80.3]
+ESYA Dolap /Game/Uyanis/Fab/Yat/Dolap/Rusty_Metal_Cabinet_vjhledeaw_High min [-33.8, -26.0, -0.1] max [33.8, 26.0, 174.4]
+ESYA Masa /Game/Uyanis/Fab/Yat/Masa/Wooden_Table_With_Drawer_vfvndhsga_High min [-41.5, -29.0, -0.3] max [41.5, 28.9, 81.5]
+ESYA KafesLamba /Game/Uyanis/Fab/Yat/KafesLamba/Rusty_Bulkhead_Light_vgyidfpaw_High min [-7.2, -0.3, -10.7] max [7.3, 13.0, 10.7]
+anahtar slot KeyRing → KeyRing
+anahtar slot Key1 → Key1
+anahtar slot Key2 → Key2
+anahtar slot Key_3 → Key3
+ESYA Anahtarlik /Game/Uyanis/Fab/Yat/Anahtarlik/Keys boyut [19.7, 24.1, 1.5] minz -0.3
+4K'ya açılan doku 192
+oyuncak 4K
+TAMAM

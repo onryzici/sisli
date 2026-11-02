@@ -1,0 +1,3 @@
+eksen ızgara: 4
+BS örnek hızları: [0, 195, 390]
+kol: <Struct 'Rotator' (0x000001B199183598) {pitch: -32.000000, yaw: 0.000000, roll: 0.000000}>

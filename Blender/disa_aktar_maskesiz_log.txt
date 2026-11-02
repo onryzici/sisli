@@ -1,0 +1,37 @@
+00:01.484  blend            | Read blend: "C:\Users\Onur\Sisli\Blender\cocuk_v2.blend"
+00:02.250  render           | Saved: 'C:\Users\Onur\Sisli\Unreal\SourceArt\Cocuk\goz_kontrol\goz_0.png'
+00:02.328  render           | Saved: 'C:\Users\Onur\Sisli\Unreal\SourceArt\Cocuk\goz_kontrol\goz_1.png'
+00:02.422  render           | Saved: 'C:\Users\Onur\Sisli\Unreal\SourceArt\Cocuk\goz_kontrol\goz_2.png'
+00:02.500  render           | Saved: 'C:\Users\Onur\Sisli\Unreal\SourceArt\Cocuk\goz_kontrol\goz_son.png'
+BlenderMCP addon registered
+ATILDI Maske
+ATILDI Kayis
+GOZ ölçüm 0 {'sol': np.float64(-1.83), 'sag': np.float64(2.33)} mm
+GOZ çevrildi sol 6.15°
+GOZ çevrildi sag -7.85°
+GOZ ölçüm 1 {'sol': np.float64(-0.51), 'sag': np.float64(0.74)} mm
+GOZ çevrildi sol 1.72°
+GOZ çevrildi sag -2.48°
+GOZ ölçüm 2 {'sol': np.float64(-0.17), 'sag': np.float64(0.3)} mm
+GOZ çevrildi sol 0.56°
+GOZ çevrildi sag -0.99°
+GOZ son {'sol': np.float64(-0.07), 'sag': np.float64(0.08)} mm
+RENK PİŞTİ male_worksuit01_Mat (2048, 2048)
+RENK PİŞTİ Sac_Mat (2048, 2048)
+MASKE YOK — pişirme atlandı, kaşlar korundu
+ARMATÜR ölçek (1.0, 1.0, 1.0) Head yerel (0.0, -4.05, 109.6)
+
+FBX export starting... 'C:/Users/Onur/Sisli/Unreal/SourceArt/Cocuk\\SK_Cocuk.fbx'
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+(bpy.data.armatures['Armature'], 'POSE')
+export finished in 0.0795 sec.
+Info: Saved as "cocuk_v2_export.blend"
+FBX C:/Users/Onur/Sisli/Unreal/SourceArt/Cocuk\SK_Cocuk.fbx
+BlenderMCP addon unregistered
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:37:34)
+
+Blender quit

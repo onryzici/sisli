@@ -1,0 +1,10 @@
+  MF_Unarmed_Walk_Fwd kare 45 süre 1.500
+  x aralık 4.2 y aralık 449.9
+  MF_Unarmed_Walk_Fwd_Cocuk kare 45 süre 1.500
+  x aralık 2.8 y aralık 297.9
+Walk/MF_Unarmed_Walk_Fwd  Manny 17 cm/s  Çocuk 12 cm/s
+  MF_Unarmed_Jog_Fwd kare 53 süre 1.767
+  x aralık 14.2 y aralık 1060.1
+  MF_Unarmed_Jog_Fwd_Cocuk kare 53 süre 1.767
+  x aralık 9.1 y aralık 702.1
+Jog/MF_Unarmed_Jog_Fwd  Manny 65 cm/s  Çocuk 46 cm/s

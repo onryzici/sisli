@@ -1,0 +1,12 @@
+bp <Object '/Game/Sisli/Mekanik/BP_DslTest.BP_DslTest' (0x0000010322517200) Class 'Blueprint'>
+OK graph <Object '/Game/Sisli/Mekanik/BP_DslTest.BP_DslTest:EventGraph' (0x00000102BDE59A80) Class 'EdGraph'>
+OK write None
+OK nodes ['AddEvent|EventBeginPlay', 'AddEvent|Collision|EventActorBeginOverlap', 'AddEvent|EventTick', 'Development|PrintString']
+OK compile None
+OK save True
+OK read (event EventBeginPlay
+  (Development|PrintString "SISLI_DSL_CALISIYOR" true true "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)" 5.0))
+
+(event Collision|EventActorBeginOverlap (OtherActor))
+
+(event EventTick (DeltaSeconds))
