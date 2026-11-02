@@ -1,0 +1,28 @@
+yöntemler ['auto_align_all_bones', 'auto_align_bones', 'reset_chain_settings_in_all_ops', 'reset_chain_settings_to_default', 'reset_editor_property', 'reset_retarget_pose']
+RTG_UE4_Cocuk2 pelvis ofset p0.1 y2.1 r0.0
+RTG_UE4_Cocuk2 spine_01 ofset p-0.0 y-13.4 r0.0
+RTG_UE4_Cocuk2 spine_02 ofset p0.0 y20.3 r0.0
+RTG_UE4_Cocuk2 spine_03 ofset p0.0 y0.0 r-0.0
+RTG_UE4_Cocuk2 neck_01 ofset p0.0 y0.0 r-0.0
+RTG_UE4_Cocuk2 head ofset p0.0 y0.0 r-0.0
+RTG_UE4_Cocuk2 clavicle_l ofset p0.0 y0.0 r-0.0
+RTG_UE4_Cocuk2 upperarm_l ofset p-1.2 y7.4 r-0.1
+RTG_UE4_Cocuk2 lowerarm_l ofset p3.2 y-2.4 r-0.1
+RTG_UE4_Cocuk2 clavicle_r ofset p0.0 y0.0 r-0.0
+RTG_UE4_Cocuk2 upperarm_r ofset p-1.1 y7.4 r-0.1
+RTG_Manny_Cocuk2 pelvis ofset p0.1 y5.9 r0.0
+RTG_Manny_Cocuk2 spine_01 ofset p-0.0 y-2.4 r0.0
+RTG_Manny_Cocuk2 spine_02 ofset p0.0 y15.1 r0.0
+RTG_Manny_Cocuk2 spine_03 ofset p0.0 y0.0 r-0.0
+RTG_Manny_Cocuk2 neck_01 ofset p0.0 y0.0 r-0.0
+RTG_Manny_Cocuk2 head ofset p0.0 y0.0 r-0.0
+RTG_Manny_Cocuk2 clavicle_l ofset p0.0 y0.0 r-0.0
+RTG_Manny_Cocuk2 upperarm_l ofset p-5.6 y20.8 r-1.0
+RTG_Manny_Cocuk2 lowerarm_l ofset p-0.4 y9.8 r-0.0
+RTG_Manny_Cocuk2 clavicle_r ofset p0.0 y0.0 r-0.0
+RTG_Manny_Cocuk2 upperarm_r ofset p-5.4 y20.8 r-1.0
+RTG_UE4_Cocuk2_Sifir sıfırlandı tümü [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+RTG_Manny_Cocuk2_Govde sıfırlandı ['pelvis', 'spine_01', 'spine_02', 'spine_03', 'neck_01', 'head'] [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+aktarılan ['/Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_S']
+aktarılan ['/Game/Sisli/Cocuk2/Anim/Test/MM_Idle_G', '/Game/Sisli/Cocuk2/Anim/Test/MM_Jump_G']
+TAMAM

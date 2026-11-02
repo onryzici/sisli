@@ -1,0 +1,10 @@
+RTG_UE4_Cocuk2 gövde ofset [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+RTG_Manny_Cocuk2 gövde ofset [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+aktarılan ['MOB1_Stand_Relaxed_Idle_v2_IPC_C3', 'MOB1_Walk_F_IPC_C3', 'MOB1_Jog_F_IPC_C3', 'MOB1_Crouch_Idle_V2_IPC_C3', 'MOB1_CrouchWalk_F_IPC_C3']
+aktarılan ['MM_Jump_G', 'MM_Fall_Loop_G', 'MM_Land_G']
+BS anim ['MOB1_CrouchWalk_F_IPC_C3', 'MOB1_Crouch_Idle_V2_IPC_C3', 'MOB1_Jog_F_IPC_C3', 'MOB1_Stand_Relaxed_Idle_v2_IPC_C3', 'MOB1_Walk_F_IPC_C3']
+silinen 13 / 13
+MM_Jump süre 0.867
+MM_Fall_Loop süre 3.000
+MM_Land süre 0.867
+TAMAM

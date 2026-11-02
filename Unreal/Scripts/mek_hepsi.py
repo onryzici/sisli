@@ -173,10 +173,34 @@ def fener():
     bilesen(bp, unreal.SpotLightComponent, "Isik", intensity_units=unreal.LightUnits.CANDELAS, intensity=55.0, attenuation_radius=1800.0,
             outer_cone_angle=24.0, inner_cone_angle=10.0, light_color=unreal.Color(r=255, g=236, b=205, a=255), volumetric_scattering_intensity=2.5,
             source_radius=3.0, visible=False)
-    degisken(bp, "Comeldi", "bool", False, False); degisken(bp, "CAnim", "float", 0.0, False); degisken(bp, "TestComel", "bool", False)
-    degisken(bp, "BSKurulu", "bool", False, False); degisken(bp, "ComelA", "float", 0.0, False); degisken(bp, "HizY", "float", 0.0, False)   # CAnim: 0 ABP, 1 çömelik bekleme, 2 çömelik yürüme
-    g = BT.get_graph(bp, "EventGraph")
-    # F tuşu olayı (InputKey düğümü, Pressed çıkışı)
+    degisken(bp, "Comeldi", "bool", False, False); degisken(bp, "TestComel", "bool", False); degisken(bp, "TestZipla", "bool", False)
+    degisken(bp, "BSKurulu", "bool", False, False); degisken(bp, "ComelA", "float", 0.0, False); degisken(bp, "HizY", "float", 0.0, False)
+    # zıplama (tek düğüm kipi: karışım yok, durum değişince animasyon değişir): Havada → MM_Jump, 0.8 sn sonra MM_Fall_Loop; yere değince MM_Land → BS
+    degisken(bp, "Havada", "bool", False, False); degisken(bp, "DusDongu", "bool", False, False); degisken(bp, "Inis", "bool", False, False)
+    degisken(bp, "HavaT", "float", 0.0, False); degisken(bp, "SonrakiZipla", "float", 3.0, False)
+    # yüz: Zaman, göz kırpma (GozT: kırpma başından beri geçen süre, SonrakiGoz: sonraki kırpma anı; %18 çift kırpma), yavaş mikro ifadeler
+    degisken(bp, "Zaman", "float", 0.0, False); degisken(bp, "GozT", "float", 9.0, False); degisken(bp, "SonrakiGoz", "float", 1.5, False)
+    A = "/Game/Sisli/Cocuk2/Anim"
+    BS = f"{A}/BS_Cocuk2_Hareket2.BS_Cocuk2_Hareket2"
+    JUMP, FALL, LAND = (f"{A}/Ziplama/{n}_G.{n}_G" for n in ("MM_Jump", "MM_Fall_Loop", "MM_Land"))
+    def oynat(yol, dongu): return f'(Components|Animation|PlayAnimation :self m :NewAnimToPlay "{yol}" :bLooping {"true" if dongu else "false"})'
+    def sn(f, faz=0.0): return f"(Math|Trig|Sin(Radians) (+ (* t {f}) {faz}))"
+    def art(x): return f"(Math|Float|Max(Float) 0.0 {x})"
+    def morf(ad, deger, iki=True):
+        adlar = [ad + "_L", ad + "_R"] if iki else [ad]
+        return "\n".join(f'      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "{a}" :Value {deger} :bRemoveZeroWeight false)' for a in adlar)
+    yuz = "\n".join([
+        morf("Mouth_Smile", "0.0"), morf("Mouth_Smile_Sharp", "0.0"), morf("Cheek_Raise", "0.0"),
+        morf("Eye_Blink", "kirp"),
+        morf("Eye_Squint", f"(+ 0.1 (* 0.04 {sn(0.53, 0.3)}))"),
+        morf("Brow_Raise_Inner", f"(+ (+ 0.44 (* 0.22 (Uye|Get|ComelA))) (+ (* 0.11 {sn(0.37)}) (* 0.05 {sn(1.13, 0.7)})))"),
+        morf("Brow_Compress", f"(+ 0.2 (* 0.08 {sn(0.29, 1.0)}))"),
+        morf("Mouth_Frown", f"(+ 0.29 (* 0.06 {sn(0.21, 2.0)}))"),
+        morf("Mouth_Press", f"(+ 0.12 (* 0.22 {art(sn(0.43, 0.4))}))"),
+        morf("Eye_Wide", f"(+ (* 0.14 (Uye|Get|ComelA)) (* 0.06 {art(sn(0.19, 2.5))}))"),
+        morf("Nose_Nostril_Dilate", f"(+ 0.06 (* 0.06 {sn(1.7)}))"),
+        morf("Jaw_Open", f"(+ 0.025 (* 0.02 {sn(1.7, 0.6)}))", iki=False),
+    ])
     dsl(bp, f'''
 (event EventBeginPlay
   (Development|PrintString "SISLI FENER_BASLADI" :bPrintToScreen false)
@@ -195,29 +219,27 @@ def fener():
     (Rendering|ToggleVisibility (Uye|Get|Isik))
     (Audio|PlaySound2D :Sound "{SES}/FenerTik.FenerTik"))
   (bind oy {OYUNCU})
+  (Uye|Set|Zaman (+ (Uye|Get|Zaman) DeltaSeconds))
+  (Uye|Set|GozT (+ (Uye|Get|GozT) DeltaSeconds))
+  (if (> (Uye|Get|Zaman) (Uye|Get|SonrakiGoz))
+    (Uye|Set|GozT 0.0)
+    (Uye|Set|SonrakiGoz (+ (Uye|Get|Zaman) (select (< (Math|Random|RandomFloatinRange 0.0 1.0) 0.18) 0.34 (Math|Random|RandomFloatinRange 2.2 5.8)))))
+  (bind t (Uye|Get|Zaman))
+  (bind gt (Uye|Get|GozT))
+  (bind kirp (Math|Float|Clamp(Float) (Math|Float|Min(Float) (/ gt 0.07) (/ (- 0.23 gt) 0.16)) 0.0 1.0))
+  (if (and (Uye|Get|TestZipla) (> (Uye|Get|Zaman) (Uye|Get|SonrakiZipla)))
+    (Uye|Set|SonrakiZipla (+ (Uye|Get|Zaman) 2.6))
+    (Character|Jump :self oy))
   (bind ctrl (or (or (Game|Player|IsInputKeyDown :self pc :Key "LeftControl") (Game|Player|IsInputKeyDown :self pc :Key "RightControl")) (Uye|Get|TestComel)))
+  (bind v (Transformation|GetVelocity oy))
+  (bind hiz (Math|Vector|VectorLength (Math|Vector|MakeVector (.x v) (.y v) 0.0)))
   (bind mb (Actor|GetComponentbyClass oy "/Script/Engine.SkeletalMeshComponent"))
   (bind m (Utilities|Casting|CastToSkeletalMeshComponent :Object mb)
     (:then
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Smile_L" :Value 0.00 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Smile_R" :Value 0.00 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Smile_Sharp_L" :Value 0.00 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Smile_Sharp_R" :Value 0.00 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Cheek_Raise_L" :Value 0.00 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Cheek_Raise_R" :Value 0.00 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Frown_L" :Value 0.32 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Frown_R" :Value 0.32 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Brow_Raise_Inner_L" :Value 0.50 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Brow_Raise_Inner_R" :Value 0.50 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Brow_Compress_L" :Value 0.22 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Brow_Compress_R" :Value 0.22 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Press_L" :Value 0.18 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Mouth_Press_R" :Value 0.18 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Eye_Squint_L" :Value 0.12 :bRemoveZeroWeight false)
-      (Components|SkeletalMesh|SetMorphTarget :self m :MorphTargetName "Eye_Squint_R" :Value 0.12 :bRemoveZeroWeight false)
+{yuz}
       (if (not (Uye|Get|BSKurulu))
         (Uye|Set|BSKurulu true)
-        (Components|Animation|PlayAnimation :self m :NewAnimToPlay "/Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket2.BS_Cocuk2_Hareket2" :bLooping true))
+        {oynat(BS, True)})
       (if (!= ctrl (Uye|Get|Comeldi))
         (Uye|Set|Comeldi ctrl)
         (if ctrl
@@ -226,13 +248,40 @@ def fener():
           (else
             (Character|UnCrouch :self oy))))
       (Uye|Set|ComelA (Math|Interpolation|FInterpTo (Uye|Get|ComelA) (select (Uye|Get|Comeldi) 1.0 0.0) DeltaSeconds 5.0))
-      (bind v (Transformation|GetVelocity oy))
-      (bind hiz (Math|Vector|VectorLength (Math|Vector|MakeVector (.x v) (.y v) 0.0)))
       (Uye|Set|HizY (Math|Interpolation|FInterpTo (Uye|Get|HizY) hiz DeltaSeconds 8.0))
-      (bind tek (Utilities|Casting|CastToAnimSingleNodeInstance :Object (Components|SkeletalMesh|GetAnimInstance :self m))
-        (:then
-          (Animation|SetBlendSpacePosition :self tek :InPosition (Math|Vector|MakeVector (+ 45.0 (* 45.0 (Uye|Get|ComelA))) (* (Uye|Get|HizY) (+ 2.0 (* 1.16 (Uye|Get|ComelA)))) 0.0)))
-        (:CastFailed)))
+      (if (Movement|IsFalling :self (Class|Character|GetCharacterMovement :self oy))
+        (if (not (Uye|Get|Havada))
+          (Uye|Set|Havada true)
+          (Uye|Set|Inis false)
+          (Uye|Set|HavaT 0.0)
+          (Development|PrintString "SISLI ZIPLADI" :bPrintToScreen false)
+          (if (> (.z v) 10.0)
+            (Uye|Set|DusDongu false)
+            {oynat(JUMP, False)}
+            (else
+              (Uye|Set|DusDongu true)
+              {oynat(FALL, True)})))
+        (Uye|Set|HavaT (+ (Uye|Get|HavaT) DeltaSeconds))
+        (if (and (not (Uye|Get|DusDongu)) (> (Uye|Get|HavaT) 0.8))
+          (Uye|Set|DusDongu true)
+          {oynat(FALL, True)})
+        (else
+          (if (Uye|Get|Havada)
+            (Uye|Set|Havada false)
+            (Uye|Set|Inis true)
+            (Uye|Set|HavaT 0.0)
+            (Development|PrintString "SISLI INDI" :bPrintToScreen false)
+            {oynat(LAND, False)})
+          (if (Uye|Get|Inis)
+            (Uye|Set|HavaT (+ (Uye|Get|HavaT) DeltaSeconds))
+            (if (or (> (Uye|Get|HavaT) 0.42) (> (Uye|Get|HizY) 50.0))
+              (Uye|Set|Inis false)
+              {oynat(BS, True)}))))
+      (if (and (not (Uye|Get|Havada)) (not (Uye|Get|Inis)))
+        (bind tek (Utilities|Casting|CastToAnimSingleNodeInstance :Object (Components|SkeletalMesh|GetAnimInstance :self m))
+          (:then
+            (Animation|SetBlendSpacePosition :self tek :InPosition (Math|Vector|MakeVector (+ 45.0 (* 45.0 (Uye|Get|ComelA))) (* (Uye|Get|HizY) (+ 2.0 (* 1.16 (Uye|Get|ComelA)))) 0.0)))
+          (:CastFailed))))
     (:CastFailed)))
 ''')
     derle_kaydet(bp)

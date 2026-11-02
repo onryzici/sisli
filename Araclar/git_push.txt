@@ -1,0 +1,8 @@
+remote: warning: See https://gh.io/lfs for more information.        
+remote: warning: File Blender/sahne.blend is 88.48 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: warning: File Blender/oda1.blend is 51.31 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/onryzici/sisli.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+push cikis 0

@@ -1,0 +1,2 @@
+önce jump 430 gravity 1.00 air 0.20
+sonra jump 400 → yükseklik 58 cm, havada 0.58 sn

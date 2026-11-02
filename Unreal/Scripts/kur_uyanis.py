@@ -532,6 +532,7 @@ try:
     if fe:
         fen = spawn(fe, V(0, 0, 0), R(), "Fener")
         if os.environ.get("UY_COMELTEST"): sset(fen, "TestComel", True)
+        if os.environ.get("UY_ZIPLATEST"): sset(fen, "TestZipla", True)
     if not os.environ.get("UY_KAMERA"): spawn(bpcls("BP_Giris"), V(0, 0, 0), R(), "Giris")
     # ---------- test kamerası (UY_KAMERA="x y z pitch yaw fov"): sabit sinema kamerası + alanı ----------
     tk = os.environ.get("UY_KAMERA")

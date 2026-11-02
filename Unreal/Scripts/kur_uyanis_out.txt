@@ -1,7 +1,4 @@
 uzak kule pencere 323
-animtest 0 unreal_file MOB1_Walk_F_IPC
-animtest 1 unreal_file MOB1_Stand_Relaxed_Idle_v2_IPC
-animtest 2 unreal_file MOB1_Walk_F_IPC_C2
 ÇAKIŞMA prop Kolon_-1150_6800 ↔ Moloz_Yigin_A
 çakışma sayısı 1 prop 234 kutu 666
 kaydedildi /Game/Uyanis/Maps/L_Uyanis
