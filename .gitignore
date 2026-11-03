@@ -19,5 +19,12 @@ Unreal/MCO_Mocap_Basics.png
 # İndirmeler (Poly Haven / MakeHuman CC0 — betiklerle yeniden indirilebilir)
 Indir/
 Unreal/Content/Sisli/Cocuk2/Anim/MCO3/
+Unreal/Content/Sisli/Cocuk2/Anim/MCO4/
+Unreal/Content/Sisli/Cocuk2/Anim/Hazir/
+Unreal/Content/Sisli/Cocuk2/Anim/MCOK/
 Unreal/Content/Sisli/Cocuk2/Anim/Test/
 Unreal/Content/Sisli/Cocuk/Anim/MCO/
+
+# Epic Game Animation Sample (GASP) — yalnız UE ürünlerinde kullanım lisansı, public repoya konmaz (VARLIKLAR.md)
+Unreal/Content/Characters/UEFN_Mannequin/
+Unreal/Content/Sisli/Cocuk2/Anim/GASP/

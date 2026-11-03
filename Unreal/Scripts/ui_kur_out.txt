@@ -1,0 +1,27 @@
+wbp <Object '/Game/Uyanis/UI/WBP_Incele_Sablon.WBP_Incele_Sablon' (0x0000018823712A00) Class 'WidgetBlueprint'>
+ağaç ['Kok', 'Bulanik', 'Karart', 'Kagit', 'Baslik', 'Ic', 'Ipucu', 'OkuPanel', 'OkuMetin']
+derleme1 True
+tür GetOwningPlayer → Widget|GetOwningPlayer ["Widget|GetOwningPlayer", "Player|GetOwningPlayerPawn", "Player|GetOwningPlayerCameraManager", "Game|Player|GetOwningPlayerController", "HUD|GetOwningPlayerController"]
+tür IsInputKeyDown → Game|Player|IsInputKeyDown ["Game|Player|IsInputKeyDown"]
+tür WasInputKeyJustPressed → Game|Player|WasInputKeyJustPressed ["Game|Player|WasInputKeyJustPressed"]
+tür GetInputAnalogKeyState → Game|Player|GetInputAnalogKeyState ["Game|Player|GetInputAnalogKeyState"]
+tür SetRenderScale → Widget|Transform|SetRenderScale ["Widget|Transform|SetRenderScale"]
+tür SetRenderTranslation → Widget|Transform|SetRenderTranslation ["Widget|Transform|SetRenderTranslation"]
+tür SetVisibility → Widget|SetVisibility ["Rendering|SetVisibility", "Widget|SetVisibility", "Variables|Behavior|SetVisibility", "Sequencer|Section|SetVisibility", "Class|SkinnedMeshComponent|SetVisibilityBasedAnimTickOption"]
+tür MakeVector2D → Math|Vector2D|MakeVector2D ["Utilities|Struct|MakeVector2dCameraParameter", "Math|Vector2D|MakeVector2D"]
+tür Min(Float) → Math|Float|Min(Float) ["Math|Float|Min(Float)"]
+tür Max(Float) → Math|Float|Max(Float) ["Math|Float|Max(Float)"]
+tür FInterpTo → Math|Interpolation|FInterpTo ["Math|Interpolation|FInterptoConstant", "Math|Interpolation|FInterpTo"]
+olay türleri ["AddEvent|UserInterface|EventTick", "AddEvent|UserInterface|EventPreConstruct", "AddEvent|UserInterface|EventOnInitialized", "AddEvent|UserInterface|EventDestruct", "AddEvent|UserInterface|EventConstruct", "AddEvent|Input|EventOnRemovedFromFocusPath", "AddEvent|Input|EventOnFocusLost", "AddEvent|Input|EventOnAddedToFocusPath", "AddEvent|Mouse|EventOnMouseLeave", "AddEvent|Mouse|EventOnMouseEnter", "AddEvent|TouchInput|EventOnMouseCaptureLost", "AddEvent|DragandDrop|EventOnDragLeave", "AddEvent|DragandDrop|EventOnDragEnter", "AddEvent|DragandDrop|EventOnDragCancelled", "AddEvent|Animation|EventOnAnimationStarted", "AddEvent|Animation|EventOnAnimationFinished", "AddEvent|AddCustomEvent..."]
+derleme2 True
+kopya Kurallar True
+kopya ElaCizim True
+aktör türü CreateWidget ["UserInterface|CreateWidget"]
+aktör türü AddToViewport ["UserInterface|Viewport|AddtoViewport"]
+aktör türü RemoveFromParent ["Widget|RemovefromParent"]
+aktör türü SetIgnoreMoveInput ["Input|SetIgnoreMoveInput", "Input|ResetIgnoreMoveInput"]
+aktör türü SetIgnoreLookInput ["Input|SetIgnoreLookInput", "Input|ResetIgnoreLookInput"]
+aktör türü ResetIgnoreInputFlags ["Input|ResetIgnoreInputFlags"]
+aktör türü IsInViewport ["Appearance|IsinViewport"]
+aktör türü IsValid ["SharedImage|IsValid", "TypedElementFramework|List|IsValidIndex", "AssetData|IsValidAssetData", "Utilities|IsValidSoftObjectReference", "Utilities|IsValidSoftClassReference", "Utilities|IsValidInterface"]
+TAMAM

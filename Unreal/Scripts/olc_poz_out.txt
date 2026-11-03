@@ -1,0 +1,102 @@
+== KAYNAK mesh bağlama
+  gövde pelvis→neck   ön  -4.6° yan  -0.0°
+  alt gövde pel→sp2   ön  -0.9° yan  -0.0°
+  üst gövde sp2→neck  ön  -8.4° yan  +0.0°
+  boyun→kafa          ön +11.8° yan  +0.0°
+  kol l üst           aşağıdan  40.5° ön -0.07 yan +0.64
+  kol l alt           aşağıdan  56.8° ön +0.43 yan +0.72
+  kol r üst           aşağıdan  40.5° ön -0.07 yan -0.64
+  kol r alt           aşağıdan  56.8° ön +0.43 yan -0.72
+  pelvis−ayak (cm) x +0.0 y +7.0 z 83.3 | el_l−uyluk_l (cm) x +47.6 y +0.2 z +16.4
+    pelvis konum [0.0, -1.1, 96.8] dönüş p/y/r 89.8 90.0 90.0
+    spine_01 konum [0.0, -0.2, 107.6] dönüş p/y/r 82.6 90.0 90.0
+    spine_02 konum [-0.0, -1.5, 126.8] dönüş p/y/r 83.3 -90.0 -90.0
+    spine_03 konum [-0.0, -3.5, 140.0] dönüş p/y/r 80.5 -90.0 -90.0
+    neck_01 konum [-0.0, -5.9, 156.4] dönüş p/y/r 76.0 90.0 90.0
+    head konum [-0.0, -4.0, 165.5] dönüş p/y/r 88.7 -90.0 -90.0
+    clavicle_l konum [3.8, -2.8, 152.2] dönüş p/y/r -9.7 -26.5 -0.0
+    upperarm_l konum [17.7, -9.7, 149.5] dönüş p/y/r -49.5 -6.4 3.3
+    lowerarm_l konum [37.3, -11.9, 126.4] dönüş p/y/r -33.2 30.8 -28.5
+    hand_l konum [56.6, -0.3, 111.7] dönüş p/y/r -35.2 32.8 -105.9
+== ÇOCUK mesh bağlama
+  gövde pelvis→neck   ön  -5.4° yan  +0.0°
+  alt gövde pel→sp2   ön +11.4° yan  +0.0°
+  üst gövde sp2→neck  ön -10.6° yan  +0.0°
+  boyun→kafa          ön +24.1° yan  -0.6°
+  kol l üst           aşağıdan  40.8° ön -0.08 yan +0.65
+  kol l alt           aşağıdan  54.6° ön +0.39 yan +0.71
+  kol r üst           aşağıdan  40.9° ön -0.08 yan -0.65
+  kol r alt           aşağıdan  54.6° ön +0.39 yan -0.71
+  pelvis−ayak (cm) x -0.0 y +3.1 z 77.8 | el_l−uyluk_l (cm) x +37.9 y +0.3 z +11.0
+    pelvis konum [-0.0, -4.0, 83.7] dönüş p/y/r 90.0 -0.0 0.0
+    spine_01 konum [-0.0, -2.3, 90.5] dönüş p/y/r 87.3 -89.5 -89.5
+    spine_02 konum [-0.0, -1.8, 94.5] dönüş p/y/r 71.9 -89.8 -89.8
+    spine_03 konum [-0.0, -4.5, 106.3] dönüş p/y/r 80.7 -90.2 -90.2
+    neck_01 konum [-0.0, -8.3, 129.1] dönüş p/y/r 65.4 90.4 90.4
+    head konum [-0.1, -5.6, 135.0] dönüş p/y/r 85.0 -90.0 -90.0
+    clavicle_l konum [4.3, -7.6, 124.3] dönüş p/y/r -4.1 -22.5 0.2
+    upperarm_l konum [15.3, -10.1, 122.5] dönüş p/y/r -49.2 -7.3 0.1
+    lowerarm_l konum [30.3, -12.0, 105.0] dönüş p/y/r -35.4 28.7 -23.0
+    hand_l konum [45.7, -3.5, 92.5] dönüş p/y/r -39.1 19.3 -99.6
+== KAYNAK idle t=0.00 (manken mesh)
+  gövde pelvis→neck   ön  +0.4° yan  -0.5°
+  alt gövde pel→sp2   ön  +3.0° yan  -0.3°
+  üst gövde sp2→neck  ön  -2.2° yan  -0.7°
+  boyun→kafa          ön +18.1° yan  -3.0°
+  kol l üst           aşağıdan  17.3° ön +0.09 yan +0.28
+  kol l alt           aşağıdan  19.7° ön +0.34 yan +0.01
+  kol r üst           aşağıdan  17.3° ön +0.11 yan -0.27
+  kol r alt           aşağıdan  20.5° ön +0.35 yan +0.02
+  pelvis−ayak (cm) x +0.4 y +2.6 z 83.5 | el_l−uyluk_l (cm) x +17.4 y +8.5 z +0.4
+== ÇOCUK idle_C3 t=0.00 (çocuk mesh)
+  gövde pelvis→neck   ön  -0.0° yan  -0.5°
+  alt gövde pel→sp2   ön +14.2° yan  +0.3°
+  üst gövde sp2→neck  ön  -4.5° yan  -0.7°
+  boyun→kafa          ön +30.4° yan  -4.0°
+  kol l üst           aşağıdan  17.9° ön +0.09 yan +0.29
+  kol l alt           aşağıdan  17.6° ön +0.30 yan +0.04
+  kol r üst           aşağıdan  17.8° ön +0.11 yan -0.29
+  kol r alt           aşağıdan  18.5° ön +0.32 yan -0.01
+  pelvis−ayak (cm) x +0.4 y -0.9 z 77.7 | el_l−uyluk_l (cm) x +14.8 y +7.0 z -1.5
+== DOĞRUDAN kaynak idle çocuk mesh t=0.00
+  gövde pelvis→neck   ön  +3.9° yan  -0.4°
+  alt gövde pel→sp2   ön +18.0° yan  +0.5°
+  üst gövde sp2→neck  ön  -0.6° yan  -0.6°
+  boyun→kafa          ön +19.8° yan  -3.4°
+  kol l üst           aşağıdan  17.3° ön +0.09 yan +0.28
+  kol l alt           aşağıdan  19.7° ön +0.34 yan +0.01
+  kol r üst           aşağıdan  17.3° ön +0.11 yan -0.27
+  kol r alt           aşağıdan  20.5° ön +0.35 yan +0.02
+  pelvis−ayak (cm) x +0.3 y +3.2 z 77.8 | el_l−uyluk_l (cm) x +13.7 y +10.0 z -2.3
+== KAYNAK idle t=3.07 (manken mesh)
+  gövde pelvis→neck   ön  +0.8° yan  -0.3°
+  alt gövde pel→sp2   ön  +3.3° yan  -0.0°
+  üst gövde sp2→neck  ön  -1.8° yan  -0.5°
+  boyun→kafa          ön +19.3° yan  -1.9°
+  kol l üst           aşağıdan  19.4° ön +0.12 yan +0.31
+  kol l alt           aşağıdan  21.1° ön +0.36 yan +0.06
+  kol r üst           aşağıdan  18.2° ön +0.15 yan -0.27
+  kol r alt           aşağıdan  21.1° ön +0.36 yan +0.01
+  pelvis−ayak (cm) x -0.4 y +1.9 z 83.6 | el_l−uyluk_l (cm) x +19.6 y +9.9 z +0.9
+== ÇOCUK idle_C3 t=3.07 (çocuk mesh)
+  gövde pelvis→neck   ön  +0.3° yan  -0.2°
+  alt gövde pel→sp2   ön +14.5° yan  +1.1°
+  üst gövde sp2→neck  ön  -4.1° yan  -0.6°
+  boyun→kafa          ön +31.7° yan  -2.3°
+  kol l üst           aşağıdan  20.0° ön +0.12 yan +0.32
+  kol l alt           aşağıdan  19.2° ön +0.32 yan +0.08
+  kol r üst           aşağıdan  18.8° ön +0.15 yan -0.29
+  kol r alt           aşağıdan  19.2° ön +0.33 yan -0.01
+  pelvis−ayak (cm) x -0.4 y -1.5 z 77.7 | el_l−uyluk_l (cm) x +16.5 y +7.9 z -1.1
+== DOĞRUDAN kaynak idle çocuk mesh t=3.07
+  gövde pelvis→neck   ön  +4.2° yan  +0.1°
+  alt gövde pel→sp2   ön +18.3° yan  +1.5°
+  üst gövde sp2→neck  ön  -0.2° yan  -0.4°
+  boyun→kafa          ön +21.1° yan  -2.3°
+  kol l üst           aşağıdan  19.4° ön +0.12 yan +0.31
+  kol l alt           aşağıdan  21.1° ön +0.36 yan +0.06
+  kol r üst           aşağıdan  18.2° ön +0.15 yan -0.27
+  kol r alt           aşağıdan  21.1° ön +0.36 yan +0.01
+  pelvis−ayak (cm) x -0.4 y +2.5 z 77.9 | el_l−uyluk_l (cm) x +15.6 y +11.1 z -1.9
+MCO idle listesi ['/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Crouch_Idle_V2_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Jog_F_to_Stand_Relaxed_RU_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Run_F_to_Stand_Relaxed_RU_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Stand_Relaxed_Death_B_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Stand_Relaxed_Fgt_v1_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Stand_Relaxed_Fgt_v4_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/In_Place/MOB1_Stand_Relaxed_Idle_v2_IPC', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Crouch_Idle_V2', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Jog_F_to_Stand_Relaxed_RU', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Run_F_to_Stand_Relaxed_RU', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Stand_Relaxed_Death_B', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Stand_Relaxed_Fgt_v1', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Stand_Relaxed_Fgt_v4', '/Game/MCO_Mocap_Basics/Animation/Mobility_Pro/Root_Motion/MOB1_Stand_Relaxed_Idle_v2']
+TAMAM

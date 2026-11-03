@@ -1,0 +1,18 @@
+/Game/Sisli/Malzeme/M_Sisli vec ["Ton", "Isima"] sc ["PuruzCarpan", "MetalCarpan", "Birikinti"] tex ["BaseColor", "Normal", "ARM"]
+  tex BaseColor <Object '/Game/Sisli/Doku/T_Beyaz.T_Beyaz' (0x00000199A882C600) Class 'Texture2D'>
+  tex Normal <Object '/Engine/EngineMaterials/DefaultNormal.DefaultNormal' (0x00000199A882C000) Class 'Texture2D'>
+  tex ARM <Object '/Game/Sisli/Doku/T_BeyazMaske.T_BeyazMaske' (0x00000199A882CC00) Class 'Texture2D'>
+  vec Ton <Struct 'LinearColor' (0x00000199A8183A20) {r: 1.000000, g: 1.000000, b: 1.000000, a: 1.000000}>
+  vec Isima <Struct 'LinearColor' (0x00000199A8183A20) {r: 0.000000, g: 0.000000, b: 0.000000, a: 1.000000}>
+  usage skel True shading <MaterialShadingModel.MSM_DEFAULT_LIT: 1> blend <BlendMode.BLEND_OPAQUE: 0>
+/Game/Uyanis/Malzeme/M_MS vec ["Ton", "Isima"] sc ["NormalGuc", "AOGuc", "PuruzCarpan", "Metal", "UVOlcek"] tex ["Renk", "Normal", "AO", "Puruz", "MetalDoku"]
+  tex Renk <Object '/Engine/EngineResources/WhiteSquareTexture.WhiteSquareTexture' (0x000001990A216C00) Class 'Texture2D'>
+  tex Normal <Object '/Engine/EngineMaterials/DefaultNormal.DefaultNormal' (0x00000199A882C000) Class 'Texture2D'>
+  tex AO <Object '/Game/Sisli/Doku/T_BeyazMaske.T_BeyazMaske' (0x00000199A882CC00) Class 'Texture2D'>
+  tex Puruz <Object '/Game/Sisli/Doku/T_BeyazMaske.T_BeyazMaske' (0x00000199A882CC00) Class 'Texture2D'>
+  tex MetalDoku <Object '/Game/Sisli/Doku/T_BeyazMaske.T_BeyazMaske' (0x00000199A882CC00) Class 'Texture2D'>
+  vec Ton <Struct 'LinearColor' (0x00000199A8183960) {r: 1.000000, g: 1.000000, b: 1.000000, a: 1.000000}>
+  vec Isima <Struct 'LinearColor' (0x00000199A8183960) {r: 0.000000, g: 0.000000, b: 0.000000, a: 1.000000}>
+  usage skel True shading <MaterialShadingModel.MSM_DEFAULT_LIT: 1> blend <BlendMode.BLEND_OPAQUE: 0>
+TON
+mi Ton <Struct 'LinearColor' (0x00000199A7DB9EA0) {r: 0.012000, g: 0.011500, b: 0.013000, a: 1.000000}>

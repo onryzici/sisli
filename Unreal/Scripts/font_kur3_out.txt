@@ -1,0 +1,13 @@
+sil /Game/Uyanis/UI/Font/FF_EBGaramond_Italic True
+sil /Game/Uyanis/UI/Font/FF_EBGaramond_Medium True
+sil /Game/Uyanis/UI/Font/FF_EBGaramond_Regular True
+sil /Game/Uyanis/UI/Font/FF_EBGaramond_SemiBold True
+sil /Game/Uyanis/UI/F_Garamond True
+sil /Game/Uyanis/UI/F_Altyazi True
+içe Regular ['/Game/Uyanis/UI/Font/FF_EBGaramond_Regular.FF_EBGaramond_Regular']
+içe Italic ['/Game/Uyanis/UI/Font/FF_EBGaramond_Italic.FF_EBGaramond_Italic']
+içe Medium ['/Game/Uyanis/UI/Font/FF_EBGaramond_Medium.FF_EBGaramond_Medium']
+içe SemiBold ['/Game/Uyanis/UI/Font/FF_EBGaramond_SemiBold.FF_EBGaramond_SemiBold']
+klasör ['/Game/Uyanis/UI/Font/FF_EBGaramond_Italic.FF_EBGaramond_Italic', '/Game/Uyanis/UI/Font/FF_EBGaramond_Italic_Font.FF_EBGaramond_Italic_Font', '/Game/Uyanis/UI/Font/FF_EBGaramond_Medium.FF_EBGaramond_Medium', '/Game/Uyanis/UI/Font/FF_EBGaramond_Medium_Font.FF_EBGaramond_Medium_Font', '/Game/Uyanis/UI/Font/FF_EBGaramond_Regular.FF_EBGaramond_Regular', '/Game/Uyanis/UI/Font/FF_EBGaramond_Regular_Font.FF_EBGaramond_Regular_Font', '/Game/Uyanis/UI/Font/FF_EBGaramond_SemiBold.FF_EBGaramond_SemiBold', '/Game/Uyanis/UI/Font/FF_EBGaramond_SemiBold_Font.FF_EBGaramond_SemiBold_Font']
+F_Altyazi 30 <FontCacheType.RUNTIME: 1>
+TAMAM

@@ -16,15 +16,15 @@ function Kagit([int]$w, [int]$h, $taban) {
 $kb = Kagit 1024 1448 ([System.Drawing.Color]::FromArgb(255, 214, 202, 170)); $b = $kb[0]; $g = $kb[1]
 $m = [System.Drawing.Color]::FromArgb(235, 38, 34, 32); $f1 = New-Object System.Drawing.Font 'Courier New', 38, ([System.Drawing.FontStyle]::Bold); $f2 = New-Object System.Drawing.Font 'Courier New', 25
 $br = New-Object System.Drawing.SolidBrush $m
-$g.DrawString("4. YATAKHANE", $f2, $br, 90, 110); $g.DrawString("YATAKHANE KURALLARI", $f1, $br, 90, 170)
+$g.DrawString("DORMITORY 4", $f2, $br, 90, 110); $g.DrawString("HOUSE RULES", $f1, $br, 90, 170)
 $g.DrawLine((New-Object System.Drawing.Pen $m, 3), 90, 240, 934, 240)
-$satir = @("1. Işıklar saat 21.00'de söner.", "2. Gece sayımında herkes yatağında olur.", "3. Yatakhanede konuşmak yasaktır.", "4. Bakıcının izni olmadan kapıdan", "   çıkılmaz.", "5. Kardeşler ayrı ranzalarda yatar.", "6. Kural dışı hareket eden çocuk", "   ayrılır.")
+$satir = @("1. Lights go out at 21:00.", "2. All children in bed for night count.", "3. No talking in the dormitory.", "4. No child leaves through the door", "   without a caretaker.", "5. Siblings sleep in separate bunks.", "6. A child who breaks the rules", "   will be separated.")
 $y = 300; foreach ($s in $satir) { $g.DrawString($s, $f2, $br, 90 + $R.Next(-2, 3), $y + $R.Next(-2, 3)); $y += 62 }
-$g.DrawString("Müdürlük", $f2, $br, 640, 1010)
+$g.DrawString("- The Directorate", $f2, $br, 560, 1010)
 # mühür: mor halka + yazı, eğik
 $g.TranslateTransform(300, 1120); $g.RotateTransform(-14)
 $mp = New-Object System.Drawing.Pen ([System.Drawing.Color]::FromArgb(150, 92, 40, 110)), 7; $g.DrawEllipse($mp, -120, -120, 240, 240); $g.DrawEllipse((New-Object System.Drawing.Pen ([System.Drawing.Color]::FromArgb(120, 92, 40, 110)), 3), -95, -95, 190, 190)
-$g.DrawString("ONAYLI", (New-Object System.Drawing.Font 'Arial Black', 30), (New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(140, 92, 40, 110))), -82, -26)
+$g.DrawString("APPROVED", (New-Object System.Drawing.Font 'Arial Black', 24), (New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(140, 92, 40, 110))), -92, -22)
 $g.ResetTransform()
 # biri "6"nın altını tırnakla kazımış
 $g.DrawLine((New-Object System.Drawing.Pen ([System.Drawing.Color]::FromArgb(90, 120, 30, 20)), 2), 120, 798, 690, 806)
@@ -71,12 +71,12 @@ Pastel $g $sari @(($ex + 50), 690, ($ex + 110), 700) 2 7
 Pastel $g $siyah @(($ex + 105), 640, ($ex + 140), 640, ($ex + 150), 690, ($ex + 140), 740, ($ex + 110), 740, ($ex + 100), 690, ($ex + 105), 640) 2 5   # tavşan
 Pastel $g $siyah @(($ex + 112), 640, ($ex + 108), 590) 2 5; Pastel $g $siyah @(($ex + 132), 640, ($ex + 140), 592) 2 5
 Pastel $g $siyah @(($ex - 12), 597, ($ex - 8), 600) 2 5; Pastel $g $siyah @(($ex + 10), 597, ($ex + 14), 600) 2 5; Pastel $g $kir @(($ex - 12), 620, $ex, 627, ($ex + 13), 620) 2 4
-# yazı: ABİM VE BEN (titrek büyük harfler)
+# yazı: ME AND MY BROTHER (titrek büyük harfler)
 $fnt = New-Object System.Drawing.Font 'Segoe Print', 64, ([System.Drawing.FontStyle]::Bold)
-$x = 70; foreach ($ch in "ABİM VE BEN".ToCharArray()) {
-  $g.TranslateTransform($x, 130 + $R.Next(-14, 14)); $g.RotateTransform($R.Next(-12, 12))
+foreach ($sat in @(@("ME AND", 70, 90), @("MY BROTHER", 110, 220))) { $x = $sat[1]; foreach ($ch in ([string]$sat[0]).ToCharArray()) {
+  $g.TranslateTransform($x, $sat[2] + $R.Next(-14, 14)); $g.RotateTransform($R.Next(-12, 12))
   $g.DrawString([string]$ch, $fnt, (New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(200, 70, 100, 170))), 0, 0); $g.ResetTransform(); $x += ($(if ($ch -eq ' ') { 40 } else { 62 }))
-}
+} }
 # köşelerde bant
 foreach ($c in @(@(-20, -10, 14), @(1360, -10, -10), @(-20, 950, -12), @(1370, 950, 9))) { $g.TranslateTransform($c[0] + 55, $c[1] + 35); $g.RotateTransform($c[2]); $g.FillRectangle((New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(120, 235, 225, 190))), -60, -22, 120, 44); $g.ResetTransform() }
 $b.Save("$Out\T_ElaCizim.png"); $g.Dispose(); $b.Dispose()

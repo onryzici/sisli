@@ -1,0 +1,8 @@
+segment 24 parametre 46 eksik parmak kemikleri ['cc_base_l_indextoe1', 'cc_base_l_pinkytoe1', 'cc_base_l_ringtoe1', 'cc_base_r_indextoe1', 'cc_base_r_pinkytoe1', 'cc_base_r_ringtoe1']
+adım 0 hata² 13.1447 en kötü [('pinky_01_l>index_01_l', 35.0), ('pinky_01_r>index_01_r', 34.4), ('thumb_01_l>thumb_02_l', 23.8), ('thumb_01_r>thumb_02_r', 23.7), ('thumb_02_l>thumb_03_l', 21.4), ('thumb_02_r>thumb_03_r', 20.9), ('middle_02_l>middle_03_l', 20.2), ('middle_02_r>middle_03_r', 19.4)]
+adım 1 hata² 1.4251 en kötü [('pinky_01_l>index_01_l', 14.6), ('pinky_01_r>index_01_r', 14.4), ('index_02_l>index_03_l', 6.7), ('index_02_r>index_03_r', 6.2), ('index_01_r>index_02_r', 4.6), ('hand_l>middle_01_l', 4.5), ('hand_r>middle_01_r', 4.4), ('index_01_l>index_02_l', 4.1)]
+adım 2 hata² 0.7335 en kötü [('pinky_01_l>index_01_l', 9.1), ('pinky_01_r>index_01_r', 8.7), ('index_02_l>index_03_l', 6.4), ('index_02_r>index_03_r', 6.0), ('index_01_r>index_02_r', 4.6), ('hand_l>middle_01_l', 4.4), ('hand_r>middle_01_r', 4.4), ('index_01_l>index_02_l', 4.2)]
+adım 3 hata² 0.5472 en kötü [('pinky_01_l>index_01_l', 6.7), ('index_02_l>index_03_l', 6.4), ('pinky_01_r>index_01_r', 6.4), ('index_02_r>index_03_r', 6.0), ('index_01_r>index_02_r', 4.4), ('index_01_l>index_02_l', 4.1), ('hand_l>middle_01_l', 3.6), ('hand_r>middle_01_r', 3.6)]
+SON hata² 0.4625 en kötü [('index_02_l>index_03_l', 6.4), ('index_02_r>index_03_r', 6.0), ('pinky_01_l>index_01_l', 5.3), ('pinky_01_r>index_01_r', 5.0), ('index_01_r>index_02_r', 4.4), ('index_01_l>index_02_l', 4.0), ('middle_02_r>middle_03_r', 3.5), ('middle_01_l>middle_02_l', 3.1)]
+başparmak {'thumb_01_l>thumb_02_l': 0.7, 'thumb_02_l>thumb_03_l': 1.4, 'thumb_01_r>thumb_02_r': 0.7, 'thumb_02_r>thumb_03_r': 0.5}
+TAMAM

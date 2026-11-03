@@ -1,0 +1,10 @@
+HEDEF (beğenilen) MM_Idle_E gövde +4.7 göğüs +3.3 baş +23.8 omuz -6.9
+ŞİMDİ (GASP)     M_Neutral_Stand_Idle_Loop gövde -0.1 göğüs -2.3 baş +15.1 omuz -15.7
+HEDEF (beğenilen) MF_Unarmed_Walk_Fwd_E gövde +4.6 göğüs +4.8 baş +23.6 omuz -4.5
+ŞİMDİ (GASP)     M_Neutral_Walk_Loop_F gövde +1.8 göğüs +3.0 baş +24.0 omuz -11.7
+adım 0 p=[0.0, 0.0, 0.0] idle gövde -0.1 göğüs -2.3 baş +15.1 omuz -15.7 | yürüme gövde +1.8 göğüs +3.0 baş +24.0 omuz -11.7
+adım 1 p=[4.8, -0.7, -15.0] idle gövde +3.0 göğüs +2.1 baş +19.1 omuz -13.5 | yürüme gövde +5.1 göğüs +7.7 baş +28.1 omuz -9.6
+adım 2 p=[4.8, -0.7, -30.0] idle gövde +3.0 göğüs +2.1 baş +19.2 omuz -10.3 | yürüme gövde +5.1 göğüs +7.7 baş +28.2 omuz -6.7
+adım 3 p=[4.8, -0.7, -42.5] idle gövde +3.0 göğüs +2.1 baş +19.2 omuz -7.3 | yürüme gövde +5.1 göğüs +7.7 baş +28.2 omuz -3.7
+SON p=[4.8, -0.7, -41.9] idle gövde +3.1 göğüs +2.2 baş +19.2 omuz -7.5 | yürüme gövde +5.1 göğüs +7.7 baş +28.2 omuz -3.9
+TAMAM

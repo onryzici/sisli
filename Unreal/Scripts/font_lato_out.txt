@@ -1,0 +1,5 @@
+içe Regular ['/Game/Uyanis/UI/Font/FF_Lato_Regular.FF_Lato_Regular']
+içe Italic ['/Game/Uyanis/UI/Font/FF_Lato_Italic.FF_Lato_Italic']
+hale ['/Game/Uyanis/UI/T_AltyaziHale.T_AltyaziHale']
+klasör ['FF_Lato_Italic.FF_Lato_Italic', 'FF_Lato_Italic_Font.FF_Lato_Italic_Font', 'FF_Lato_Regular.FF_Lato_Regular', 'FF_Lato_Regular_Font.FF_Lato_Regular_Font']
+TAMAM

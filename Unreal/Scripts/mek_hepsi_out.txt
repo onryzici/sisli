@@ -1,2 +1,8 @@
-TAMAM BP_Fener
-OK BP_Fener
+TAMAM BP_Giris
+OK BP_Giris
+TAMAM BP_Oyuncak
+OK BP_Oyuncak
+TAMAM BP_Incele
+OK BP_Incele
+TAMAM BP_YatakhaneKapisi
+OK BP_YatakhaneKapisi

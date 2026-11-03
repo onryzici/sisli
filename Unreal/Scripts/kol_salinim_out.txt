@@ -1,0 +1,5 @@
+KAYNAK l: üst kol en geri -34.2° en ileri +36.2° | omuz→el en geri -21.9° ileri +47.0° | köprücük -32.3..-0.5° | gövde +0.9..+6.3
+KAYNAK r: üst kol en geri -28.6° en ileri +23.3° | omuz→el en geri -16.2° ileri +35.6° | köprücük -41.0..-7.2° | gövde +0.9..+6.3
+ÇOCUK l: üst kol en geri -35.3° en ileri +34.8° | omuz→el en geri -22.3° ileri +46.5° | köprücük -22.8..+10.5° | gövde +1.6..+7.1
+ÇOCUK r: üst kol en geri -29.9° en ileri +22.0° | omuz→el en geri -16.5° ileri +35.2° | köprücük -31.1..+3.4° | gövde +1.6..+7.1
+TAMAM

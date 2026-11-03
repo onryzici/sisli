@@ -1,0 +1,6 @@
+MOB1_Jog_F_IPC_C doğal hız 251 cm/s süre 0.80
+MOB1_Run_F_IPC_C doğal hız 440 cm/s süre 0.57
+M_Neutral_Run_Loop_F_C doğal hız 364 cm/s süre 2.50
+M_Relaxed_Run_Loop_F_C doğal hız 266 cm/s süre 2.90
+Walk_06_Look_Around_Loop_IP_C doğal hız 97 cm/s süre 11.93
+TAMAM

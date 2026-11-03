@@ -1,0 +1,1 @@
+[('MF_Unarmed_Jog_Fwd_H', 0.75), ('MF_Unarmed_Walk_Fwd_H', 0.73), ('MM_Idle_H', 1.0), ('MOB1_CrouchWalk_F_IPC_H', 1.0), ('MOB1_Crouch_Idle_V2_IPC_H', 1.0)]

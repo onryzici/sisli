@@ -1,0 +1,5 @@
+UMGToolSet.UMGToolSet.ToggleWidgetAsVariable giriş: {"widgetBlueprint": "/Script/UMGEditor.WidgetBlueprint", "widget": "/Script/UMG.Widget", "bIsVariable": "boolean"} zorunlu: ['widgetBlueprint', 'widget', 'bIsVariable']
+UMGToolSet.UMGToolSet.GetWidgets giriş: {"widgetBlueprint": "/Script/UMGEditor.WidgetBlueprint"} zorunlu: ['widgetBlueprint']
+UMGToolSet.UMGToolSet.CreateWidgetBlueprint giriş: {"folderPath": "string", "assetName": "string", "parentClass": "Class@/Script/UMG.UserWidget"} zorunlu: ['folderPath', 'assetName', 'parentClass']
+UMGToolSet.UMGToolSet.CompileWidgetBlueprint giriş: {"widgetBlueprint": "/Script/UMGEditor.WidgetBlueprint"} zorunlu: ['widgetBlueprint']
+UMGToolSet.UMGToolSet.AddWidget giriş: {"widgetBlueprint": "/Script/UMGEditor.WidgetBlueprint", "widgetClass": "Class@/Script/UMG.Widget", "widgetDisplayName": "string", "parentWidget": "/Script/UMG.Widget", "childIndex": "integer"} zorunlu: ['widgetBlueprint', 'widgetClass', 'widgetDisplayName']

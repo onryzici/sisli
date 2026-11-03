@@ -1,0 +1,3 @@
+dolap boyutu 68 52 174
+kaydedildi /Game/Uyanis/Maps/L_Kat01
+TAMAM dolap 114 saklanma 8

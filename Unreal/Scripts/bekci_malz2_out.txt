@@ -1,0 +1,4 @@
+/Game/Uyanis/Malzeme/M_MS once True simdi True kayit True
+/Game/Sisli/Malzeme/M_Sisli once False simdi True kayit True
+mi parent /Game/Sisli/Malzeme/M_Sisli.M_Sisli
+bp None

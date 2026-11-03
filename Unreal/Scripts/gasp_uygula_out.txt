@@ -1,0 +1,3 @@
+BS [('M_Neutral_Crouch_Idle_Loop_C', 1.0), ('M_Neutral_Stand_Idle_Loop_C', 1.0), ('M_Relaxed_Run_Loop_F_C', 1.0), ('SCR_Walk_Scared_Fwd_Look_Right_Loop_IP_C', 1.04), ('SCR_Walk_Scared_Fwd_Look_Right_Loop_IP_C', 2.08), ('Walk_06_Look_Around_Loop_IP_C', 1.02)]
+hız 100.0 50.0
+TAMAM

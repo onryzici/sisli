@@ -1,0 +1,15 @@
+içe Regular ['/Game/Uyanis/UI/Font/FF_EBGaramond_Regular.FF_EBGaramond_Regular']
+  sınıf FontFace
+içe Italic ['/Game/Uyanis/UI/Font/FF_EBGaramond_Italic.FF_EBGaramond_Italic']
+  sınıf FontFace
+içe Medium ['/Game/Uyanis/UI/Font/FF_EBGaramond_Medium.FF_EBGaramond_Medium']
+  sınıf FontFace
+içe SemiBold ['/Game/Uyanis/UI/Font/FF_EBGaramond_SemiBold.FF_EBGaramond_SemiBold']
+  sınıf FontFace
+HATA Traceback (most recent call last):
+  File "C:/Users/Onur/Sisli/Unreal/Scripts/font_kur.py", line 34, in <module>
+    font_yap("/Game/Uyanis/UI/F_Garamond", [("Regular", yuzler["Regular"]), ("Italic", yuzler["Italic"]), ("Medium", yuzler["Medium"]), ("SemiBold", yuzler["SemiBold"])])
+  File "C:/Users/Onur/Sisli/Unreal/Scripts/font_kur.py", line 19, in font_yap
+    f = eal.load_asset(yol); cf = f.get_editor_property("composite_font"); tf = cf.get_editor_property("default_typeface")
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: CompositeFont: Failed to find property 'default_typeface' for attribute 'default_typeface' on 'CompositeFont'

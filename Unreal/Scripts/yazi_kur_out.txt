@@ -1,21 +1,21 @@
-YAZI SW_giris 3s ...Ela?
-YAZI SW_kontrol 7s Fare: bak   ·   WASD: yürü   ·   Ctrl: çömel   ·   E: incele   ·   F: fener
-YAZI SW_ipucu 3s [E]  İncele
-YAZI SW_tavsan1 5s Ela'nın tavşanı. Onu hiç yanından ayırmazdı...
-YAZI SW_tavsan2 3s Ela'yı bulmalıyım.
-YAZI SW_yatak_ela 4s Ela'nın yatağı. Çarşafı buz gibi.
-YAZI SW_yatak_ben 7s Benim yatağım. Ela hep alttakini isterdi; korkunca yanıma kıvrılırdı.
-YAZI SW_cizim1 4s Ela'nın çizimi. İkimiz... el ele.
-YAZI SW_cizim2 5s Arkaya kırmızı bir ışık çizmiş. Neden kırmızı?
-YAZI SW_kurallar1 6s "Işıklar 21.00'de söner. Gece sayımında herkes yatağında olur."
-YAZI SW_kurallar2 6s "Kural dışı hareket eden çocuk ayrılır."  ...Ayrılır mı?
-YAZI SW_pencere 5s Sis. Sisin ardında hiç bitmeyen duvarlar.
-YAZI SW_dolap_ela 5s Ela'nın dolabı. Boşaltılmış... Kıyafetleri bile yok.
-YAZI SW_dolap_bakici 5s Kilitli. İçinden ilaç kokusu geliyor.
-YAZI SW_defter1 6s Bakıcının defteri.  "Gece sayımı — 4. Yatakhane: 23 çocuk."
-YAZI SW_defter2 7s "02:40 — K. Ela (7). 7. Blok'a nakledildi. Ağabeyine bildirilmeyecek."
-YAZI SW_defter3 5s 7. Blok... Onu götürmüşler. Anahtarları alıyorum.
-YAZI SW_kapi_kilitli 5s Kilitli. Bakıcının anahtarları olmalı.
-YAZI SW_anahtar 4s Bakıcının anahtarları.
-YAZI SW_kapi_acik 3s Ela... Geliyorum.
+YAZI SW_giris 3s Ela...?
+YAZI SW_kontrol 9s Mouse  look   ·   WASD  walk   ·   Shift  run   ·   Ctrl  sneak   ·   E  inspect   ·   F  flashlight
+YAZI SW_ipucu 3s E   Inspect
+YAZI SW_tavsan1 5s Her rabbit. She never sleeps without it.
+YAZI SW_tavsan2 4s She wouldn't have left it here.
+YAZI SW_yatak_ela 4s Her side of the bunk. Cold.
+YAZI SW_yatak_ben 8s She always wanted the bottom bunk. And still climbed up to mine when the lights went out.
+YAZI SW_cizim1 4s She drew us. Holding hands.
+YAZI SW_cizim2 7s And a red light over the tower. I never told her about the red light.
+YAZI SW_kurallar1 6s The rules. I used to read them to her, like a bedtime story.
+YAZI SW_kurallar2 5s Someone scratched a line under the last one.
+YAZI SW_pencere 5s Fog. And walls, as far as the fog lets me see.
+YAZI SW_dolap_ela 5s Her locker. Emptied. Not even her coat.
+YAZI SW_dolap_bakici 4s Locked. It smells of medicine.
+YAZI SW_defter1 5s The night log. Twenty-three names. Mine. Not hers.
+YAZI SW_defter2 6s 02:40. Her initial. Block 7. 'Do not inform the brother.'
+YAZI SW_defter3 4s They knew I'd look for her.
+YAZI SW_kapi_kilitli 4s Locked. The caretaker has the keys.
+YAZI SW_anahtar 4s The caretaker's keys. Still warm.
+YAZI SW_kapi_acik 3s Wait for me, Ela.
 TAMAM

@@ -1,0 +1,2 @@
+SetMaterial ['Class|MaterialExpression|SetMaterialExpressionEditorX', 'Class|MaterialExpression|SetMaterialExpressionEditorY', 'ClothingSimulation|SetMaterialLinear', 'ClothingSimulation|SetMaterialBuckling', 'ClothingSimulation|SetMaterial', 'Rendering|SetMaterial', 'Rendering|Material|SetMaterialbyName', 'Rendering|Material|SetMaterial']
+slot 1

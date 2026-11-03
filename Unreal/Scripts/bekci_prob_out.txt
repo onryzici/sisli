@@ -1,0 +1,11 @@
+bilesen Default__BP_Bekci_C Actor
+bilesen DefaultSceneRoot_GEN_VARIABLE SceneComponent
+bilesen Fener_GEN_VARIABLE SpotLightComponent
+bilesen Fener_GEN_VARIABLE SpotLightComponent
+bilesen Govde_GEN_VARIABLE SkeletalMeshComponent
+  override ['/Game/Uyanis/Sahne/MI_Bekci_Kumas.MI_Bekci_Kumas']
+  mesh <Object '/Game/Characters/UEFN_Mannequin/Meshes/SKM_UEFN_Mannequin.SKM_UEFN_Mannequin' (0x0000023D446A1400) Class 'SkeletalMesh'>
+bilesen Govde_GEN_VARIABLE SkeletalMeshComponent
+  override ['/Game/Uyanis/Sahne/MI_Bekci_Kumas.MI_Bekci_Kumas']
+  mesh <Object '/Game/Characters/UEFN_Mannequin/Meshes/SKM_UEFN_Mannequin.SKM_UEFN_Mannequin' (0x0000023D446A1400) Class 'SkeletalMesh'>
+graf EdGraph: Property 'Nodes' for attribute 'nodes' on 'EdGraph' is protected and cannot be read

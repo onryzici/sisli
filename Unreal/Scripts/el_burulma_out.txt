@@ -1,0 +1,11 @@
+temiz anahtar 358 hedef 358
+geri yüklendi
+l önce (gövdeye göre): geri/ileri -34.7..+35.7°  açıklık -0.8..+23.3°
+r önce (gövdeye göre): geri/ileri -26.9..+21.2°  açıklık +6.0..+19.6°
+l sonra (gövdeye göre): geri/ileri -26.0..+26.9°  açıklık +3.7..+22.4°
+r sonra (gövdeye göre): geri/ileri -26.9..+21.2°  açıklık +6.0..+19.6°
+l: önce sapma ort 42.8° maks 83.6°
+l: sonra sapma ort 0.0° maks 0.0°, dirsek değişimi 0.00°
+r: önce sapma ort 8.5° maks 44.4°
+r: sonra sapma ort 6.7° maks 44.4°, dirsek değişimi 0.00°
+TAMAM

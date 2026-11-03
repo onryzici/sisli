@@ -1,0 +1,15 @@
+ops [('Pelvis Motion', True), ('FK Chains', True), ('Run IK Rig', False), ('Root Motion', True), ('Remap Curves', True)]
+gövde adım 0 hata² 1.1294 [('clavicle_l>upperarm_l', 14.0), ('clavicle_r>upperarm_r', 14.0), ('neck_01>head', 12.4), ('thigh_l>calf_l', 4.5), ('thigh_r>calf_r', 4.5), ('lowerarm_r>hand_r', 3.2)]
+gövde adım 1 hata² 0.7429 [('clavicle_r>upperarm_r', 13.8), ('clavicle_l>upperarm_l', 13.7), ('neck_01>head', 4.0), ('thigh_l>calf_l', 1.7), ('thigh_r>calf_r', 1.7), ('lowerarm_r>hand_r', 1.4)]
+gövde adım 2 hata² 0.6558 [('clavicle_l>upperarm_l', 13.2), ('clavicle_r>upperarm_r', 13.2), ('neck_01>head', 1.8), ('lowerarm_l>hand_l', 1.1), ('lowerarm_r>hand_r', 1.1), ('calf_r>foot_r', 1.1)]
+gövde adım 3 hata² 0.5959 [('clavicle_l>upperarm_l', 12.6), ('clavicle_r>upperarm_r', 12.6), ('upperarm_l>lowerarm_l', 1.1), ('upperarm_r>lowerarm_r', 1.1), ('calf_r>foot_r', 1.1), ('neck_01>head', 1.0)]
+gövde SON hata² 0.5429 [('clavicle_l>upperarm_l', 12.0), ('clavicle_r>upperarm_r', 12.0), ('upperarm_l>lowerarm_l', 1.4), ('upperarm_r>lowerarm_r', 1.4), ('calf_r>foot_r', 1.1), ('calf_l>foot_l', 1.0)]
+el adım 0 hata² 1.9018 [('pinky_01_l>index_01_l', 14.5), ('pinky_01_r>index_01_r', 14.2), ('hand_l>middle_01_l', 11.6), ('hand_r>middle_01_r', 11.5), ('thumb_01_r>thumb_02_r', 9.0), ('thumb_01_l>thumb_02_l', 8.8)]
+el adım 1 hata² 0.4479 [('pinky_01_l>index_01_l', 8.0), ('pinky_01_r>index_01_r', 7.6), ('hand_l>middle_01_l', 5.4), ('hand_r>middle_01_r', 5.4), ('thumb_01_r>thumb_02_r', 2.7), ('thumb_01_l>thumb_02_l', 2.6)]
+el adım 2 hata² 0.2120 [('pinky_01_l>index_01_l', 5.5), ('pinky_01_r>index_01_r', 5.2), ('hand_l>middle_01_l', 3.4), ('hand_r>middle_01_r', 3.4), ('thumb_01_l>thumb_02_l', 2.0), ('thumb_01_r>thumb_02_r', 2.0)]
+el SON hata² 0.1182 [('pinky_01_l>index_01_l', 4.0), ('pinky_01_r>index_01_r', 3.8), ('hand_r>middle_01_r', 2.3), ('hand_l>middle_01_l', 2.2), ('thumb_01_l>thumb_02_l', 1.7), ('thumb_01_r>thumb_02_r', 1.7)]
+anim SCR_Walk_Scared_Fwd_Look_Left_Loop_IP süre 9.97 doğal hız (oyunda, ×0.86) 41 cm/s
+anim SCR_Walk_Scared_Fwd_Look_Right_Loop_IP süre 8.77 doğal hız (oyunda, ×0.86) 48 cm/s
+anim Walk_06_Look_Around_Loop_IP süre 11.93 doğal hız (oyunda, ×0.86) 98 cm/s
+anim MOB1_Walk_F_IPC süre 1.20 doğal hız (oyunda, ×0.86) 94 cm/s
+TAMAM

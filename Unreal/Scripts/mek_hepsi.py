@@ -173,9 +173,10 @@ def fener():
     bilesen(bp, unreal.SpotLightComponent, "Isik", intensity_units=unreal.LightUnits.CANDELAS, intensity=55.0, attenuation_radius=1800.0,
             outer_cone_angle=24.0, inner_cone_angle=10.0, light_color=unreal.Color(r=255, g=236, b=205, a=255), volumetric_scattering_intensity=2.5,
             source_radius=3.0, visible=False)
-    degisken(bp, "Comeldi", "bool", False, False); degisken(bp, "TestComel", "bool", False); degisken(bp, "TestZipla", "bool", False)
+    degisken(bp, "Comeldi", "bool", False, False); degisken(bp, "TestComel", "bool", False); degisken(bp, "TestZipla", "bool", False); degisken(bp, "TestKos", "bool", False)
     degisken(bp, "BSKurulu", "bool", False, False); degisken(bp, "ComelA", "float", 0.0, False); degisken(bp, "HizY", "float", 0.0, False)
-    # zıplama (tek düğüm kipi: karışım yok, durum değişince animasyon değişir): Havada → MM_Jump, 0.8 sn sonra MM_Fall_Loop; yere değince MM_Land → BS
+    # hareket ABP_Cocuk'ta (BS + DefaultSlot). Zıplama: Slot montajı, giriş/çıkış karışımlı: Havada → MM_Jump, 0.8 sn sonra MM_Fall_Loop;
+    # yere değince MM_Land, 0.42 sn sonra (ya da yürümeye başlayınca) montaj karışarak durur → BS
     degisken(bp, "Havada", "bool", False, False); degisken(bp, "DusDongu", "bool", False, False); degisken(bp, "Inis", "bool", False, False)
     degisken(bp, "HavaT", "float", 0.0, False); degisken(bp, "SonrakiZipla", "float", 3.0, False)
     # yüz: Zaman, göz kırpma (GozT: kırpma başından beri geçen süre, SonrakiGoz: sonraki kırpma anı; %18 çift kırpma), yavaş mikro ifadeler
@@ -183,7 +184,12 @@ def fener():
     A = "/Game/Sisli/Cocuk2/Anim"
     BS = f"{A}/BS_Cocuk2_Hareket2.BS_Cocuk2_Hareket2"
     JUMP, FALL, LAND = (f"{A}/Ziplama/{n}_G.{n}_G" for n in ("MM_Jump", "MM_Fall_Loop", "MM_Land"))
-    def oynat(yol, dongu): return f'(Components|Animation|PlayAnimation :self m :NewAnimToPlay "{yol}" :bLooping {"true" if dongu else "false"})'
+    ABP = f"{A}/ABP_Cocuk.ABP_Cocuk_C"
+    AI = "(Components|SkeletalMesh|GetAnimInstance :self m)"
+    def montaj(yol, gir, cik, dongu=1):
+        return (f'(Animation|Montage|PlaySlotAnimationasDynamicMontage :self {AI} :Asset "{yol}" :SlotNodeName "DefaultSlot" '
+                f':BlendInTime {gir} :BlendOutTime {cik} :LoopCount {dongu})')
+    def durdur(cik): return f'(Animation|Montage|StopSlotAnimation :self {AI} :InBlendOutTime {cik} :SlotNodeName "DefaultSlot")'
     def sn(f, faz=0.0): return f"(Math|Trig|Sin(Radians) (+ (* t {f}) {faz}))"
     def art(x): return f"(Math|Float|Max(Float) 0.0 {x})"
     def morf(ad, deger, iki=True):
@@ -231,6 +237,8 @@ def fener():
     (Uye|Set|SonrakiZipla (+ (Uye|Get|Zaman) 2.6))
     (Character|Jump :self oy))
   (bind ctrl (or (or (Game|Player|IsInputKeyDown :self pc :Key "LeftControl") (Game|Player|IsInputKeyDown :self pc :Key "RightControl")) (Uye|Get|TestComel)))
+  (bind kos (and (or (or (Game|Player|IsInputKeyDown :self pc :Key "LeftShift") (Game|Player|IsInputKeyDown :self pc :Key "RightShift")) (Uye|Get|TestKos)) (not ctrl)))
+  (Class|CharacterMovementComponent|SetMaxWalkSpeed :self (Class|Character|GetCharacterMovement :self oy) :MaxWalkSpeed (select kos 266.0 100.0))
   (bind v (Transformation|GetVelocity oy))
   (bind hiz (Math|Vector|VectorLength (Math|Vector|MakeVector (.x v) (.y v) 0.0)))
   (bind mb (Actor|GetComponentbyClass oy "/Script/Engine.SkeletalMeshComponent"))
@@ -239,7 +247,7 @@ def fener():
 {yuz}
       (if (not (Uye|Get|BSKurulu))
         (Uye|Set|BSKurulu true)
-        {oynat(BS, True)})
+        (Components|SkeletalMesh|SetAnimInstanceClass :self m :NewClass "{ABP}"))
       (if (!= ctrl (Uye|Get|Comeldi))
         (Uye|Set|Comeldi ctrl)
         (if ctrl
@@ -257,31 +265,26 @@ def fener():
           (Development|PrintString "SISLI ZIPLADI" :bPrintToScreen false)
           (if (> (.z v) 10.0)
             (Uye|Set|DusDongu false)
-            {oynat(JUMP, False)}
+            {montaj(JUMP, 0.12, 0.25)}
             (else
               (Uye|Set|DusDongu true)
-              {oynat(FALL, True)})))
+              {montaj(FALL, 0.3, 0.25, 999)})))
         (Uye|Set|HavaT (+ (Uye|Get|HavaT) DeltaSeconds))
         (if (and (not (Uye|Get|DusDongu)) (> (Uye|Get|HavaT) 0.8))
           (Uye|Set|DusDongu true)
-          {oynat(FALL, True)})
+          {montaj(FALL, 0.3, 0.25, 999)})
         (else
           (if (Uye|Get|Havada)
             (Uye|Set|Havada false)
             (Uye|Set|Inis true)
             (Uye|Set|HavaT 0.0)
             (Development|PrintString "SISLI INDI" :bPrintToScreen false)
-            {oynat(LAND, False)})
+            {montaj(LAND, 0.08, 0.35)})
           (if (Uye|Get|Inis)
             (Uye|Set|HavaT (+ (Uye|Get|HavaT) DeltaSeconds))
             (if (or (> (Uye|Get|HavaT) 0.42) (> (Uye|Get|HizY) 50.0))
               (Uye|Set|Inis false)
-              {oynat(BS, True)}))))
-      (if (and (not (Uye|Get|Havada)) (not (Uye|Get|Inis)))
-        (bind tek (Utilities|Casting|CastToAnimSingleNodeInstance :Object (Components|SkeletalMesh|GetAnimInstance :self m))
-          (:then
-            (Animation|SetBlendSpacePosition :self tek :InPosition (Math|Vector|MakeVector (+ 45.0 (* 45.0 (Uye|Get|ComelA))) (* (Uye|Get|HizY) (+ 2.0 (* 1.16 (Uye|Get|ComelA)))) 0.0)))
-          (:CastFailed))))
+              {durdur(0.35)})))))
     (:CastFailed)))
 ''')
     derle_kaydet(bp)
@@ -418,18 +421,42 @@ def testyuru():
 
 # ================= UYANIŞ (açılış) mekanikleri =================
 YAZI = "(Math|Color|MakeColor 0.86 0.84 0.8 1.0)"
-# ---------- BP_Giris: siyahtan açılış + ilk iç ses ----------
+# ---------- altyazı (WBP_Altyazi, ui_altyazi.py; kullanıcı motor altyazısını "çok kötü" buldu): metin widget'ın ToolTipText "gelen kutusu"na yazılır ----------
+import sys as _sys; _sys.path.append("C:/Users/Onur/Sisli/Unreal/Scripts")
+from metinler import SATIR, iki
+ALTYAZI_C = "/Game/Uyanis/UI/WBP_Altyazi.WBP_Altyazi_C"
+_say = [0]
+def soyle(ifade):
+    """ifade: Text veren DSL ifadesi (tırnaklı metin ya da (Uye|Get|Metin1)). Widget yoksa oluşturur."""
+    _say[0] += 1; n = _say[0]
+    return f'''(bind aws{n} (Widget|GetAllWidgetsOfClass :WidgetClass "{ALTYAZI_C}" :TopLevelOnly true))
+  (if (> (Utilities|Array|Length aws{n}) 0)
+    (Widget|SetToolTipText :self (Utilities|Array|Get(acopy) aws{n} 0) :InToolTipText {ifade})
+    (else
+      (bind aw{n} (UserInterface|CreateWidget :Class "{ALTYAZI_C}" :OwningPlayer (Game|GetPlayerController 0)))
+      (UserInterface|Viewport|AddtoViewport :self aw{n} :ZOrder 5)
+      (Widget|SetToolTipText :self aw{n} :InToolTipText {ifade})))'''
+def soz(k): return soyle('(Utilities|Text|ToText(String) "' + iki(k).replace('"', "'") + '")')   # Text pinine düz metin yazılamıyor
+
+# ---------- BP_Giris: siyahtan açılış + ilk iç ses (altyazı widget'ı burada kurulur) ----------
 def giris():
     bp = yeni_bp("BP_Giris")
+    degisken(bp, "TestUI", "bool", False)   # test: arayüz dahil ekran görüntüsü (shot showui) — UMG -dumpmovie karelerinde görünmez
     dsl(bp, f'''
 (event EventBeginPlay
   (bind kam (Game|GetPlayerCameraManager 0))
   (CameraFades|StartCameraFade kam 1.0 0.0 5.0 (Math|Color|MakeColor 0.0 0.0 0.0 1.0) false false)
+  (bind aw0 (UserInterface|CreateWidget :Class "{ALTYAZI_C}" :OwningPlayer (Game|GetPlayerController 0)))
+  (UserInterface|Viewport|AddtoViewport :self aw0 :ZOrder 5)
   (Development|PrintString "SISLI GIRIS" :bPrintToScreen false)
   (Utilities|FlowControl|Delay 3.5)
-  (Audio|PlaySound2D :Sound "/Game/Uyanis/Yazi/SW_giris.SW_giris")
+  {soz('giris')}
   (Utilities|FlowControl|Delay 4.0)
-  (Audio|PlaySound2D :Sound "/Game/Uyanis/Yazi/SW_kontrol.SW_kontrol"))
+  {soz('kontrol')}
+  (if (Uye|Get|TestUI)
+    (Utilities|FlowControl|Delay 2.0)
+    (Development|ExecuteConsoleCommand :Command "shot showui")
+    (Development|PrintString "SISLI UI_SHOT" :bPrintToScreen false)))
 ''')
     derle_kaydet(bp)
 
@@ -448,9 +475,9 @@ def oyuncak():
     (Development|PrintString "SISLI TAVSAN_ALINDI" :bPrintToScreen false)
     (Audio|PlaySound2D :Sound "{SES}/Anahtar.Anahtar" :PitchMultiplier 0.7)
     (Rendering|SetVisibility :self (Uye|Get|Govde) :bNewVisibility false)
-    (Audio|PlaySound2D :Sound "/Game/Uyanis/Yazi/SW_tavsan1.SW_tavsan1")
+    {soz('tavsan1')}
     (Utilities|FlowControl|Delay 5.0)
-    (Audio|PlaySound2D :Sound "/Game/Uyanis/Yazi/SW_tavsan2.SW_tavsan2")))))
+    {soz('tavsan2')}))))
 ''')
     derle_kaydet(bp)
 
@@ -543,10 +570,27 @@ def incele():
     bp = yeni_bp("BP_Incele")
     bilesen(bp, unreal.PointLightComponent, "Parilti", intensity_units=unreal.LightUnits.CANDELAS, intensity=0.15, attenuation_radius=60.0, source_radius=1.0,
             light_color=unreal.Color(r=255, g=232, b=200, a=255), cast_shadows=False, volumetric_scattering_intensity=0.0)
-    for n in ("Satir1", "Satir2", "Satir3"): degisken(bp, n, unreal.SoundBase)
+    for n in ("Metin1", "Metin2", "Metin3"): degisken(bp, n, "text")   # iç ses satırları (kur_uyanis: metinler.SATIR)
     degisken(bp, "Sure1", "float", 4.0); degisken(bp, "Sure2", "float", 4.0); degisken(bp, "Yaricap", "float", 160.0)
     degisken(bp, "Al", "bool", False); degisken(bp, "AlinanAktor", unreal.Actor); degisken(bp, "TestOto", "bool", False)
     degisken(bp, "Yakin", "bool", False, False); degisken(bp, "Incelendi", "bool", False, False); degisken(bp, "Mesgul", "bool", False, False)
+    # inceleme arayüzü (ui_kur.py WBP_Incele_*): Arayuz doluysa E kâğıdı ekrana getirir (yürüme/bakış kilitli); E ile kapanınca iç ses satırları çalar
+    bel = unreal.BlueprintEditorLibrary
+    bel.add_member_variable(bp, "Arayuz", bel.get_class_reference_type(unreal.UserWidget.static_class())); BT.set_variable_instance_editable(bp, "Arayuz", True)
+    degisken(bp, "AcikArayuz", unreal.UserWidget, None, False); degisken(bp, "Acikta", "bool", False, False); degisken(bp, "TestAc", "bool", False)
+    konus = lambda: f'''(Uye|Set|Mesgul true)
+          (Uye|Set|Incelendi true)
+          (Rendering|SetVisibility :self (Uye|Get|Parilti) :bNewVisibility false)
+          (Development|PrintString "SISLI INCELE" :bPrintToScreen false)
+          {soyle("(Uye|Get|Metin1)")}
+          (if (Uye|Get|Al)
+            (Actor|DestroyActor :self (Uye|Get|AlinanAktor))
+            (Development|PrintString "SISLI ALINDI" :bPrintToScreen false))
+          (Utilities|FlowControl|Delay (Uye|Get|Sure1))
+          {soyle("(Uye|Get|Metin2)")}
+          (Utilities|FlowControl|Delay (Uye|Get|Sure2))
+          {soyle("(Uye|Get|Metin3)")}
+          (Uye|Set|Mesgul false)'''
     dsl(bp, f'''
 (event EventTick (DeltaSeconds)
   (bind pc (Game|GetPlayerController 0))
@@ -554,23 +598,32 @@ def incele():
   (if (and yakin (not (Uye|Get|Yakin)))
     (Uye|Set|Yakin true)
     (if (not (Uye|Get|Incelendi))
-      (Audio|PlaySound2D :Sound "{sw('ipucu')}")))
+      {soz("ipucu")}))
   (if (not yakin)
     (Uye|Set|Yakin false))
-  (if (and (and yakin (not (Uye|Get|Mesgul))) (or (Game|Player|WasInputKeyJustPressed :self pc :Key "E") (and (Uye|Get|TestOto) (not (Uye|Get|Incelendi)))))
-    (Uye|Set|Mesgul true)
-    (Uye|Set|Incelendi true)
-    (Rendering|SetVisibility :self (Uye|Get|Parilti) :bNewVisibility false)
-    (Development|PrintString "SISLI INCELE" :bPrintToScreen false)
-    (Audio|PlaySound2D :Sound (Uye|Get|Satir1))
-    (if (Uye|Get|Al)
-      (Actor|DestroyActor :self (Uye|Get|AlinanAktor))
-      (Development|PrintString "SISLI ALINDI" :bPrintToScreen false))
-    (Utilities|FlowControl|Delay (Uye|Get|Sure1))
-    (Audio|PlaySound2D :Sound (Uye|Get|Satir2))
-    (Utilities|FlowControl|Delay (Uye|Get|Sure2))
-    (Audio|PlaySound2D :Sound (Uye|Get|Satir3))
-    (Uye|Set|Mesgul false)))
+  (bind e (Game|Player|WasInputKeyJustPressed :self pc :Key "E"))
+  (if (Uye|Get|Acikta)
+    (if e
+      (Uye|Set|Acikta false)
+      (Widget|RemovefromParent :self (Uye|Get|AcikArayuz))
+      (Input|SetIgnoreMoveInput :self pc :bNewMoveInput false)
+      (Input|SetIgnoreLookInput :self pc :bNewLookInput false)
+      (Development|PrintString "SISLI INCELE_KAPANDI" :bPrintToScreen false)
+      (if (not (Uye|Get|Mesgul))
+        {konus()}))
+    (else
+      (if (and (and yakin (not (Uye|Get|Mesgul))) (or (or e (Uye|Get|TestAc)) (and (Uye|Get|TestOto) (not (Uye|Get|Incelendi)))))
+        (if (and (Utilities|IsValidClass (Uye|Get|Arayuz)) (not (Uye|Get|TestOto)))
+          (bind w (UserInterface|CreateWidget :Class (Uye|Get|Arayuz) :OwningPlayer pc))
+          (UserInterface|Viewport|AddtoViewport :self w)
+          (Uye|Set|AcikArayuz w)
+          (Uye|Set|Acikta true)
+          (Uye|Set|TestAc false)
+          (Input|SetIgnoreMoveInput :self pc :bNewMoveInput true)
+          (Input|SetIgnoreLookInput :self pc :bNewLookInput true)
+          (Development|PrintString "SISLI INCELE_ACILDI" :bPrintToScreen false)
+          (else
+            {konus()}))))))
 ''')
     derle_kaydet(bp)
 
@@ -595,7 +648,7 @@ def yatakhanekapisi():
   (if (and yakin (not (Uye|Get|Yakin)))
     (Uye|Set|Yakin true)
     (if (not (Uye|Get|Acik))
-      (Audio|PlaySound2D :Sound "{sw('ipucu')}")))
+      {soz("ipucu")}))
   (if (not yakin)
     (Uye|Set|Yakin false))
   (if (and (and (and yakin (not (Uye|Get|Mesgul))) (not (Uye|Get|Acik))) (or (Game|Player|WasInputKeyJustPressed :self pc :Key "E") (Uye|Get|TestOto)))
@@ -603,7 +656,7 @@ def yatakhanekapisi():
       (:"Is Valid"
         (Uye|Set|Mesgul true)
         (Development|PrintString "SISLI KAPI_KILITLI" :bPrintToScreen false)
-        (Audio|PlaySound2D :Sound "{sw('kapi_kilitli')}")
+        {soz("kapi_kilitli")}
         (Audio|PlaySoundatLocation :Sound "{SES}/Gicirti.Gicirti" :Location (Transformation|GetActorLocation) :VolumeMultiplier 0.35 :PitchMultiplier 2.2)
         (Utilities|FlowControl|Delay 3.0)
         (Uye|Set|Mesgul false))
@@ -612,7 +665,7 @@ def yatakhanekapisi():
         (Development|PrintString "SISLI KAPI_ACILDI" :bPrintToScreen false)
         (Audio|PlaySoundatLocation :Sound "{SES}/Gicirti.Gicirti" :Location (Transformation|GetActorLocation) :PitchMultiplier 0.85)
         (Utilities|FlowControl|Delay 1.2)
-        (Audio|PlaySound2D :Sound "{sw('kapi_acik')}")))))
+        {soz("kapi_acik")}))))
 ''')
     derle_kaydet(bp)
 

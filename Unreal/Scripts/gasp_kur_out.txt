@@ -1,0 +1,20 @@
+ops [('Pelvis Motion', True), ('FK Chains', True), ('Run IK Rig', False), ('Root Motion', True), ('Remap Curves', True)]
+gövde adım 0 hata² 0.9625 [('clavicle_l>upperarm_l', 10.8), ('clavicle_r>upperarm_r', 10.8), ('upperarm_l>lowerarm_l', 8.2), ('upperarm_r>lowerarm_r', 8.2), ('neck_01>head', 7.0), ('lowerarm_r>hand_r', 6.1)]
+gövde adım 1 hata² 0.4734 [('clavicle_l>upperarm_l', 9.3), ('clavicle_r>upperarm_r', 9.2), ('lowerarm_r>hand_r', 4.2), ('lowerarm_l>hand_l', 4.1), ('upperarm_l>lowerarm_l', 3.7), ('upperarm_r>lowerarm_r', 3.7)]
+gövde adım 2 hata² 0.3671 [('clavicle_l>upperarm_l', 9.1), ('clavicle_r>upperarm_r', 9.1), ('pelvis>neck_01', 2.8), ('lowerarm_r>hand_r', 2.4), ('lowerarm_l>hand_l', 2.3), ('upperarm_l>lowerarm_l', 2.2)]
+gövde adım 3 hata² 0.3319 [('clavicle_l>upperarm_l', 9.1), ('clavicle_r>upperarm_r', 9.0), ('pelvis>neck_01', 2.4), ('neck_01>head', 1.7), ('upperarm_l>lowerarm_l', 1.4), ('upperarm_r>lowerarm_r', 1.4)]
+gövde SON hata² 0.3178 [('clavicle_l>upperarm_l', 9.0), ('clavicle_r>upperarm_r', 9.0), ('pelvis>neck_01', 2.1), ('neck_01>head', 1.7), ('upperarm_l>lowerarm_l', 0.9), ('upperarm_r>lowerarm_r', 0.9)]
+el adım 0 hata² 19.2404 [('thumb_01_r>thumb_02_r', 35.1), ('thumb_01_l>thumb_02_l', 35.0), ('pinky_02_l>pinky_03_l', 31.9), ('thumb_02_r>thumb_03_r', 29.9), ('thumb_02_l>thumb_03_l', 29.6), ('pinky_02_r>pinky_03_r', 28.8)]
+el adım 1 hata² 2.0736 [('thumb_01_r>thumb_02_r', 10.3), ('thumb_01_l>thumb_02_l', 10.1), ('middle_01_l>middle_02_l', 9.2), ('middle_01_r>middle_02_r', 9.2), ('middle_02_r>middle_03_r', 7.4), ('pinky_01_l>pinky_02_l', 7.3)]
+el adım 2 hata² 0.7008 [('middle_01_l>middle_02_l', 5.9), ('middle_01_r>middle_02_r', 5.9), ('thumb_01_r>thumb_02_r', 5.0), ('thumb_01_l>thumb_02_l', 4.9), ('index_01_l>index_02_l', 4.6), ('index_01_r>index_02_r', 4.6)]
+el SON hata² 0.3272 [('middle_01_r>middle_02_r', 3.7), ('middle_01_l>middle_02_l', 3.6), ('hand_r>middle_01_r', 3.6), ('hand_l>middle_01_l', 3.5), ('thumb_01_l>thumb_02_l', 3.5), ('thumb_01_r>thumb_02_r', 3.5)]
+anim M_Neutral_Stand_Idle_Loop süre 10.00 doğal hız (oyunda, ×0.86) 0 cm/s root lock True
+anim M_Relaxed_Stand_Idle_Loop süre 10.00 doğal hız (oyunda, ×0.86) 0 cm/s root lock True
+anim M_Neutral_Crouch_Idle_Loop süre 10.00 doğal hız (oyunda, ×0.86) 0 cm/s root lock True
+anim M_Neutral_Walk_Loop_F süre 4.00 doğal hız (oyunda, ×0.86) 155 cm/s root lock True
+anim M_Relaxed_Walk_Loop_F süre 4.10 doğal hız (oyunda, ×0.86) 128 cm/s root lock True
+anim M_Neutral_Crouch_Loop_F süre 3.70 doğal hız (oyunda, ×0.86) 175 cm/s root lock True
+anim M_Neutral_Jump_F_Start_Stand_Lfoot süre 2.50 doğal hız (oyunda, ×0.86) 1 cm/s root lock True
+anim M_Neutral_Jump_Loop_Fall süre 3.33 doğal hız (oyunda, ×0.86) 1 cm/s root lock True
+anim M_Neutral_Jump_F_Land_Stand_Light_Lfoot süre 2.77 doğal hız (oyunda, ×0.86) 46 cm/s root lock True
+TAMAM

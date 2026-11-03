@@ -4,31 +4,11 @@ import unreal, math, traceback
 OUT = []
 def log(*a): OUT.append(" ".join(str(x) for x in a))
 at = unreal.AssetToolsHelpers.get_asset_tools(); eal = unreal.EditorAssetLibrary
+import sys; sys.path.append("C:/Users/Onur/Sisli/Unreal/Scripts")
+from metinler import SATIR
 D = "/Game/Uyanis/Yazi"; WAV = "C:/Users/Onur/Sisli/Unreal/SourceArt/Ses/sessiz_{}s.wav"
-SATIR = {
-    "giris": "...Ela?",
-    "kontrol": "Fare: bak   ·   WASD: yürü   ·   Ctrl: çömel   ·   E: incele   ·   F: fener",
-    "ipucu": "[E]  İncele",
-    "tavsan1": "Ela'nın tavşanı. Onu hiç yanından ayırmazdı...",
-    "tavsan2": "Ela'yı bulmalıyım.",
-    "yatak_ela": "Ela'nın yatağı. Çarşafı buz gibi.",
-    "yatak_ben": "Benim yatağım. Ela hep alttakini isterdi; korkunca yanıma kıvrılırdı.",
-    "cizim1": "Ela'nın çizimi. İkimiz... el ele.",
-    "cizim2": "Arkaya kırmızı bir ışık çizmiş. Neden kırmızı?",
-    "kurallar1": "\"Işıklar 21.00'de söner. Gece sayımında herkes yatağında olur.\"",
-    "kurallar2": "\"Kural dışı hareket eden çocuk ayrılır.\"  ...Ayrılır mı?",
-    "pencere": "Sis. Sisin ardında hiç bitmeyen duvarlar.",
-    "dolap_ela": "Ela'nın dolabı. Boşaltılmış... Kıyafetleri bile yok.",
-    "dolap_bakici": "Kilitli. İçinden ilaç kokusu geliyor.",
-    "defter1": "Bakıcının defteri.  \"Gece sayımı — 4. Yatakhane: 23 çocuk.\"",
-    "defter2": "\"02:40 — K. Ela (7). 7. Blok'a nakledildi. Ağabeyine bildirilmeyecek.\"",
-    "defter3": "7. Blok... Onu götürmüşler. Anahtarları alıyorum.",
-    "kapi_kilitli": "Kilitli. Bakıcının anahtarları olmalı.",
-    "anahtar": "Bakıcının anahtarları.",
-    "kapi_acik": "Ela... Geliyorum.",
-}
 try:
-    for k, metin in SATIR.items():
+    for k, (metin, _tr) in SATIR.items():
         sure = max(2, min(9, int(math.ceil(len(metin) * 0.065 + 1.6))))
         ad = "SW_" + k; p = f"{D}/{ad}"
         if not eal.does_asset_exist(p):   # var olanı SİLME: BP'lerdeki referanslar kopar; yalnız altyazıyı güncelle

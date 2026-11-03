@@ -1,4 +1,11 @@
+kâğıt yüzeye oturdu Ela_Cizim 5 isabet ['Dolap_Sol0', 'Dolap_Sol0'] normal [0.997, -0.079] kayma -4.31 cm
+kâğıt yüzeye oturdu Kurallar 5 isabet ['ArkaDuvar', 'ArkaDuvar'] normal [0.0, 1.0] kayma -2.48 cm
 uzak kule pencere 323
+ÇAKIŞMA mimari Palet_Yigin_0 ↔ Asn_Sol
+ÇAKIŞMA mimari Palet_Yigin_1 ↔ Asn_Sol
+ÇAKIŞMA mimari Palet_Yigin_2 ↔ Asn_Sol
+ÇAKIŞMA mimari Palet_Yigin_3 ↔ Asn_Sol
+ÇAKIŞMA mimari Palet_Yigin_4 ↔ Asn_Sol
 ÇAKIŞMA prop Kolon_-1150_6800 ↔ Moloz_Yigin_A
-çakışma sayısı 1 prop 234 kutu 666
+çakışma sayısı 6 prop 234 kutu 693
 kaydedildi /Game/Uyanis/Maps/L_Uyanis

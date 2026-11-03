@@ -1,0 +1,21 @@
+ofset spine_01 [-0.0, -0.0, 0.0218, 0.9998]
+ofset spine_02 [-0.0, -0.0, 0.0218, 0.9998]
+ofset neck_01 [-0.0001, 0.0, -0.0436, 0.999]
+ofset upperarm_l [0.028, 0.0996, 0.0412, 0.9938]
+ofset lowerarm_l [-0.0644, 0.0063, -0.0508, 0.9966]
+ofset upperarm_r [0.0209, 0.1013, 0.0317, 0.9941]
+ofset lowerarm_r [-0.0849, -0.0017, -0.0608, 0.9945]
+aktarılan ['MOB1_Stand_Relaxed_Idle_v2_IPC_C4', 'MOB1_Walk_F_IPC_C4', 'MOB1_Jog_F_IPC_C4', 'MOB1_Crouch_Idle_V2_IPC_C4', 'MOB1_CrouchWalk_F_IPC_C4']
+BS anim ['MOB1_CrouchWalk_F_IPC_C4', 'MOB1_Crouch_Idle_V2_IPC_C4', 'MOB1_Jog_F_IPC_C4', 'MOB1_Stand_Relaxed_Idle_v2_IPC_C4', 'MOB1_Walk_F_IPC_C4']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Stand_Relaxed_Idle_v2_IPC_C3 ['/Game/Uyanis/Maps/L_Uyanis', '/Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket2']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Walk_F_IPC_C3 ['/Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket2']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Jog_F_IPC_C3 ['/Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket2']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Crouch_Idle_V2_IPC_C3 ['/Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket2']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_CrouchWalk_F_IPC_C3 ['/Game/Sisli/Cocuk2/Anim/BS_Cocuk2_Hareket2']
+silindi RTG_V1
+silindi RTG_V2
+silindi RTG_V3
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_V1 ['/Game/Uyanis/Maps/L_Uyanis']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_V2 ['/Game/Uyanis/Maps/L_Uyanis']
+silinmedi (başvuru var) /Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_V3 ['/Game/Uyanis/Maps/L_Uyanis']
+TAMAM

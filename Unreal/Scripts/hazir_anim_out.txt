@@ -1,0 +1,7 @@
+RTG_UE4_Cocuk2 hedef poz sıfırlandı
+aktarılan ['MOB1_Crouch_Idle_V2_IPC_H', 'MOB1_CrouchWalk_F_IPC_H', 'MOB1_Walk_F_IPC_H', 'MOB1_Jog_F_IPC_H']
+aktarılan ['MM_Idle_H', 'MF_Unarmed_Walk_Fwd_H', 'MF_Unarmed_Jog_Fwd_H']
+adım hızları cm/s {'MOB1_Walk_F_IPC': 116.4, 'MOB1_Jog_F_IPC': 291.5, 'MF_Unarmed_Walk_Fwd': 23.0, 'MF_Unarmed_Jog_Fwd': 36.5, 'MOB1_CrouchWalk_F_IPC': 88.3}
+rate yürüme 5.06 koşu 7.98
+BS [('MF_Unarmed_Jog_Fwd_H', 7.98), ('MF_Unarmed_Walk_Fwd_H', 5.06), ('MM_Idle_H', 1.0), ('MOB1_CrouchWalk_F_IPC_H', 1.0), ('MOB1_Crouch_Idle_V2_IPC_H', 1.0)]
+TAMAM

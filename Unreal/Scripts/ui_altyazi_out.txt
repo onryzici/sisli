@@ -1,0 +1,14 @@
+derleme1 True
+tür SetText(Text) → Widget|SetText(Text)
+tür SetRenderOpacity → Widget|SetRenderOpacity
+tür FInterpTo → Math|Interpolation|FInterpTo
+tür Min(Float) → Math|Float|Min(Float)
+derleme2 True
+çağıran türü GetAllWidgetsofClass ["Widget|GetAllWidgetsOfClass"]
+çağıran türü Length ["Utilities|Casting|CastToMaterialExpressionLength", "Utilities|Casting|CastToMaterialExpressionLengthClass", "Animation|GetLength", "Animation|GetPlayLength", "Rendering|Lighting|SetSourceLength", "Rendering|Lighting|SetBarnDoorLength", "AI|Navigation|GetPathLength", "AI|Navigation|GetLengthfromPosition"]
+çağıran türü Get(acopy) ["Utilities|Array|Get(acopy)"]
+çağıran türü Get(aref) ["Utilities|Array|Get(aref)"]
+çağıran türü CastToWBP_Altyazi []
+çağıran türü Goster []
+çağıran türü IsValid ["SharedImage|IsValid", "TypedElementFramework|List|IsValidIndex", "AssetData|IsValidAssetData", "Utilities|IsValidSoftObjectReference", "Utilities|IsValidSoftClassReference", "Utilities|IsValidInterface", "Utilities|IsValidClass", "Utilities|IsValid"]
+TAMAM

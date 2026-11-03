@@ -1,0 +1,9 @@
+FontFactory alanları []
+initial_font_faces yok FontFactory: Failed to find property 'initial_font_faces' for attribute 'initial_font_faces' on 'FontFactory'
+font F_Garamond <Object '/Game/Uyanis/UI/F_Garamond.F_Garamond' (0x000001FA21B8C200) Class 'Font'> cache <FontCacheType.RUNTIME: 1> boy 9
+  typeface -
+sil /Game/Uyanis/UI/F_Altyazi True
+initial_font_faces yok FontFactory: Failed to find property 'initial_font_faces' for attribute 'initial_font_faces' on 'FontFactory'
+font F_Altyazi <Object '/Game/Uyanis/UI/F_Altyazi.F_Altyazi' (0x000001F992CB8800) Class 'Font'> cache <FontCacheType.RUNTIME: 1> boy 30
+  typeface -
+TAMAM

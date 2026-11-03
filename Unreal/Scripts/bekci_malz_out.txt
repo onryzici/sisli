@@ -1,0 +1,5 @@
+slotlar [(Name("lambert1"), '/Game/Characters/UEFN_Mannequin/Materials/M_UEFN_Mannequin.M_UEFN_Mannequin')]
+mi parent /Game/Uyanis/Malzeme/M_MS.M_MS
+bpc None
+M_Sisli skel False
+yeni parent /Game/Sisli/Malzeme/M_Sisli.M_Sisli

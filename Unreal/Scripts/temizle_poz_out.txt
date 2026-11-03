@@ -1,0 +1,12 @@
+silindi /Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_V1
+silindi /Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_V2
+silindi /Game/Sisli/Cocuk2/Anim/Test/MOB1_Stand_Relaxed_Idle_v2_IPC_V3
+silindi /Game/Sisli/Cocuk2/Anim/Test/RTG_V1
+silindi /Game/Sisli/Cocuk2/Anim/Test/RTG_V3
+silindi /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Crouch_Idle_V2_IPC_C3
+silindi /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_CrouchWalk_F_IPC_C3
+silindi /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Jog_F_IPC_C3
+silindi /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Stand_Relaxed_Idle_v2_IPC_C3
+silindi /Game/Sisli/Cocuk2/Anim/MCO3/MOB1_Walk_F_IPC_C3
+BS örnekleri ['MOB1_CrouchWalk_F_IPC_C4', 'MOB1_Crouch_Idle_V2_IPC_C4', 'MOB1_Jog_F_IPC_C4', 'MOB1_Stand_Relaxed_Idle_v2_IPC_C4', 'MOB1_Walk_F_IPC_C4']
+TAMAM

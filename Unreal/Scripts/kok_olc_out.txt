@@ -1,0 +1,5 @@
+MF_Unarmed_Walk_Fwd süre 1.50 root kayma [0.0, 396.5] pelvis kayma [0.0, 396.5] basan ayak hızı (pelvise göre) 238.0 root motion True kilit True
+MF_Unarmed_Jog_Fwd süre 1.77 root kayma [0.0, 929.2] pelvis kayma [-0.0, 928.7] basan ayak hızı (pelvise göre) 467.6 root motion True kilit True
+MOB1_Walk_F_IPC süre 1.20 root kayma [0.0, 0.0] pelvis kayma [0.0, -0.0] basan ayak hızı (pelvise göre) 109.4 root motion False kilit False
+MOB1_Jog_F_IPC süre 0.80 root kayma [0.0, 0.0] pelvis kayma [-0.0, 0.0] basan ayak hızı (pelvise göre) 292.7 root motion False kilit False
+MM_Idle süre 7.57 root kayma [0.0, 0.0] pelvis kayma [-0.0, 0.0] basan ayak hızı (pelvise göre) 0.4 root motion False kilit False

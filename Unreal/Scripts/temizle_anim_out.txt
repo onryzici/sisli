@@ -1,0 +1,17 @@
+silindi /Game/Sisli/Cocuk2/Anim/Test/MF_Unarmed_Walk_Fwd_E
+silindi /Game/Sisli/Cocuk2/Anim/Test/MM_Idle_E
+silindi /Game/Sisli/Cocuk2/Anim/Test/RTG_Epic
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MF_Unarmed_Jog_Fwd_H
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MF_Unarmed_Walk_Fwd_H
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MM_Idle_H
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MOB1_Crouch_Idle_V2_IPC_H
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MOB1_CrouchWalk_F_IPC_H
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MOB1_Jog_F_IPC_H
+silindi /Game/Sisli/Cocuk2/Anim/Hazir/MOB1_Walk_F_IPC_H
+silindi /Game/Sisli/Cocuk2/Anim/MCO4/MOB1_Crouch_Idle_V2_IPC_C4
+silindi /Game/Sisli/Cocuk2/Anim/MCO4/MOB1_CrouchWalk_F_IPC_C4
+silindi /Game/Sisli/Cocuk2/Anim/MCO4/MOB1_Jog_F_IPC_C4
+silindi /Game/Sisli/Cocuk2/Anim/MCO4/MOB1_Stand_Relaxed_Idle_v2_IPC_C4
+silindi /Game/Sisli/Cocuk2/Anim/MCO4/MOB1_Walk_F_IPC_C4
+BS ['M_Neutral_Crouch_Idle_Loop_C', 'M_Neutral_Stand_Idle_Loop_C', 'SCR_Walk_Scared_Fwd_Look_Right_Loop_IP_C', 'Walk_06_Look_Around_Loop_IP_C']
+TAMAM

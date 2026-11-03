@@ -166,21 +166,52 @@ try:
         c.set_collision_response_to_channel(unreal.CollisionChannel.ECC_CAMERA, unreal.CollisionResponseType.ECR_IGNORE)
         return a
     def kagit(et, doku_yol, x, y, z, nx, ny, gen, yuk):
-        """Duvara/dolap kapağına kâğıt: normal (nx, ny) yönüne bakar, görüntü dik ve okunur."""
+        """Duvara/dolap kapağına kâğıt: normal (nx, ny) yönüne bakar, görüntü dik ve okunur.
+        Yüzeye OTURTMA (kullanıcı: "resim havada duruyor gibi"): orta + 4 köşeden yüzeye ışın atılır; isabetlerden düzlem (konum + normal)
+        çıkarılır, kâğıt 0.12 cm önüne yatırılır ve yüzeyin eğimini alır. İsabet yoksa verilen konum/normal kullanılır."""
         t = eal.load_asset(doku_yol)
         m = smi("Kagit_" + et, M_MS, {"PuruzCarpan": 0.85, "AOGuc": 0.0}, {"Ton": (0.6, 0.58, 0.55)}); mel.set_material_instance_texture_parameter_value(m, "Renk", t); eal.save_loaded_asset(m)
-        n = V(nx, ny, 0); sag = V(ny, -nx, 0) * -1.0   # bakan kişinin sağı = (-n) × yukarı
+        n = V(nx, ny, 0); sag0 = V(-ny, nx, 0)
+        dunya = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world(); isab = []
+        for (du, dv) in ((0, 0), (-0.42, -0.42), (0.42, -0.42), (-0.42, 0.42), (0.42, 0.42)):
+            p = V(x, y, z) + sag0 * (du * gen) + V(0, 0, dv * yuk)
+            h = unreal.SystemLibrary.line_trace_single(dunya, p + n * 25.0, p - n * 25.0, unreal.TraceTypeQuery.TRACE_TYPE_QUERY1, True, [], unreal.DrawDebugTrace.NONE, True)
+            if h is not None:
+                tp = h.to_tuple()
+                if tp[0]: isab.append((tp[5], tp[7], tp[9]))
+        if len(isab) >= 3:
+            nn = V(0, 0, 0)
+            for _, nr, _ in isab: nn = nn + nr
+            nn.z = 0.0; nn = nn.normal()
+            mrk = V(0, 0, 0)
+            for ip, _, _ in isab: mrk = mrk + ip
+            mrk = mrk * (1.0 / len(isab))
+            on = max(((ip - mrk).dot(nn)) for ip, _, _ in isab)   # en önde kalan isabete göre (kâğıt hiçbir yerde gömülmesin)
+            P0 = V(x, y, z); merkez = P0 - nn * ((P0 - mrk).dot(nn)) + nn * (on + 0.12)   # ortalama düzleme izdüşüm + en öndeki isabetin 1.2 mm önü
+            log("kâğıt yüzeye oturdu", et, len(isab), "isabet", [str(a.get_actor_label()) if a else "-" for _, _, a in isab][:2],
+                "normal", [round(nn.x, 3), round(nn.y, 3)], "kayma %.2f cm" % ((merkez - V(x, y, z)).dot(nn)))
+            n = nn
+        else:
+            merkez = V(x, y, z); log("UYARI kâğıt isabeti az", et, len(isab))
+        sag = V(n.y, -n.x, 0) * -1.0   # bakan kişinin sağı = (-n) × yukarı
         rot = unreal.MathLibrary.make_rotation_from_axes(sag * -1.0, V(0, 0, -1), n)   # (sag, yukarı) 180° ters çıkıyordu
-        a = spawn(unreal.StaticMeshActor, V(x, y, z), rot, et); c = a.static_mesh_component
+        a = spawn(unreal.StaticMeshActor, merkez, rot, et); c = a.static_mesh_component
         c.set_static_mesh(unreal.load_asset("/Engine/BasicShapes/Plane.Plane")); c.set_material(0, m); a.set_actor_scale3d(V(gen / 100.0, yuk / 100.0, 1.0))
-        c.set_collision_enabled(unreal.CollisionEnabled.NO_COLLISION); sset(c, "cast_shadow", False)
+        c.set_collision_enabled(unreal.CollisionEnabled.NO_COLLISION); sset(c, "cast_shadow", True)
         return a
-    def incele(et, x, y, z, satirlar, yaricap=140.0, sureler=(4.5, 5.0), al=None):
+    def incele(et, x, y, z, satirlar, yaricap=140.0, sureler=(4.5, 5.0), al=None, arayuz=None):
         b = spawn(bpcls("BP_Incele"), V(x, y, z), R(), "Incele_" + et)
-        for i, k in enumerate(satirlar[:3]): sset(b, f"Satir{i + 1}", eal.load_asset(f"/Game/Uyanis/Yazi/SW_{k}"))
-        sset(b, "Yaricap", yaricap); sset(b, "Sure1", sureler[0]); sset(b, "Sure2", sureler[1])
+        import sys as _s; _s.path.append("C:/Users/Onur/Sisli/Unreal/Scripts"); from metinler import SATIR, iki, sure as _sure
+        for i, k in enumerate(satirlar[:3]): sset(b, f"Metin{i + 1}", iki(k))   # WBP_Altyazi'ye giden iç ses (İngilizce)
+        # satırlar arası bekleme: önceki satırın ekranda kalma süresi + nefes (verilen değerden kısa olmasın)
+        s1 = max(sureler[0], _sure(satirlar[0]) + 0.6) if satirlar else sureler[0]
+        s2 = max(sureler[1], _sure(satirlar[1]) + 0.6) if len(satirlar) > 1 else sureler[1]
+        sset(b, "Yaricap", yaricap); sset(b, "Sure1", s1); sset(b, "Sure2", s2)
         if al is not None: sset(b, "Al", True); sset(b, "AlinanAktor", al)
         if os.environ.get("UY_YURU"): sset(b, "TestOto", True)
+        if os.environ.get("UY_INCELE_TEST") == et: sset(b, "TestAc", True)
+        if arayuz:   # inceleme ekranı (ui_kur.py): E ile kâğıt ekrana gelir
+            w_ = eal.load_asset(f"/Game/Uyanis/UI/{arayuz}"); sset(b, "Arayuz", w_.generated_class() if w_ else None)
         return b
     # cam (bakıcı odası pencereleri): ince, yarı saydam, parlak
     cp = SMI + "/M_Cam"
@@ -221,7 +252,7 @@ try:
     for i, gy in enumerate((440.0, 1120.0)):
         koy("Dolap", W - 32.0, gy, DOL_YAW + 180.0 + (1.5 if i else -2.0), 0.0, 0.3, etiket=f"Dolap_Sag{i}")
     # Ela'nın dolabı (Sol0, y=440): kapağında çizimi
-    kagit("Ela_Cizim", "/Game/Uyanis/Kagit/T_ElaCizim", 60.5, 440.0, 128.0, 1.0, 0.0, 34.0, 24.0)
+    kagit("Ela_Cizim", "/Game/Uyanis/Kagit/T_ElaCizim", 60.5, 455.0, 130.0, 1.0, 0.0, 26.0, 18.4)   # tek kapakta (kapak arası şerit y≈431-438)
     # ---------- kardeşinin ve çocuğun köşesi ----------
     BX, BY = 230.0, 470.0   # tavşan: Ela'nın ranzası (Sol1) ile Sol0 arası, sarkıt lambanın ışık havuzunda
     tb = mesh("SM_ToyBunny").get_bounding_box()
@@ -310,8 +341,8 @@ try:
     if os.environ.get("UY_YURU"): sset(kp_, "TestOto", True)
     incele("Ela_Yatak", 150.0, 690.0, 60.0, ["yatak_ela"], 120.0)
     incele("Ben_Yatak", 150.0, 1010.0, 60.0, ["yatak_ben"], 120.0)
-    incele("Ela_Dolap", 75.0, 440.0, 110.0, ["dolap_ela", "cizim1", "cizim2"], 125.0, (4.5, 4.0))
-    incele("Kurallar", 600.0, 70.0, 120.0, ["kurallar1", "kurallar2"], 150.0, (5.0, 5.0))
+    incele("Ela_Dolap", 75.0, 440.0, 110.0, ["dolap_ela", "cizim1", "cizim2"], 125.0, (4.5, 4.0), arayuz="WBP_Incele_ElaCizim")
+    incele("Kurallar", 600.0, 70.0, 120.0, ["kurallar1", "kurallar2"], 150.0, (5.0, 5.0), arayuz="WBP_Incele_Kurallar")
     incele("Pencere", 860.0, 1630.0, 120.0, ["pencere"], 190.0)
     incele("Bak_Dolap", 690.0, 2235.0, 100.0, ["dolap_bakici"], 110.0)
     # ay: pencerelerden, yüksekten ve çapraz — koğuşun içinde ışık sütunları
@@ -452,8 +483,21 @@ try:
         dk = spawn(tk_.generated_class(), V(520, 8300, 1120), R(), "Dron_Uyari")
         dl = dk.get_component_by_class(unreal.PointLightComponent); sset(dl, "light_color", unreal.Color(r=255, g=30, b=20, a=255)); sset(dl, "attenuation_radius", 400.0)
         sset(dk, "TemelSiddet", 6.0); sset(dk, "Sans", 0.5)
-    bt = spawn(bpcls("BP_Bitis"), V(500, TY1 - 260, TZ + 150), R(), "Bitis")
-    bt.get_component_by_class(unreal.BoxComponent).set_box_extent(V(700, 160, 200), False)
+    # avlunun ucu: kuleye çıkan asansör (TASARIM.md: bodrum → Kat 1). Kabin + sise doğru yükselen kafes kuyusu, ağzında kırmızı lamba.
+    AY0, AY1, AZ = TY1 - 560, TY1 - 300, TZ
+    kutu("Asn_Sol", 380, 400, AY0, AY1, AZ, AZ + 260, METAL); kutu("Asn_Sag", 600, 620, AY0, AY1, AZ, AZ + 260, METAL)
+    kutu("Asn_Arka", 380, 620, AY1 - 20, AY1, AZ, AZ + 260, METAL); kutu("Asn_Tavan", 380, 620, AY0, AY1, AZ + 240, AZ + 260, METAL)
+    kutu("Asn_Esik", 400, 600, AY0 - 6, AY0, AZ, AZ + 3, METAL)
+    for (cx_, cy_) in ((380, AY0), (620, AY0), (380, AY1), (620, AY1)):   # kuyu direkleri
+        kutu("Asn_Direk", cx_ - 7, cx_ + 7, cy_ - 7, cy_ + 7, AZ + 260, AZ + 4200, METAL, carpisma=False)
+    for hz_ in range(560, 4200, 420):   # kuyu kuşakları
+        kutu("Asn_KusakS", 380, 620, AY0 - 5, AY0 + 5, AZ + hz_, AZ + hz_ + 10, METAL, carpisma=False)
+        kutu("Asn_KusakN", 380, 620, AY1 - 5, AY1 + 5, AZ + hz_, AZ + hz_ + 10, METAL, carpisma=False)
+    al_ = spawn(bpcls("BP_KirmiziLamba"), V(500, AY0 - 8, AZ + 252), R(yaw=-90.0), "KirmiziLamba_Asansor")
+    asn_ = spawn(bpcls("BP_Asansor"), V(500, (AY0 + AY1) / 2, AZ + 110), R(), "Asansor_Kat01")
+    sset(asn_, "Hedef", "L_Kat01")
+    if os.environ.get("UY_YURU"): sset(asn_, "TestOto", True)
+    incele("Kule", 500.0, AY0 - 260, AZ + 120.0, ["avlu"], 260.0)
     # uzak megayapı siluetleri (sisin içinde): dev kuleler, köprüler, seyrek pencere ışıkları, tepe uyarı ışıkları
     SILUET = smi("Siluet", M_MS, {"PuruzCarpan": 1.0}, {"Ton": (0.012, 0.014, 0.017)})
     PS = smi("Uzak_Pencere_Sicak", M_MS, {}, {"Ton": (0, 0, 0), "Isima": (9.0, 4.6, 1.6)})
@@ -532,8 +576,11 @@ try:
     if fe:
         fen = spawn(fe, V(0, 0, 0), R(), "Fener")
         if os.environ.get("UY_COMELTEST"): sset(fen, "TestComel", True)
+        if os.environ.get("UY_KOSTEST"): sset(fen, "TestKos", True)
         if os.environ.get("UY_ZIPLATEST"): sset(fen, "TestZipla", True)
-    if not os.environ.get("UY_KAMERA"): spawn(bpcls("BP_Giris"), V(0, 0, 0), R(), "Giris")
+    if not os.environ.get("UY_KAMERA"):
+        gi_ = spawn(bpcls("BP_Giris"), V(0, 0, 0), R(), "Giris")
+        if os.environ.get("UY_UITEST"): sset(gi_, "TestUI", True)   # arayüz dahil ekran görüntüsü (shot showui)
     # ---------- test kamerası (UY_KAMERA="x y z pitch yaw fov"): sabit sinema kamerası + alanı ----------
     tk = os.environ.get("UY_KAMERA")
     if tk:
@@ -556,7 +603,7 @@ try:
         t_ = [float(v) for v in ti.replace("_", " ").split()]
         isik(unreal.PointLight, "TestIsik", V(t_[0], t_[1], t_[2]), intensity=t_[3], attenuation_radius=400.0, source_radius=8.0, use_temperature=True, temperature=5600.0)
     # ---------- başlangıç ----------
-    b = [float(v) for v in os.environ.get("UY_BASLA", "330 900 257").split()]
+    b = [float(v) for v in os.environ.get("UY_BASLA", "430 640 88").split()]
     spawn(unreal.PlayerStart, V(b[0], b[1], 95.0), R(yaw=b[2]), "Baslangic")
     # ---------- çakışma denetimi: prop ↔ mimari / prop ↔ prop (2 cm tolerans) ----------
     def kesisim(a0, a1, b0, b1, tol=2.0):
